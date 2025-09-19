@@ -31,7 +31,7 @@ app.add_middleware(
 # 初始化增强版 API 客户端
 # try:
 #     enhanced_api = EnhancedVolcEngineAPI(
-#         api_key=
+#         api_key
 #         milvus_host="localhost",
 #         milvus_port=19530
 #     )
