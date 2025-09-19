@@ -16,10 +16,10 @@ from pymilvus import SearchFuture
 from sentence_transformers import SentenceTransformer
 import asyncio
 
-from ..models.StoredMessage import StoredMessage
-from ..models.ReceivedMessage import ReceivedMessage  
-from ..models.SearchMessage import SearchMessage
-from ..utils.image_handler import ImageHandler
+from models.StoredMessage import StoredMessage
+from models.ReceivedMessage import ReceivedMessage  
+from models.SearchMessage import SearchMessage
+from utils.image_handler import ImageHandler
 
 # 配置日志
 logger = logging.getLogger(__name__)
@@ -372,17 +372,14 @@ class MilvusMessageStore:
             # 执行搜索
             search_params = {"metric_type": "COSINE", "params": {"nprobe": 10}}
             results = await asyncio.get_event_loop().run_in_executor(
-                None,  # 使用默认线程池
-                self.collection.search,
-                [query_embedding],  # data
-                "embedding",  # anns_field
-                search_params,  # param
-                limit,  # limit
-                filter_expr if filter_expr else None,  # expr
-                ["id", "role", "text_content", "timestamp", "session_id", "user_id", "image_paths", "has_image"]  # output_fields
+                None,
+                self._do_search,
+                query_embedding,
+                search_params,
+                limit,
+                filter_expr,
+                ["id", "role", "text_content", "timestamp", "session_id", "user_id", "image_paths", "has_image"]
             )
-            print("search results: ")
-            print(results)
 
             # results = await asyncio.wrap_future(results)
             # results = await results
@@ -391,12 +388,7 @@ class MilvusMessageStore:
             messages = []
             for hit in results[0]:
                 # 创建SearchMessage对象
-                print("hit: ")
-                print(hit)
-                print("hit.entity: ")
-                print(hit.get("entity"))
                 search_message = SearchMessage.from_milvus_hit(hit.get("entity"), pic_stored_path)
-                print("search_message: " + str(search_message))
                 messages.append(search_message)
 
             logger.info("from milvus: " + f"找到 {len(messages)} 条相似消息")
@@ -411,6 +403,16 @@ class MilvusMessageStore:
         except Exception as e:
             logger.warning("from milvus: " + f"搜索过程中发生异常: {e}")
             return []
+        
+    def _do_search(self, query_embedding, search_params, limit, filter_expr, output_fields):
+        return self.collection.search(
+            data=[query_embedding],
+            anns_field="embedding",
+            param=search_params,
+            limit=limit,
+            expr=filter_expr,
+            output_fields=output_fields
+        )
 
     def _build_filter_expr(self, user_id: Optional[str], session_id: Optional[str]) -> str:
         conditions = []
