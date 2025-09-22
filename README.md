@@ -1,20 +1,21 @@
-# 导入火山引擎deepseek API key，也可以选择其他LLM推理服务，但需要修改base_url和传递数据的格式
+# quick start
+#### 1.导入火山引擎deepseek API key，也可以选择其他LLM推理服务，但需要修改base_url和传递数据的格式
 ```
 export VOLCENG_API_KEY=your_actual_api_key
 ```
 
-# 启动milvus服务
+#### 2.启动milvus服务
 ```
 cd milvus_config
 docker-compose up -d
 ```
 
-# 启动主服务程序
+#### 3.启动主服务程序
 ```
 python mainService.py
 ```
 
-# 接口介绍
+#### 4.接口介绍
 /chat/completions
 可以接收来自前端的如下例子的数据：
 ```json
