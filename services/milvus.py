@@ -20,9 +20,11 @@ from models.StoredMessage import StoredMessage
 from models.ReceivedMessage import ReceivedMessage  
 from models.SearchMessage import SearchMessage
 from utils.image_handler import ImageHandler
+from utils.log import get_logger
+from utils.image_describer import ImageDescriber
 
 # 配置日志
-logger = logging.getLogger(__name__)
+logger = get_logger(__name__) 
 pic_stored_path = "/home/xuyao/data/bzchat_pic"
 
 class MilvusMessageStore:
@@ -52,13 +54,16 @@ class MilvusMessageStore:
         # 初始化多模态嵌入模型 (CLIP)
         try:
             self.embedding_model = SentenceTransformer(embedding_model)
-            logger.info("from milvus: " + f"成功加载 CLIP 多模态模型: {embedding_model}")
+            logger.info( f"成功加载 CLIP 多模态模型: {embedding_model}")
         except Exception as e:
-            logger.error("from milvus: " + f"加载 CLIP 模型失败: {e}")
+            logger.error( f"加载 CLIP 模型失败: {e}")
             raise
         
         # 初始化图片处理器
         self.image_handler = ImageHandler(pic_stored_path)
+
+        # 初始化图片描述器
+        self.image_describer = ImageDescriber("/home/xuyao/data/Qwen2.5-VL-3B-Instruct")
         
         # 连接到 Milvus
         self._connect()
@@ -66,7 +71,7 @@ class MilvusMessageStore:
         # 创建或获取集合
         if utility.has_collection(self.collection_name):
             self.collection = Collection(self.collection_name)
-            logger.info("from milvus: " + f"集合 {self.collection_name} 已存在，直接使用")
+            logger.info( f"集合 {self.collection_name} 已存在，直接使用")
         else:
             self._create_collection()
         
@@ -75,27 +80,31 @@ class MilvusMessageStore:
         
         # 加载集合到内存
         self.collection.load()
-        logger.info("from milvus: " + f"集合 {self.collection_name} 加载完成")
+        logger.info( f"集合 {self.collection_name} 加载完成")
     
     def _connect(self):
         """连接到 Milvus 服务器"""
         try:
             # 使用 milvus-lite 进行本地测试
             connections.connect(
-                uri="../milvus_lite.db"  # 使用本地文件数据库
+                host=self.host,
+                port=self.port
+                # uri="/home/xuyao/data/milvus_lite.db"
             )
-            logger.info("from milvus: " + "成功连接到 Milvus Lite 本地数据库")
+            # print(utility.get_server_version()) 
+            # logger.info( "成功连接到 Milvus Lite 本地数据库")
+            logger.info( f"成功连接到 Milvus 服务器 {self.host}:{self.port}")
         except Exception as e:
-            logger.error("from milvus: " + f"连接 Milvus 失败: {e}")
+            logger.error( f"连接 Milvus 失败: {e}")
             raise
     
     def _disconnect(self):
         """断开 Milvus 连接"""
         try:
             connections.disconnect("default")
-            logger.info("from milvus: " + "已断开 Milvus 连接")
+            logger.info( "已断开 Milvus 连接")
         except Exception as e:
-            logger.warning("from milvus: " + f"断开连接时出现警告: {e}")
+            logger.warning( f"断开连接时出现警告: {e}")
     
     def _create_collection(self):
         """创建多模态消息集合"""
@@ -108,7 +117,8 @@ class MilvusMessageStore:
             FieldSchema(name="role", dtype=DataType.VARCHAR, max_length=32),
             FieldSchema(name="text_content", dtype=DataType.VARCHAR, max_length=10000),
             FieldSchema(name="has_image", dtype=DataType.BOOL),  # 是否包含图片
-            FieldSchema(name="image_paths", dtype=DataType.VARCHAR, max_length=1000),  # 图片路径（JSON字符串）
+            FieldSchema(name="image_path", dtype=DataType.VARCHAR, max_length=1000),  # 图片路径（JSON字符串）
+            FieldSchema(name="image_desc", dtype=DataType.VARCHAR, max_length=2000),  # 图片描述（JSON字符串）
             FieldSchema(name="embedding", dtype=DataType.FLOAT_VECTOR, dim=self.embedding_dim)  # CLIP向量
         ]
         
@@ -124,7 +134,7 @@ class MilvusMessageStore:
             schema=schema
         )
         
-        logger.info("from milvus: " + f"成功创建多模态集合: {self.collection_name}")
+        logger.info( f"成功创建多模态集合: {self.collection_name}")
     
     def _create_index(self, index_name: str = "embedding_idx", recreate: bool = False):
         """
@@ -143,10 +153,10 @@ class MilvusMessageStore:
 
             if has_index:
                 if not recreate:
-                    logger.info("from milvus: " + f"索引 '{index_name}' 已存在，跳过创建")
+                    logger.info( f"索引 '{index_name}' 已存在，跳过创建")
                     return
                 else:
-                    logger.info("from milvus: " + f"正在删除已有索引 '{index_name}' 以重建...")
+                    logger.info( f"正在删除已有索引 '{index_name}' 以重建...")
                     self.collection.drop_index(
                         field_name=field_name,
                         index_name=index_name
@@ -159,17 +169,17 @@ class MilvusMessageStore:
                 "params": {"nlist": 128}       # 聚类中心数量，一般设为数据量的1/1000~1/500
             }
 
-            logger.info("from milvus: " + f"正在为字段 '{field_name}' 创建索引 '{index_name}'...")
+            logger.info( f"正在为字段 '{field_name}' 创建索引 '{index_name}'...")
             self.collection.create_index(
                 field_name=field_name,
                 index_params=index_params,
                 index_name=index_name
             )
 
-            logger.info("from milvus: " + f"成功创建向量索引 '{index_name}' (type={index_params['index_type']}, metric={index_params['metric_type']})")
+            logger.info( f"成功创建向量索引 '{index_name}' (type={index_params['index_type']}, metric={index_params['metric_type']})")
 
         except Exception as e:
-            logger.error("from milvus: " + f"创建索引 '{index_name}' 失败: {e}")
+            logger.error( f"创建索引 '{index_name}' 失败: {e}")
             raise
     
     def _get_embedding(self, content: Union[str, Image.Image]) -> List[float]:
@@ -189,16 +199,16 @@ class MilvusMessageStore:
                 return embedding[0].tolist()
             elif isinstance(content, Image.Image):
                 # 图片向量化 - 这里需要使用CLIP模型的图片编码功能
-                # 注意：sentence-transformers的CLIP模型通常不直接支持PIL图片
-                # 需要转换为合适的格式或使用其他方法
-                raise NotImplementedError("图片向量化功能需要使用专门的CLIP模型")
+                embedding = self.embedding_model.encode([content], convert_to_numpy=True)
+                logger.info( "生成图片向量成功")
+                return embedding[0].tolist()
             else:
-                raise ValueError("from milvus: " + f"不支持的内容类型: {type(content)}")
+                raise ValueError( f"不支持的内容类型: {type(content)}")
         except Exception as e:
-            logger.error("from milvus: " + f"生成向量失败: {e}")
+            logger.error( f"生成向量失败: {e}")
             raise
     
-    def _get_multimodal_embedding(self, text_content: str, image_path, fusion_strategy: str = "priority") -> List[float]:
+    def _get_multimodal_embedding(self, text_content: Optional[str], image_path, fusion_strategy: str = "priority") -> List[float]:
         """
         获取多模态消息的向量表示
         对于包含图片的消息，优先使用图片生成向量
@@ -211,19 +221,19 @@ class MilvusMessageStore:
             # 分别获取两种向量
             if text_content:
                 text_embedding = self._get_embedding(text_content)
-                logger.info("from milvus: " + "生成文本向量")
+                logger.info("生成文本向量")
             else:
-                logger.info("from milvus: " + "消息无文本内容")
+                logger.info( "消息无文本内容")
             
             if image_path:
                 image = self.image_handler.load_image(image_path)
                 if image:
                     image_embedding = self._get_embedding(image)
-                    logger.info("from milvus: " + "生成图片向量")
+                    logger.info( "生成图片向量")
             else:
-                logger.info("from milvus: " + "消息无图片内容")
+                logger.info( "消息无图片内容")
 
-            logger.info("from milvus: " + f"融合策略: {fusion_strategy}")
+            logger.info( f"融合策略: {fusion_strategy}")
             
             # 根据策略融合
             if fusion_strategy == "average" and text_embedding and image_embedding:
@@ -238,7 +248,7 @@ class MilvusMessageStore:
                 return image_embedding or text_embedding or [0.0] * 768
             
         except Exception as e:
-            logger.error("from milvus: " + f"生成多模态向量失败: {e}")
+            logger.error( f"生成多模态向量失败: {e}")
             raise
     
     async def store_message(self, message: ReceivedMessage) -> Optional[StoredMessage]:
@@ -257,30 +267,46 @@ class MilvusMessageStore:
             has_text = False
             text_content = None
             image_path = None
+            image_desc = None
             if isinstance(message.content, str):
                 text_content = message.content
             else:
-                text_content = message.content[0].text if message.content[0].type == "text" and message.content[0].text else ""
-                # 把content[1].image_url从base64转化为图片保存
-                if message.content[1].type == "image_url" and message.content[1].image_url:
-                    base64_data = message.content[1].image_url
-                    try:
-                        image_path, _ = self.image_handler.save_image_from_base64(
-                            base64_data=base64_data,
-                            user_id="admin",
-                            session_id="total"
-                        )
-                        has_image = True
-                        logger.info("from milvus: " + f"保存图片成功: {image_path}")
-                    except Exception as e:
-                        logger.error("from milvus: " + f"保存图片失败: {e}")
-            has_text = bool(text_content.strip())
+                for item in message.content:
+                    if item.type == "text" and item.text:
+                        text_content = item.text
+                    elif item.type == "image_url" and item.image_url:
+                        base64_data = item.image_url
+                        try:
+                            image_path, _ = self.image_handler.save_image_from_base64(
+                                base64_data=base64_data,
+                                user_id="admin",
+                                session_id="total"
+                            )
+                            has_image = True
+                            logger.info( f"保存图片成功: {image_path}")
+                        except Exception as e:
+                            logger.error( f"保存图片失败: {e}")
+
+            if text_content:
+                has_text = bool(text_content.strip())
             if not has_text and not has_image:
                 logger.warning("from milvus: "f"消息没有有效内容，跳过存储")
                 return None
             
             # 使用多模态方法生成向量
             embedding = self._get_multimodal_embedding(text_content, image_path)
+
+            # 生成图片描述（如果有图片）
+            if has_image and image_path:
+                try:
+                    image_desc = self.image_describer.describe_image(
+                        image_path=pic_stored_path + "/" + image_path,
+                        context=text_content or "",
+                    )
+                    logger.info( f"生成图片描述成功: {image_desc}")
+                except Exception as e:
+                    logger.error( f"生成图片描述失败: {e}")
+                    image_desc = None
 
             # 准备数据（按schema字段顺序）
             data = StoredMessage.from_dict({
@@ -289,21 +315,22 @@ class MilvusMessageStore:
                 "role": message.role,
                 "text_content": text_content or "",
                 "has_image": has_image,
-                "image_paths": [image_path] if has_image else [],
+                "image_path": image_path if has_image else "",
+                "image_desc": image_desc if has_image else "",
                 "embedding": embedding
             })
-            
+
             # 插入数据
             mr = self.collection.insert(data.to_dict())
             
             # 立即刷新以确保数据持久化
             self.collection.flush()
             
-            logger.info("from milvus: " + f"成功存储多模态消息: {data.id}")
+            logger.info( f"成功存储多模态消息: {data.id}")
             return data
             
         except Exception as e:
-            logger.error("from milvus: " + f"存储消息失败: {e}")
+            logger.error( f"存储消息失败: {e}")
             return None
     
     async def get_recent_messages(self, limit: int = 20, user_id: Optional[str] = "admin", session_id: Optional[str] = "total") -> List[SearchMessage]:
@@ -325,7 +352,7 @@ class MilvusMessageStore:
             # 执行查询，按时间戳降序排列
             results = self.collection.query(
                 expr=filter_expr if filter_expr else "",
-                output_fields=["id", "role", "text_content", "timestamp", "session_id", "user_id", "image_paths", "has_image"],
+                output_fields=["id", "role", "text_content", "timestamp", "session_id", "user_id", "image_path", "has_image", "image_desc"],
                 limit=limit
             )
             
@@ -339,14 +366,14 @@ class MilvusMessageStore:
                 search_message = SearchMessage.from_milvus_hit(hit, pic_stored_path)
                 messages.append(search_message)
             
-            logger.info("from milvus: " + f"获取到 {len(messages)} 条最近消息")
+            logger.info( f"获取到 {len(messages)} 条最近消息")
             # 调试代码
             for m in messages:
                 print(f"[Recent] {m.role}: {m.text_content[:50]}... (ID: {m.id})")
             return messages
             
         except Exception as e:
-            logger.error("from milvus: " + f"获取最近消息失败: {e}")
+            logger.error( f"获取最近消息失败: {e}")
             return []
     
     async def search_similar_messages(
@@ -357,13 +384,13 @@ class MilvusMessageStore:
         try:
             # 输入验证
             if not query_message:
-                logger.error("from milvus: " + "查询消息不能为空")
+                logger.error( "查询消息不能为空")
                 return []
 
             # 获取多模态嵌入 - 需要提供text_content和image_path
             query_embedding = query_message.embedding
             if not query_embedding:
-                logger.warning("from milvus: " + "无法生成查询嵌入")
+                logger.warning( "无法生成查询嵌入")
                 return []
 
             # 构建过滤表达式
@@ -378,7 +405,7 @@ class MilvusMessageStore:
                 search_params,
                 limit,
                 filter_expr,
-                ["id", "role", "text_content", "timestamp", "session_id", "user_id", "image_paths", "has_image"]
+                ["id", "role", "text_content", "timestamp", "session_id", "user_id", "image_path", "has_image", "image_desc"]
             )
 
             # results = await asyncio.wrap_future(results)
@@ -391,17 +418,17 @@ class MilvusMessageStore:
                 search_message = SearchMessage.from_milvus_hit(hit.get("entity"), pic_stored_path)
                 messages.append(search_message)
 
-            logger.info("from milvus: " + f"找到 {len(messages)} 条相似消息")
+            logger.info( f"找到 {len(messages)} 条相似消息")
             # 调试代码
             for m in messages:
                 print(f"[Similar] {m.role}: {m.text_content[:50]}... (ID: {m.id})")
             return messages
 
         except MilvusException as e:
-            logger.error("from milvus: " + f"Milvus 搜索失败: {e}")
+            logger.error( f"Milvus 搜索失败: {e}")
             raise
         except Exception as e:
-            logger.warning("from milvus: " + f"搜索过程中发生异常: {e}")
+            logger.warning( f"搜索过程中发生异常: {e}")
             return []
         
     def _do_search(self, query_embedding, search_params, limit, filter_expr, output_fields):

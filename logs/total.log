@@ -1,0 +1,803 @@
+2025-09-19 11:03:20,423 - MilvusMessageStore - INFO - <module>:94 - Starting Enhanced OpenAI Compatible API Server...
+2025-09-19 11:20:36,817 - bzchat.main - INFO - <module>:98 - Starting Enhanced OpenAI Compatible API Server...
+2025-09-19 11:20:41,856 - bzchat.services.milvus - INFO - __init__:56 - from milvus: 成功加载 CLIP 多模态模型: clip-ViT-L-14
+2025-09-19 11:20:41,857 - bzchat.utils.image_handler - INFO - __init__:33 - from image_handler: 图片存储路径: /home/xuyao/data/bzchat_pic
+2025-09-19 11:20:42,427 - bzchat.services.milvus - INFO - _connect:88 - from milvus: 成功连接到 Milvus Lite 本地数据库
+2025-09-19 11:20:42,434 - bzchat.services.milvus - INFO - __init__:70 - from milvus: 集合 chat_messages 已存在，直接使用
+2025-09-19 11:20:42,435 - bzchat.services.milvus - INFO - _create_index:147 - from milvus: 索引 'embedding_idx' 已存在，跳过创建
+2025-09-19 11:20:42,527 - bzchat.services.milvus - INFO - __init__:79 - from milvus: 集合 chat_messages 加载完成
+2025-09-19 11:21:32,402 - bzchat.services.milvus - INFO - _get_multimodal_embedding:215 - from milvus: 生成文本向量
+2025-09-19 11:21:32,403 - bzchat.services.milvus - INFO - _get_multimodal_embedding:225 - from milvus: 消息无图片内容
+2025-09-19 11:21:32,403 - bzchat.services.milvus - INFO - _get_multimodal_embedding:227 - from milvus: 融合策略: priority
+2025-09-19 11:21:32,423 - bzchat.services.milvus - INFO - store_message:319 - from milvus: 成功存储多模态消息: 648cebd8-bc33-4782-a734-a5c1f1187e1c
+2025-09-19 11:21:32,427 - bzchat.services.milvus - INFO - get_recent_messages:359 - from milvus: 获取到 5 条最近消息
+2025-09-19 11:21:32,433 - bzchat.services.milvus - INFO - search_similar_messages:411 - from milvus: 找到 5 条相似消息
+2025-09-19 11:21:32,433 - bzchat.services.milvus - INFO - get_context_messages:475 - 获取到 5 条上下文消息（去重后）
+2025-09-19 11:22:05,187 - bzchat.services.milvus - INFO - _disconnect:97 - from milvus: 已断开 Milvus 连接
+2025-09-19 11:30:14,996 - bzchat.__main__ - INFO - startup_event:52 - Enhanced OpenAI Compatible API Server is starting up...
+2025-09-19 11:30:20,229 - bzchat.services.milvus - INFO - __init__:56 - from milvus: 成功加载 CLIP 多模态模型: clip-ViT-L-14
+2025-09-19 11:30:20,229 - bzchat.utils.image_handler - INFO - __init__:33 - from image_handler: 图片存储路径: /home/xuyao/data/bzchat_pic
+2025-09-19 11:30:20,797 - bzchat.services.milvus - INFO - _connect:88 - from milvus: 成功连接到 Milvus Lite 本地数据库
+2025-09-19 11:30:20,804 - bzchat.services.milvus - INFO - __init__:70 - from milvus: 集合 chat_messages 已存在，直接使用
+2025-09-19 11:30:20,805 - bzchat.services.milvus - INFO - _create_index:147 - from milvus: 索引 'embedding_idx' 已存在，跳过创建
+2025-09-19 11:30:20,897 - bzchat.services.milvus - INFO - __init__:79 - from milvus: 集合 chat_messages 加载完成
+2025-09-19 11:30:20,997 - bzchat.services.milvus - INFO - _disconnect:97 - from milvus: 已断开 Milvus 连接
+2025-09-19 11:32:12,043 - bzchat.__main__ - INFO - startup_event:56 - Enhanced OpenAI Compatible API Server is starting up...
+2025-09-19 11:32:33,154 - bzchat.services.milvus - INFO - __init__:56 - from milvus: 成功加载 CLIP 多模态模型: clip-ViT-L-14
+2025-09-19 11:32:33,155 - bzchat.utils.image_handler - INFO - __init__:33 - from image_handler: 图片存储路径: /home/xuyao/data/bzchat_pic
+2025-09-19 11:32:33,727 - bzchat.services.milvus - INFO - _connect:88 - from milvus: 成功连接到 Milvus Lite 本地数据库
+2025-09-19 11:32:33,734 - bzchat.services.milvus - INFO - __init__:70 - from milvus: 集合 chat_messages 已存在，直接使用
+2025-09-19 11:32:33,735 - bzchat.services.milvus - INFO - _create_index:147 - from milvus: 索引 'embedding_idx' 已存在，跳过创建
+2025-09-19 11:32:33,827 - bzchat.services.milvus - INFO - __init__:79 - from milvus: 集合 chat_messages 加载完成
+2025-09-19 11:32:33,927 - bzchat.services.milvus - INFO - _disconnect:97 - from milvus: 已断开 Milvus 连接
+2025-09-19 11:34:17,188 - bzchat.services.milvus - INFO - __init__:56 - from milvus: 成功加载 CLIP 多模态模型: clip-ViT-L-14
+2025-09-19 11:34:17,188 - bzchat.utils.image_handler - INFO - __init__:33 - from image_handler: 图片存储路径: /home/xuyao/data/bzchat_pic
+2025-09-19 11:34:17,756 - bzchat.services.milvus - INFO - _connect:88 - from milvus: 成功连接到 Milvus Lite 本地数据库
+2025-09-19 11:34:17,763 - bzchat.services.milvus - INFO - __init__:70 - from milvus: 集合 chat_messages 已存在，直接使用
+2025-09-19 11:34:17,765 - bzchat.services.milvus - INFO - _create_index:147 - from milvus: 索引 'embedding_idx' 已存在，跳过创建
+2025-09-19 11:34:17,858 - bzchat.services.milvus - INFO - __init__:79 - from milvus: 集合 chat_messages 加载完成
+2025-09-19 11:34:43,054 - bzchat.services.milvus - INFO - _get_multimodal_embedding:215 - from milvus: 生成文本向量
+2025-09-19 11:34:43,054 - bzchat.services.milvus - INFO - _get_multimodal_embedding:225 - from milvus: 消息无图片内容
+2025-09-19 11:34:43,054 - bzchat.services.milvus - INFO - _get_multimodal_embedding:227 - from milvus: 融合策略: priority
+2025-09-19 11:34:43,069 - bzchat.services.milvus - INFO - store_message:319 - from milvus: 成功存储多模态消息: 7341a64e-f755-41b9-a043-6f858d14dbf4
+2025-09-19 11:34:43,074 - bzchat.services.milvus - INFO - get_recent_messages:359 - from milvus: 获取到 6 条最近消息
+2025-09-19 11:34:43,083 - bzchat.services.milvus - INFO - search_similar_messages:411 - from milvus: 找到 6 条相似消息
+2025-09-19 11:34:43,083 - bzchat.services.milvus - INFO - get_context_messages:475 - 获取到 6 条上下文消息（去重后）
+2025-09-19 12:43:02,090 - bzchat.services.milvus - INFO - _disconnect:97 - from milvus: 已断开 Milvus 连接
+2025-09-19 12:45:52,311 - bzchat.services.milvus - INFO - __init__:57 - 成功加载 CLIP 多模态模型: clip-ViT-L-14
+2025-09-19 12:45:52,312 - bzchat.utils.image_handler - INFO - __init__:33 - from image_handler: 图片存储路径: /home/xuyao/data/bzchat_pic
+2025-09-19 12:45:52,312 - bzchat.utils.image_describer - INFO - _load_model:34 - 正在加载图片描述模型: /home/xuyao/data/Qwen2.5-VL-3B-Instruct
+2025-09-19 12:45:52,325 - bzchat.utils.image_describer - ERROR - _load_model:50 - 加载图片描述模型失败: /home/xuyao/anaconda3/envs/bzchat/lib/python3.10/site-packages/flash_attn_2_cuda.cpython-310-x86_64-linux-gnu.so: undefined symbol: _ZN3c104cuda9SetDeviceEa
+2025-09-19 12:45:52,325 - bzchat.main - ERROR - <module>:46 - 初始化Milvus存储器失败: /home/xuyao/anaconda3/envs/bzchat/lib/python3.10/site-packages/flash_attn_2_cuda.cpython-310-x86_64-linux-gnu.so: undefined symbol: _ZN3c104cuda9SetDeviceEa
+2025-09-19 12:45:52,325 - bzchat.services.milvus - INFO - _disconnect:101 - 已断开 Milvus 连接
+2025-09-19 13:06:54,804 - bzchat.services.milvus - INFO - __init__:57 - 成功加载 CLIP 多模态模型: clip-ViT-L-14
+2025-09-19 13:06:54,805 - bzchat.utils.image_handler - INFO - __init__:33 - from image_handler: 图片存储路径: /home/xuyao/data/bzchat_pic
+2025-09-19 13:06:54,805 - bzchat.utils.image_describer - INFO - _load_model:34 - 正在加载图片描述模型: /home/xuyao/data/Qwen2.5-VL-3B-Instruct
+2025-09-19 13:06:59,016 - bzchat.utils.image_describer - INFO - _load_model:47 - 图片描述模型加载成功
+2025-09-19 13:06:59,591 - bzchat.services.milvus - INFO - _connect:92 - 成功连接到 Milvus Lite 本地数据库
+2025-09-19 13:06:59,598 - bzchat.services.milvus - INFO - __init__:74 - 集合 chat_messages 已存在，直接使用
+2025-09-19 13:06:59,600 - bzchat.services.milvus - INFO - _create_index:152 - 索引 'embedding_idx' 已存在，跳过创建
+2025-09-19 13:06:59,692 - bzchat.services.milvus - INFO - __init__:83 - 集合 chat_messages 加载完成
+2025-09-19 13:10:03,976 - bzchat.services.milvus - INFO - _get_multimodal_embedding:220 - 生成文本向量
+2025-09-19 13:10:03,976 - bzchat.services.milvus - INFO - _get_multimodal_embedding:230 - 消息无图片内容
+2025-09-19 13:10:03,976 - bzchat.services.milvus - INFO - _get_multimodal_embedding:232 - 融合策略: priority
+2025-09-19 13:10:03,977 - bzchat.services.milvus - ERROR - store_message:329 - 存储消息失败: 1 validation error for StoredMessage
+embedding
+  Input should be a valid number [type=float_type, input_value=[-0.027544602751731873, -...536, 0.4231259524822235], input_type=list]
+    For further information visit https://errors.pydantic.dev/2.11/v/float_type
+2025-09-19 13:15:33,932 - bzchat.services.milvus - INFO - _disconnect:101 - 已断开 Milvus 连接
+2025-09-19 13:16:16,725 - bzchat.services.milvus - INFO - __init__:57 - 成功加载 CLIP 多模态模型: clip-ViT-L-14
+2025-09-19 13:16:16,725 - bzchat.utils.image_handler - INFO - __init__:33 - from image_handler: 图片存储路径: /home/xuyao/data/bzchat_pic
+2025-09-19 13:16:16,725 - bzchat.utils.image_describer - INFO - _load_model:34 - 正在加载图片描述模型: /home/xuyao/data/Qwen2.5-VL-3B-Instruct
+2025-09-19 13:16:20,926 - bzchat.utils.image_describer - INFO - _load_model:47 - 图片描述模型加载成功
+2025-09-19 13:16:21,499 - bzchat.services.milvus - INFO - _connect:92 - 成功连接到 Milvus Lite 本地数据库
+2025-09-19 13:16:21,506 - bzchat.services.milvus - INFO - __init__:74 - 集合 chat_messages 已存在，直接使用
+2025-09-19 13:16:21,507 - bzchat.services.milvus - INFO - _create_index:152 - 索引 'embedding_idx' 已存在，跳过创建
+2025-09-19 13:16:21,600 - bzchat.services.milvus - INFO - __init__:83 - 集合 chat_messages 加载完成
+2025-09-19 13:16:30,445 - bzchat.services.milvus - INFO - _get_multimodal_embedding:220 - 生成文本向量
+2025-09-19 13:16:30,446 - bzchat.services.milvus - INFO - _get_multimodal_embedding:230 - 消息无图片内容
+2025-09-19 13:16:30,446 - bzchat.services.milvus - INFO - _get_multimodal_embedding:232 - 融合策略: priority
+2025-09-19 13:16:30,446 - bzchat.services.milvus - ERROR - store_message:331 - 存储消息失败: 1 validation error for StoredMessage
+embedding
+  Input should be a valid number [type=float_type, input_value=[-0.027544602751731873, -...536, 0.4231259524822235], input_type=list]
+    For further information visit https://errors.pydantic.dev/2.11/v/float_type
+2025-09-19 13:30:38,113 - bzchat.utils.image_handler - INFO - save_image_from_binary:106 - from image_handler: 图片保存成功: user_admin/session_total/image_d7354e4a-2360-4e1f-9e83-228ae79d69f3.png
+2025-09-19 13:30:38,114 - bzchat.services.milvus - INFO - store_message:284 - 保存图片成功: user_admin/session_total/image_d7354e4a-2360-4e1f-9e83-228ae79d69f3.png
+2025-09-19 13:30:38,143 - bzchat.services.milvus - INFO - _get_multimodal_embedding:220 - 生成文本向量
+2025-09-19 13:30:38,312 - bzchat.services.milvus - INFO - _get_embedding:199 - 生成图片向量成功
+2025-09-19 13:30:38,312 - bzchat.services.milvus - INFO - _get_multimodal_embedding:228 - 生成图片向量
+2025-09-19 13:30:38,312 - bzchat.services.milvus - INFO - _get_multimodal_embedding:232 - 融合策略: priority
+2025-09-19 13:30:38,312 - bzchat.utils.image_describer - ERROR - describe_image:158 - 生成图片描述失败 user_admin/session_total/image_d7354e4a-2360-4e1f-9e83-228ae79d69f3.png: 图片文件不存在: user_admin/session_total/image_d7354e4a-2360-4e1f-9e83-228ae79d69f3.png
+2025-09-19 13:30:38,312 - bzchat.services.milvus - ERROR - store_message:306 - 生成图片描述失败: 图片文件不存在: user_admin/session_total/image_d7354e4a-2360-4e1f-9e83-228ae79d69f3.png
+2025-09-19 13:30:38,313 - bzchat.services.milvus - ERROR - store_message:331 - 存储消息失败: 1 validation error for StoredMessage
+embedding
+  Input should be a valid number [type=float_type, input_value=[-0.23537269234657288, 0....36, -0.5799921154975891], input_type=list]
+    For further information visit https://errors.pydantic.dev/2.11/v/float_type
+2025-09-19 13:32:14,355 - bzchat.utils.image_handler - INFO - save_image_from_binary:106 - from image_handler: 图片保存成功: user_admin/session_total/image_b7e186c3-ee31-43da-b331-bffbb5d5797f.png
+2025-09-19 13:32:14,355 - bzchat.services.milvus - INFO - store_message:284 - 保存图片成功: user_admin/session_total/image_b7e186c3-ee31-43da-b331-bffbb5d5797f.png
+2025-09-19 13:32:14,385 - bzchat.services.milvus - INFO - _get_multimodal_embedding:220 - 生成文本向量
+2025-09-19 13:32:14,415 - bzchat.services.milvus - INFO - _get_embedding:199 - 生成图片向量成功
+2025-09-19 13:32:14,415 - bzchat.services.milvus - INFO - _get_multimodal_embedding:228 - 生成图片向量
+2025-09-19 13:32:14,415 - bzchat.services.milvus - INFO - _get_multimodal_embedding:232 - 融合策略: priority
+2025-09-19 13:32:14,415 - bzchat.utils.image_describer - ERROR - describe_image:158 - 生成图片描述失败 user_admin/session_total/image_b7e186c3-ee31-43da-b331-bffbb5d5797f.png: 图片文件不存在: user_admin/session_total/image_b7e186c3-ee31-43da-b331-bffbb5d5797f.png
+2025-09-19 13:32:14,415 - bzchat.services.milvus - ERROR - store_message:306 - 生成图片描述失败: 图片文件不存在: user_admin/session_total/image_b7e186c3-ee31-43da-b331-bffbb5d5797f.png
+2025-09-19 13:32:14,416 - bzchat.services.milvus - ERROR - store_message:331 - 存储消息失败: 1 validation error for StoredMessage
+embedding
+  Input should be a valid number [type=float_type, input_value=[-0.23537269234657288, 0....36, -0.5799921154975891], input_type=list]
+    For further information visit https://errors.pydantic.dev/2.11/v/float_type
+2025-09-19 13:34:23,926 - bzchat.services.milvus - INFO - _disconnect:101 - 已断开 Milvus 连接
+2025-09-19 13:34:35,248 - bzchat.services.milvus - INFO - __init__:57 - 成功加载 CLIP 多模态模型: clip-ViT-L-14
+2025-09-19 13:34:35,248 - bzchat.utils.image_handler - INFO - __init__:33 - from image_handler: 图片存储路径: /home/xuyao/data/bzchat_pic
+2025-09-19 13:34:35,249 - bzchat.utils.image_describer - INFO - _load_model:35 - 正在加载图片描述模型: /home/xuyao/data/Qwen2.5-VL-3B-Instruct
+2025-09-19 13:34:39,479 - bzchat.utils.image_describer - INFO - _load_model:48 - 图片描述模型加载成功
+2025-09-19 13:34:40,076 - bzchat.services.milvus - INFO - _connect:92 - 成功连接到 Milvus Lite 本地数据库
+2025-09-19 13:34:40,082 - bzchat.services.milvus - INFO - __init__:74 - 集合 chat_messages 已存在，直接使用
+2025-09-19 13:34:40,084 - bzchat.services.milvus - INFO - _create_index:152 - 索引 'embedding_idx' 已存在，跳过创建
+2025-09-19 13:34:40,178 - bzchat.services.milvus - INFO - __init__:83 - 集合 chat_messages 加载完成
+2025-09-19 13:34:45,513 - bzchat.utils.image_handler - INFO - save_image_from_binary:106 - from image_handler: 图片保存成功: user_admin/session_total/image_5396d608-e135-4ce0-9181-bba6399ce960.png
+2025-09-19 13:34:45,513 - bzchat.services.milvus - INFO - store_message:282 - 保存图片成功: user_admin/session_total/image_5396d608-e135-4ce0-9181-bba6399ce960.png
+2025-09-19 13:34:45,747 - bzchat.services.milvus - INFO - _get_multimodal_embedding:220 - 生成文本向量
+2025-09-19 13:34:45,888 - bzchat.services.milvus - INFO - _get_embedding:199 - 生成图片向量成功
+2025-09-19 13:34:45,888 - bzchat.services.milvus - INFO - _get_multimodal_embedding:228 - 生成图片向量
+2025-09-19 13:34:45,888 - bzchat.services.milvus - INFO - _get_multimodal_embedding:232 - 融合策略: priority
+2025-09-19 13:34:58,782 - bzchat.utils.image_describer - INFO - describe_image:155 - 成功生成图片描述: /home/xuyao/data/bzchat_pic/user_admin/session_total/image_5396d608-e135-4ce0-9181-bba6399ce960.png
+2025-09-19 13:34:58,782 - bzchat.services.milvus - INFO - store_message:302 - 生成图片描述成功: 【场景类型】  
+室外
+
+【主要对象】  
+- 工地建筑工地：位于图片中央，正在进行建设工作。
+- 周围建筑物：在工地周围，有几栋高层建筑。
+- 施工设备：包括起重机和其他施工机械。
+- 绿化区域：在工地周围有一些树木和草地。
+
+【文字内容】  
+- “吴永辉”
+- “黄梅雨季，雨水调蓄工程的工地。”
+- “上海市·复旦大学邯郸校区逸夫楼”
+
+【颜色与风格】  
+- 整体色调以灰色和蓝色为主，反映了工业和建设的氛围。
+- 光影效果较为柔和，没有明显的艺术风格。
+
+【潜在意图或上下文线索】  
+- 这张图片可能是用于展示某个工程项目或建筑进展的社交媒体帖子。
+
+【注意】  
+- 以上描述基于图片中的可见内容，未涉及图片之外的信息。
+
+【上下文消息】
+随图片而来的上下文消息（如果有）：
+无
+2025-09-19 13:34:58,783 - bzchat.services.milvus - ERROR - store_message:329 - 存储消息失败: 1 validation error for StoredMessage
+embedding
+  Input should be a valid number [type=float_type, input_value=[-0.23537269234657288, 0....36, -0.5799921154975891], input_type=list]
+    For further information visit https://errors.pydantic.dev/2.11/v/float_type
+2025-09-19 13:39:08,353 - bzchat.services.milvus - INFO - _get_multimodal_embedding:220 - 生成文本向量
+2025-09-19 13:39:08,353 - bzchat.services.milvus - INFO - _get_multimodal_embedding:230 - 消息无图片内容
+2025-09-19 13:39:08,353 - bzchat.services.milvus - INFO - _get_multimodal_embedding:232 - 融合策略: priority
+2025-09-19 13:39:08,354 - bzchat.services.milvus - ERROR - store_message:329 - 存储消息失败: 1 validation error for StoredMessage
+embedding
+  Input should be a valid number [type=float_type, input_value=[-0.10844399034976959, -0...682, 0.2978598177433014], input_type=list]
+    For further information visit https://errors.pydantic.dev/2.11/v/float_type
+2025-09-19 13:40:29,103 - bzchat.services.milvus - INFO - _get_multimodal_embedding:220 - 生成文本向量
+2025-09-19 13:40:29,103 - bzchat.services.milvus - INFO - _get_multimodal_embedding:230 - 消息无图片内容
+2025-09-19 13:40:29,103 - bzchat.services.milvus - INFO - _get_multimodal_embedding:232 - 融合策略: priority
+2025-09-19 13:40:29,104 - bzchat.services.milvus - ERROR - store_message:329 - 存储消息失败: 1 validation error for StoredMessage
+embedding
+  Input should be a valid number [type=float_type, input_value=[-0.10844399034976959, -0...682, 0.2978598177433014], input_type=list]
+    For further information visit https://errors.pydantic.dev/2.11/v/float_type
+2025-09-19 13:40:48,415 - bzchat.services.milvus - INFO - _get_multimodal_embedding:220 - 生成文本向量
+2025-09-19 13:40:48,415 - bzchat.services.milvus - INFO - _get_multimodal_embedding:230 - 消息无图片内容
+2025-09-19 13:40:48,415 - bzchat.services.milvus - INFO - _get_multimodal_embedding:232 - 融合策略: priority
+2025-09-19 13:40:48,416 - bzchat.services.milvus - ERROR - store_message:329 - 存储消息失败: 1 validation error for StoredMessage
+embedding
+  Input should be a valid number [type=float_type, input_value=[-0.10844399034976959, -0...682, 0.2978598177433014], input_type=list]
+    For further information visit https://errors.pydantic.dev/2.11/v/float_type
+2025-09-19 13:43:51,300 - bzchat.services.milvus - INFO - _disconnect:101 - 已断开 Milvus 连接
+2025-09-19 13:44:03,359 - bzchat.services.milvus - INFO - __init__:57 - 成功加载 CLIP 多模态模型: clip-ViT-L-14
+2025-09-19 13:44:03,360 - bzchat.utils.image_handler - INFO - __init__:33 - from image_handler: 图片存储路径: /home/xuyao/data/bzchat_pic
+2025-09-19 13:44:03,360 - bzchat.utils.image_describer - INFO - _load_model:35 - 正在加载图片描述模型: /home/xuyao/data/Qwen2.5-VL-3B-Instruct
+2025-09-19 13:44:07,546 - bzchat.utils.image_describer - INFO - _load_model:48 - 图片描述模型加载成功
+2025-09-19 13:44:08,117 - bzchat.services.milvus - INFO - _connect:92 - 成功连接到 Milvus Lite 本地数据库
+2025-09-19 13:44:08,122 - bzchat.services.milvus - INFO - __init__:74 - 集合 chat_messages 已存在，直接使用
+2025-09-19 13:44:08,124 - bzchat.services.milvus - INFO - _create_index:152 - 索引 'embedding_idx' 已存在，跳过创建
+2025-09-19 13:44:08,214 - bzchat.services.milvus - INFO - __init__:83 - 集合 chat_messages 加载完成
+2025-09-19 13:44:29,035 - bzchat.utils.image_handler - INFO - save_image_from_binary:106 - from image_handler: 图片保存成功: user_admin/session_total/image_c2bbeeef-08b8-43e8-aea5-a998ec212c2d.png
+2025-09-19 13:44:29,035 - bzchat.services.milvus - INFO - store_message:282 - 保存图片成功: user_admin/session_total/image_c2bbeeef-08b8-43e8-aea5-a998ec212c2d.png
+2025-09-19 13:44:29,294 - bzchat.services.milvus - INFO - _get_multimodal_embedding:220 - 生成文本向量
+2025-09-19 13:44:29,436 - bzchat.services.milvus - INFO - _get_embedding:199 - 生成图片向量成功
+2025-09-19 13:44:29,436 - bzchat.services.milvus - INFO - _get_multimodal_embedding:228 - 生成图片向量
+2025-09-19 13:44:29,436 - bzchat.services.milvus - INFO - _get_multimodal_embedding:232 - 融合策略: priority
+2025-09-19 13:44:42,322 - bzchat.utils.image_describer - INFO - describe_image:155 - 成功生成图片描述: /home/xuyao/data/bzchat_pic/user_admin/session_total/image_c2bbeeef-08b8-43e8-aea5-a998ec212c2d.png
+2025-09-19 13:44:42,322 - bzchat.services.milvus - INFO - store_message:302 - 生成图片描述成功: 【场景类型】  
+室外
+
+【主要对象】  
+- 工地建筑工地：位于图片中央，正在进行建设工作。
+- 周围建筑物：在工地周围，有几栋高层建筑。
+- 施工设备：包括起重机和其他施工机械。
+- 绿化区域：在工地周围有一些树木和草地。
+
+【文字内容】  
+- “吴永辉”
+- “黄梅雨季，雨水调蓄工程的工地。”
+- “上海市·复旦大学邯郸校区逸夫楼”
+
+【颜色与风格】  
+- 整体色调以灰色和蓝色为主，反映了工业和建设的氛围。
+- 光影效果较为柔和，没有明显的艺术风格。
+
+【潜在意图或上下文线索】  
+- 这张图片可能是用于展示某个工程项目或建筑进展的社交媒体帖子。
+
+【注意】  
+- 以上描述基于图片中的可见内容，未涉及图片之外的信息。
+
+【上下文消息】
+随图片而来的上下文消息（如果有）：
+无
+2025-09-19 13:44:42,326 - bzchat.services.milvus - ERROR - store_message:329 - 存储消息失败: <DataNotMatchException: (code=1, message=Attempt to insert an unexpected field `image_path` to collection without enabling dynamic field)>
+2025-09-19 13:46:41,704 - bzchat.services.milvus - INFO - _disconnect:101 - 已断开 Milvus 连接
+2025-09-19 13:47:44,640 - bzchat.services.milvus - INFO - __init__:57 - 成功加载 CLIP 多模态模型: clip-ViT-L-14
+2025-09-19 13:47:44,640 - bzchat.utils.image_handler - INFO - __init__:33 - from image_handler: 图片存储路径: /home/xuyao/data/bzchat_pic
+2025-09-19 13:47:44,640 - bzchat.utils.image_describer - INFO - _load_model:35 - 正在加载图片描述模型: /home/xuyao/data/Qwen2.5-VL-3B-Instruct
+2025-09-19 13:47:48,835 - bzchat.utils.image_describer - INFO - _load_model:48 - 图片描述模型加载成功
+2025-09-19 13:47:49,410 - bzchat.services.milvus - INFO - _connect:92 - 成功连接到 Milvus Lite 本地数据库
+2025-09-19 13:47:49,426 - bzchat.services.milvus - INFO - _create_collection:133 - 成功创建多模态集合: chat_messages
+2025-09-19 13:47:49,429 - bzchat.services.milvus - INFO - _create_index:168 - 正在为字段 'embedding' 创建索引 'embedding_idx'...
+2025-09-19 13:47:49,936 - bzchat.services.milvus - INFO - _create_index:175 - 成功创建向量索引 'embedding_idx' (type=IVF_FLAT, metric=COSINE)
+2025-09-19 13:47:49,938 - bzchat.services.milvus - INFO - __init__:83 - 集合 chat_messages 加载完成
+2025-09-19 13:48:01,965 - bzchat.utils.image_handler - INFO - save_image_from_binary:106 - from image_handler: 图片保存成功: user_admin/session_total/image_6deb3cb7-5f2e-44fb-bb50-a4d029117a94.png
+2025-09-19 13:48:01,965 - bzchat.services.milvus - INFO - store_message:282 - 保存图片成功: user_admin/session_total/image_6deb3cb7-5f2e-44fb-bb50-a4d029117a94.png
+2025-09-19 13:48:02,231 - bzchat.services.milvus - INFO - _get_multimodal_embedding:220 - 生成文本向量
+2025-09-19 13:48:02,374 - bzchat.services.milvus - INFO - _get_embedding:199 - 生成图片向量成功
+2025-09-19 13:48:02,374 - bzchat.services.milvus - INFO - _get_multimodal_embedding:228 - 生成图片向量
+2025-09-19 13:48:02,374 - bzchat.services.milvus - INFO - _get_multimodal_embedding:232 - 融合策略: priority
+2025-09-19 13:48:15,369 - bzchat.utils.image_describer - INFO - describe_image:155 - 成功生成图片描述: /home/xuyao/data/bzchat_pic/user_admin/session_total/image_6deb3cb7-5f2e-44fb-bb50-a4d029117a94.png
+2025-09-19 13:48:15,369 - bzchat.services.milvus - INFO - store_message:302 - 生成图片描述成功: 【场景类型】  
+室外
+
+【主要对象】  
+- 工地建筑工地：位于图片中央，正在进行建设工作。
+- 周围建筑物：在工地周围，有几栋高层建筑。
+- 施工设备：包括起重机和其他施工机械。
+- 绿化区域：在工地周围有一些树木和草地。
+
+【文字内容】  
+- “吴永辉”
+- “黄梅雨季，雨水调蓄工程的工地。”
+- “上海市·复旦大学邯郸校区逸夫楼”
+
+【颜色与风格】  
+- 整体色调以灰色和蓝色为主，反映了工业和建设的氛围。
+- 光影效果较为柔和，没有明显的艺术风格。
+
+【潜在意图或上下文线索】  
+- 这张图片可能是用于展示某个工程项目或建筑进展的社交媒体帖子。
+
+【注意】  
+- 以上描述基于图片中的可见内容，未涉及图片之外的信息。
+
+【上下文消息】
+随图片而来的上下文消息（如果有）：
+无
+2025-09-19 13:48:15,462 - bzchat.services.milvus - INFO - store_message:325 - 成功存储多模态消息: fce5b12b-3b6b-46a4-abcf-875612b12f1e
+2025-09-19 13:48:15,466 - bzchat.services.milvus - INFO - get_recent_messages:365 - 获取到 1 条最近消息
+2025-09-19 13:48:15,474 - bzchat.services.milvus - INFO - search_similar_messages:417 - 找到 1 条相似消息
+2025-09-19 13:48:15,475 - bzchat.services.milvus - INFO - get_context_messages:481 - 获取到 1 条上下文消息（去重后）
+2025-09-19 13:48:47,475 - bzchat.services.milvus - INFO - _disconnect:101 - 已断开 Milvus 连接
+2025-09-20 04:11:31,750 - bzchat.services.milvus - INFO - __init__:57 - 成功加载 CLIP 多模态模型: clip-ViT-L-14
+2025-09-20 04:11:31,750 - bzchat.utils.image_handler - INFO - __init__:33 - from image_handler: 图片存储路径: /home/xuyao/data/bzchat_pic
+2025-09-20 04:11:31,750 - bzchat.utils.image_describer - INFO - _load_model:35 - 正在加载图片描述模型: /home/xuyao/data/Qwen2.5-VL-3B-Instruct
+2025-09-20 04:11:35,933 - bzchat.utils.image_describer - INFO - _load_model:48 - 图片描述模型加载成功
+2025-09-20 04:11:36,507 - bzchat.services.milvus - INFO - _connect:92 - 成功连接到 Milvus Lite 本地数据库
+2025-09-20 04:11:36,513 - bzchat.services.milvus - INFO - __init__:74 - 集合 chat_messages 已存在，直接使用
+2025-09-20 04:11:36,515 - bzchat.services.milvus - INFO - _create_index:152 - 索引 'embedding_idx' 已存在，跳过创建
+2025-09-20 04:11:36,608 - bzchat.services.milvus - INFO - __init__:83 - 集合 chat_messages 加载完成
+2025-09-20 04:11:36,609 - bzchat.services.deepseek - ERROR - __init__:49 - API key is required for DeepSeekAPI
+2025-09-20 04:14:27,740 - bzchat.services.milvus - INFO - __init__:57 - 成功加载 CLIP 多模态模型: clip-ViT-L-14
+2025-09-20 04:14:27,740 - bzchat.utils.image_handler - INFO - __init__:33 - from image_handler: 图片存储路径: /home/xuyao/data/bzchat_pic
+2025-09-20 04:14:27,740 - bzchat.utils.image_describer - INFO - _load_model:35 - 正在加载图片描述模型: /home/xuyao/data/Qwen2.5-VL-3B-Instruct
+2025-09-20 04:14:31,923 - bzchat.utils.image_describer - INFO - _load_model:48 - 图片描述模型加载成功
+2025-09-20 04:14:32,498 - bzchat.services.milvus - INFO - _connect:92 - 成功连接到 Milvus Lite 本地数据库
+2025-09-20 04:14:32,502 - bzchat.services.milvus - INFO - __init__:74 - 集合 chat_messages 已存在，直接使用
+2025-09-20 04:14:32,504 - bzchat.services.milvus - INFO - _create_index:152 - 索引 'embedding_idx' 已存在，跳过创建
+2025-09-20 04:14:32,598 - bzchat.services.milvus - INFO - __init__:83 - 集合 chat_messages 加载完成
+2025-09-20 04:14:32,598 - bzchat.services.deepseek - ERROR - __init__:49 - API key is required for DeepSeekAPI
+2025-09-20 04:15:08,884 - bzchat.services.milvus - INFO - __init__:57 - 成功加载 CLIP 多模态模型: clip-ViT-L-14
+2025-09-20 04:15:08,884 - bzchat.utils.image_handler - INFO - __init__:33 - from image_handler: 图片存储路径: /home/xuyao/data/bzchat_pic
+2025-09-20 04:15:08,884 - bzchat.utils.image_describer - INFO - _load_model:35 - 正在加载图片描述模型: /home/xuyao/data/Qwen2.5-VL-3B-Instruct
+2025-09-20 04:15:13,070 - bzchat.utils.image_describer - INFO - _load_model:48 - 图片描述模型加载成功
+2025-09-20 04:15:13,641 - bzchat.services.milvus - INFO - _connect:92 - 成功连接到 Milvus Lite 本地数据库
+2025-09-20 04:15:13,648 - bzchat.services.milvus - INFO - __init__:74 - 集合 chat_messages 已存在，直接使用
+2025-09-20 04:15:13,650 - bzchat.services.milvus - INFO - _create_index:152 - 索引 'embedding_idx' 已存在，跳过创建
+2025-09-20 04:15:13,743 - bzchat.services.milvus - INFO - __init__:83 - 集合 chat_messages 加载完成
+2025-09-20 04:17:01,619 - bzchat.services.milvus - INFO - _get_multimodal_embedding:220 - 生成文本向量
+2025-09-20 04:17:01,619 - bzchat.services.milvus - INFO - _get_multimodal_embedding:230 - 消息无图片内容
+2025-09-20 04:17:01,619 - bzchat.services.milvus - INFO - _get_multimodal_embedding:232 - 融合策略: priority
+2025-09-20 04:20:32,691 - bzchat.services.milvus - ERROR - store_message:329 - 存储消息失败: <MilvusException: (code=<bound method _InactiveRpcError.code of <_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.UNAVAILABLE
+	details = "failed to connect to all addresses; last error: UNKNOWN: unix:/tmp/tmpg2lvrfgg_milvus_lite.db.sock: connect: Connection refused (111)"
+	debug_error_string = "UNKNOWN:Error received from peer  {grpc_message:"failed to connect to all addresses; last error: UNKNOWN: unix:/tmp/tmpg2lvrfgg_milvus_lite.db.sock: connect: Connection refused (111)", grpc_status:14}"
+>>, message=[insert_rows] Retry run out of 75 retry times, message=failed to connect to all addresses; last error: UNKNOWN: unix:/tmp/tmpg2lvrfgg_milvus_lite.db.sock: connect: Connection refused (111))>
+2025-09-20 04:20:34,610 - bzchat.services.milvus - INFO - _get_multimodal_embedding:220 - 生成文本向量
+2025-09-20 04:20:34,610 - bzchat.services.milvus - INFO - _get_multimodal_embedding:230 - 消息无图片内容
+2025-09-20 04:20:34,610 - bzchat.services.milvus - INFO - _get_multimodal_embedding:232 - 融合策略: priority
+2025-09-20 04:24:05,538 - bzchat.services.milvus - ERROR - store_message:329 - 存储消息失败: <MilvusException: (code=<bound method _InactiveRpcError.code of <_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.UNAVAILABLE
+	details = "failed to connect to all addresses; last error: UNKNOWN: unix:/tmp/tmpg2lvrfgg_milvus_lite.db.sock: connect: Connection refused (111)"
+	debug_error_string = "UNKNOWN:Error received from peer  {grpc_status:14, grpc_message:"failed to connect to all addresses; last error: UNKNOWN: unix:/tmp/tmpg2lvrfgg_milvus_lite.db.sock: connect: Connection refused (111)"}"
+>>, message=[insert_rows] Retry run out of 75 retry times, message=failed to connect to all addresses; last error: UNKNOWN: unix:/tmp/tmpg2lvrfgg_milvus_lite.db.sock: connect: Connection refused (111))>
+2025-09-20 04:24:08,605 - bzchat.services.milvus - INFO - _get_multimodal_embedding:220 - 生成文本向量
+2025-09-20 04:24:08,606 - bzchat.services.milvus - INFO - _get_multimodal_embedding:230 - 消息无图片内容
+2025-09-20 04:24:08,606 - bzchat.services.milvus - INFO - _get_multimodal_embedding:232 - 融合策略: priority
+2025-09-20 04:44:54,978 - bzchat.services.milvus - INFO - __init__:57 - 成功加载 CLIP 多模态模型: clip-ViT-L-14
+2025-09-20 04:44:54,979 - bzchat.utils.image_handler - INFO - __init__:33 - from image_handler: 图片存储路径: /home/xuyao/data/bzchat_pic
+2025-09-20 04:44:54,979 - bzchat.utils.image_describer - INFO - _load_model:35 - 正在加载图片描述模型: /home/xuyao/data/Qwen2.5-VL-3B-Instruct
+2025-09-20 04:44:59,165 - bzchat.utils.image_describer - INFO - _load_model:48 - 图片描述模型加载成功
+2025-09-20 04:44:59,737 - bzchat.services.milvus - INFO - _connect:92 - 成功连接到 Milvus Lite 本地数据库
+2025-09-20 04:44:59,744 - bzchat.services.milvus - INFO - __init__:74 - 集合 chat_messages 已存在，直接使用
+2025-09-20 04:44:59,745 - bzchat.services.milvus - INFO - _create_index:152 - 索引 'embedding_idx' 已存在，跳过创建
+2025-09-20 04:44:59,841 - bzchat.services.milvus - INFO - __init__:83 - 集合 chat_messages 加载完成
+2025-09-20 04:45:28,944 - bzchat.services.milvus - INFO - _get_multimodal_embedding:220 - 生成文本向量
+2025-09-20 04:45:28,944 - bzchat.services.milvus - INFO - _get_multimodal_embedding:230 - 消息无图片内容
+2025-09-20 04:45:28,944 - bzchat.services.milvus - INFO - _get_multimodal_embedding:232 - 融合策略: priority
+2025-09-20 04:59:38,722 - bzchat.services.milvus - INFO - __init__:57 - 成功加载 CLIP 多模态模型: clip-ViT-L-14
+2025-09-20 04:59:38,722 - bzchat.utils.image_handler - INFO - __init__:33 - from image_handler: 图片存储路径: /home/xuyao/data/bzchat_pic
+2025-09-20 04:59:38,722 - bzchat.utils.image_describer - INFO - _load_model:35 - 正在加载图片描述模型: /home/xuyao/data/Qwen2.5-VL-3B-Instruct
+2025-09-20 04:59:42,911 - bzchat.utils.image_describer - INFO - _load_model:48 - 图片描述模型加载成功
+2025-09-20 04:59:43,484 - bzchat.services.milvus - INFO - _connect:92 - 成功连接到 Milvus Lite 本地数据库
+2025-09-20 04:59:43,491 - bzchat.services.milvus - INFO - __init__:74 - 集合 chat_messages 已存在，直接使用
+2025-09-20 04:59:43,493 - bzchat.services.milvus - INFO - _create_index:152 - 索引 'embedding_idx' 已存在，跳过创建
+2025-09-20 04:59:43,586 - bzchat.services.milvus - INFO - __init__:83 - 集合 chat_messages 加载完成
+2025-09-20 04:59:55,661 - bzchat.services.milvus - INFO - _get_multimodal_embedding:220 - 生成文本向量
+2025-09-20 04:59:55,661 - bzchat.services.milvus - INFO - _get_multimodal_embedding:230 - 消息无图片内容
+2025-09-20 04:59:55,661 - bzchat.services.milvus - INFO - _get_multimodal_embedding:232 - 融合策略: priority
+2025-09-20 05:03:26,716 - bzchat.services.milvus - ERROR - store_message:329 - 存储消息失败: <MilvusException: (code=<bound method _InactiveRpcError.code of <_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.UNAVAILABLE
+	details = "failed to connect to all addresses; last error: UNKNOWN: unix:/tmp/tmppla0s83u_milvus_lite.db.sock: connect: Connection refused (111)"
+	debug_error_string = "UNKNOWN:Error received from peer  {grpc_status:14, grpc_message:"failed to connect to all addresses; last error: UNKNOWN: unix:/tmp/tmppla0s83u_milvus_lite.db.sock: connect: Connection refused (111)"}"
+>>, message=[insert_rows] Retry run out of 75 retry times, message=failed to connect to all addresses; last error: UNKNOWN: unix:/tmp/tmppla0s83u_milvus_lite.db.sock: connect: Connection refused (111))>
+2025-09-20 05:03:58,178 - bzchat.services.milvus - INFO - _disconnect:101 - 已断开 Milvus 连接
+2025-09-20 05:10:44,342 - bzchat.services.milvus - INFO - __init__:57 - 成功加载 CLIP 多模态模型: clip-ViT-L-14
+2025-09-20 05:10:44,342 - bzchat.utils.image_handler - INFO - __init__:33 - from image_handler: 图片存储路径: /home/xuyao/data/bzchat_pic
+2025-09-20 05:10:44,343 - bzchat.utils.image_describer - INFO - _load_model:35 - 正在加载图片描述模型: /home/xuyao/data/Qwen2.5-VL-3B-Instruct
+2025-09-20 05:10:48,552 - bzchat.utils.image_describer - INFO - _load_model:48 - 图片描述模型加载成功
+2025-09-20 05:10:49,129 - bzchat.services.milvus - INFO - _connect:92 - 成功连接到 Milvus Lite 本地数据库
+2025-09-20 05:10:49,134 - bzchat.services.milvus - INFO - __init__:74 - 集合 chat_messages 已存在，直接使用
+2025-09-20 05:10:49,136 - bzchat.services.milvus - INFO - _create_index:152 - 索引 'embedding_idx' 已存在，跳过创建
+2025-09-20 05:10:49,227 - bzchat.services.milvus - INFO - __init__:83 - 集合 chat_messages 加载完成
+2025-09-20 05:18:22,812 - bzchat.services.milvus - INFO - _disconnect:101 - 已断开 Milvus 连接
+2025-09-20 05:40:15,853 - bzchat.services.milvus - INFO - __init__:57 - 成功加载 CLIP 多模态模型: clip-ViT-L-14
+2025-09-20 05:40:15,853 - bzchat.utils.image_handler - INFO - __init__:33 - from image_handler: 图片存储路径: /home/xuyao/data/bzchat_pic
+2025-09-20 05:40:15,853 - bzchat.utils.image_describer - INFO - _load_model:35 - 正在加载图片描述模型: /home/xuyao/data/Qwen2.5-VL-3B-Instruct
+2025-09-20 05:40:20,093 - bzchat.utils.image_describer - INFO - _load_model:48 - 图片描述模型加载成功
+2025-09-20 05:40:20,667 - bzchat.services.milvus - INFO - _connect:92 - 成功连接到 Milvus Lite 本地数据库
+2025-09-20 05:40:20,674 - bzchat.services.milvus - INFO - __init__:74 - 集合 chat_messages 已存在，直接使用
+2025-09-20 05:40:20,675 - bzchat.services.milvus - INFO - _create_index:152 - 索引 'embedding_idx' 已存在，跳过创建
+2025-09-20 05:40:20,769 - bzchat.services.milvus - INFO - __init__:83 - 集合 chat_messages 加载完成
+2025-09-20 05:40:25,466 - bzchat.services.milvus - INFO - __init__:57 - 成功加载 CLIP 多模态模型: clip-ViT-L-14
+2025-09-20 05:40:25,466 - bzchat.utils.image_handler - INFO - __init__:33 - from image_handler: 图片存储路径: /home/xuyao/data/bzchat_pic
+2025-09-20 05:40:25,467 - bzchat.utils.image_describer - INFO - _load_model:35 - 正在加载图片描述模型: /home/xuyao/data/Qwen2.5-VL-3B-Instruct
+2025-09-20 05:40:29,549 - bzchat.utils.image_describer - INFO - _load_model:48 - 图片描述模型加载成功
+2025-09-20 05:40:29,554 - bzchat.services.milvus - INFO - _connect:92 - 成功连接到 Milvus Lite 本地数据库
+2025-09-20 05:40:29,560 - bzchat.services.milvus - INFO - _create_collection:133 - 成功创建多模态集合: multimodal_chat_messages
+2025-09-20 05:40:29,561 - bzchat.services.milvus - INFO - _create_index:168 - 正在为字段 'embedding' 创建索引 'embedding_idx'...
+2025-09-20 05:40:30,066 - bzchat.services.milvus - INFO - _create_index:175 - 成功创建向量索引 'embedding_idx' (type=IVF_FLAT, metric=COSINE)
+2025-09-20 05:40:30,068 - bzchat.services.milvus - INFO - __init__:83 - 集合 multimodal_chat_messages 加载完成
+2025-09-20 05:40:30,471 - bzchat.services.milvus - INFO - _disconnect:101 - 已断开 Milvus 连接
+2025-09-20 05:40:30,547 - bzchat.services.milvus - INFO - _disconnect:101 - 已断开 Milvus 连接
+2025-09-20 05:44:47,881 - bzchat.services.milvus - INFO - __init__:57 - 成功加载 CLIP 多模态模型: clip-ViT-L-14
+2025-09-20 05:44:47,882 - bzchat.utils.image_handler - INFO - __init__:33 - from image_handler: 图片存储路径: /home/xuyao/data/bzchat_pic
+2025-09-20 05:44:47,882 - bzchat.utils.image_describer - INFO - _load_model:35 - 正在加载图片描述模型: /home/xuyao/data/Qwen2.5-VL-3B-Instruct
+2025-09-20 05:44:52,042 - bzchat.utils.image_describer - INFO - _load_model:48 - 图片描述模型加载成功
+2025-09-20 05:44:52,617 - bzchat.services.milvus - INFO - _connect:92 - 成功连接到 Milvus Lite 本地数据库
+2025-09-20 05:44:52,641 - bzchat.services.milvus - INFO - _create_collection:133 - 成功创建多模态集合: chat_messages_test
+2025-09-20 05:44:52,643 - bzchat.services.milvus - INFO - _create_index:168 - 正在为字段 'embedding' 创建索引 'embedding_idx'...
+2025-09-20 05:44:53,150 - bzchat.services.milvus - INFO - _create_index:175 - 成功创建向量索引 'embedding_idx' (type=IVF_FLAT, metric=COSINE)
+2025-09-20 05:44:53,152 - bzchat.services.milvus - INFO - __init__:83 - 集合 chat_messages_test 加载完成
+2025-09-20 05:44:53,438 - bzchat.services.milvus - INFO - _get_multimodal_embedding:220 - 生成文本向量
+2025-09-20 05:44:53,438 - bzchat.services.milvus - INFO - _get_multimodal_embedding:230 - 消息无图片内容
+2025-09-20 05:44:53,438 - bzchat.services.milvus - INFO - _get_multimodal_embedding:232 - 融合策略: priority
+2025-09-20 05:47:44,773 - bzchat.services.milvus - INFO - _disconnect:101 - 已断开 Milvus 连接
+2025-09-20 05:47:57,372 - bzchat.services.milvus - INFO - __init__:57 - 成功加载 CLIP 多模态模型: clip-ViT-L-14
+2025-09-20 05:47:57,373 - bzchat.utils.image_handler - INFO - __init__:33 - from image_handler: 图片存储路径: /home/xuyao/data/bzchat_pic
+2025-09-20 05:47:57,373 - bzchat.utils.image_describer - INFO - _load_model:35 - 正在加载图片描述模型: /home/xuyao/data/Qwen2.5-VL-3B-Instruct
+2025-09-20 05:48:01,538 - bzchat.utils.image_describer - INFO - _load_model:48 - 图片描述模型加载成功
+2025-09-20 05:48:02,111 - bzchat.services.milvus - INFO - _connect:92 - 成功连接到 Milvus Lite 本地数据库
+2025-09-20 05:48:02,119 - bzchat.services.milvus - INFO - __init__:74 - 集合 chat_messages_test 已存在，直接使用
+2025-09-20 05:48:02,120 - bzchat.services.milvus - INFO - _create_index:152 - 索引 'embedding_idx' 已存在，跳过创建
+2025-09-20 05:48:02,124 - bzchat.services.milvus - INFO - __init__:83 - 集合 chat_messages_test 加载完成
+2025-09-20 05:48:02,385 - bzchat.services.milvus - INFO - _get_multimodal_embedding:220 - 生成文本向量
+2025-09-20 05:48:02,385 - bzchat.services.milvus - INFO - _get_multimodal_embedding:230 - 消息无图片内容
+2025-09-20 05:48:02,385 - bzchat.services.milvus - INFO - _get_multimodal_embedding:232 - 融合策略: priority
+2025-09-20 05:51:33,423 - bzchat.services.milvus - ERROR - store_message:330 - 存储消息失败: <MilvusException: (code=<bound method _InactiveRpcError.code of <_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.UNAVAILABLE
+	details = "failed to connect to all addresses; last error: UNKNOWN: unix:/tmp/tmpyif9qluf_milvus_lite.db.sock: connect: Connection refused (111)"
+	debug_error_string = "UNKNOWN:Error received from peer  {grpc_message:"failed to connect to all addresses; last error: UNKNOWN: unix:/tmp/tmpyif9qluf_milvus_lite.db.sock: connect: Connection refused (111)", grpc_status:14}"
+>>, message=[insert_rows] Retry run out of 75 retry times, message=failed to connect to all addresses; last error: UNKNOWN: unix:/tmp/tmpyif9qluf_milvus_lite.db.sock: connect: Connection refused (111))>
+2025-09-20 05:51:33,435 - bzchat.services.milvus - INFO - _disconnect:101 - 已断开 Milvus 连接
+2025-09-20 05:54:47,628 - bzchat.services.milvus - INFO - __init__:57 - 成功加载 CLIP 多模态模型: clip-ViT-L-14
+2025-09-20 05:54:47,628 - bzchat.utils.image_handler - INFO - __init__:33 - from image_handler: 图片存储路径: /home/xuyao/data/bzchat_pic
+2025-09-20 05:54:47,628 - bzchat.utils.image_describer - INFO - _load_model:35 - 正在加载图片描述模型: /home/xuyao/data/Qwen2.5-VL-3B-Instruct
+2025-09-20 05:54:51,809 - bzchat.utils.image_describer - INFO - _load_model:48 - 图片描述模型加载成功
+2025-09-20 05:54:52,380 - bzchat.services.milvus - INFO - _connect:92 - 成功连接到 Milvus Lite 本地数据库
+2025-09-20 05:54:52,388 - bzchat.services.milvus - INFO - __init__:74 - 集合 chat_messages_test 已存在，直接使用
+2025-09-20 05:54:52,389 - bzchat.services.milvus - INFO - _create_index:152 - 索引 'embedding_idx' 已存在，跳过创建
+2025-09-20 05:54:52,393 - bzchat.services.milvus - INFO - __init__:83 - 集合 chat_messages_test 加载完成
+2025-09-20 05:54:52,657 - bzchat.services.milvus - INFO - _get_multimodal_embedding:220 - 生成文本向量
+2025-09-20 05:54:52,657 - bzchat.services.milvus - INFO - _get_multimodal_embedding:230 - 消息无图片内容
+2025-09-20 05:54:52,657 - bzchat.services.milvus - INFO - _get_multimodal_embedding:232 - 融合策略: priority
+2025-09-20 05:55:50,434 - bzchat.services.milvus - INFO - _disconnect:101 - 已断开 Milvus 连接
+2025-09-20 05:57:00,323 - bzchat.services.milvus - INFO - __init__:57 - 成功加载 CLIP 多模态模型: clip-ViT-L-14
+2025-09-20 05:57:00,324 - bzchat.utils.image_handler - INFO - __init__:33 - from image_handler: 图片存储路径: /home/xuyao/data/bzchat_pic
+2025-09-20 05:57:00,324 - bzchat.utils.image_describer - INFO - _load_model:35 - 正在加载图片描述模型: /home/xuyao/data/Qwen2.5-VL-3B-Instruct
+2025-09-20 05:57:04,552 - bzchat.utils.image_describer - INFO - _load_model:48 - 图片描述模型加载成功
+2025-09-20 05:57:05,125 - bzchat.services.milvus - INFO - _connect:92 - 成功连接到 Milvus Lite 本地数据库
+2025-09-20 05:57:05,131 - bzchat.services.milvus - INFO - __init__:74 - 集合 chat_messages_test 已存在，直接使用
+2025-09-20 05:57:05,133 - bzchat.services.milvus - INFO - _create_index:152 - 索引 'embedding_idx' 已存在，跳过创建
+2025-09-20 05:57:05,136 - bzchat.services.milvus - INFO - __init__:83 - 集合 chat_messages_test 加载完成
+2025-09-20 05:57:05,395 - bzchat.services.milvus - INFO - _get_multimodal_embedding:220 - 生成文本向量
+2025-09-20 05:57:05,395 - bzchat.services.milvus - INFO - _get_multimodal_embedding:230 - 消息无图片内容
+2025-09-20 05:57:05,395 - bzchat.services.milvus - INFO - _get_multimodal_embedding:232 - 融合策略: priority
+2025-09-20 05:57:53,573 - bzchat.services.milvus - INFO - _disconnect:101 - 已断开 Milvus 连接
+2025-09-20 06:02:22,736 - bzchat.services.milvus - INFO - __init__:57 - 成功加载 CLIP 多模态模型: clip-ViT-L-14
+2025-09-20 06:02:22,736 - bzchat.utils.image_handler - INFO - __init__:33 - from image_handler: 图片存储路径: /home/xuyao/data/bzchat_pic
+2025-09-20 06:02:22,736 - bzchat.utils.image_describer - INFO - _load_model:35 - 正在加载图片描述模型: /home/xuyao/data/Qwen2.5-VL-3B-Instruct
+2025-09-20 06:02:26,905 - bzchat.utils.image_describer - INFO - _load_model:48 - 图片描述模型加载成功
+2025-09-20 06:02:27,476 - bzchat.services.milvus - INFO - _connect:92 - 成功连接到 Milvus Lite 本地数据库
+2025-09-20 06:02:27,483 - bzchat.services.milvus - INFO - __init__:74 - 集合 chat_messages 已存在，直接使用
+2025-09-20 06:02:27,484 - bzchat.services.milvus - INFO - _create_index:152 - 索引 'embedding_idx' 已存在，跳过创建
+2025-09-20 06:02:27,579 - bzchat.services.milvus - INFO - __init__:83 - 集合 chat_messages 加载完成
+2025-09-20 06:02:56,075 - bzchat.services.milvus - INFO - _get_multimodal_embedding:220 - 生成文本向量
+2025-09-20 06:02:56,075 - bzchat.services.milvus - INFO - _get_multimodal_embedding:230 - 消息无图片内容
+2025-09-20 06:02:56,075 - bzchat.services.milvus - INFO - _get_multimodal_embedding:232 - 融合策略: priority
+2025-09-20 06:06:27,122 - bzchat.services.milvus - ERROR - store_message:330 - 存储消息失败: <MilvusException: (code=<bound method _InactiveRpcError.code of <_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.UNAVAILABLE
+	details = "failed to connect to all addresses; last error: UNKNOWN: unix:/tmp/tmpozfhuew6_milvus_lite.db.sock: connect: Connection refused (111)"
+	debug_error_string = "UNKNOWN:Error received from peer  {grpc_message:"failed to connect to all addresses; last error: UNKNOWN: unix:/tmp/tmpozfhuew6_milvus_lite.db.sock: connect: Connection refused (111)", grpc_status:14}"
+>>, message=[insert_rows] Retry run out of 75 retry times, message=failed to connect to all addresses; last error: UNKNOWN: unix:/tmp/tmpozfhuew6_milvus_lite.db.sock: connect: Connection refused (111))>
+2025-09-20 06:08:52,554 - bzchat.services.milvus - INFO - _disconnect:101 - 已断开 Milvus 连接
+2025-09-20 06:14:02,704 - bzchat.services.milvus - INFO - __init__:57 - 成功加载 CLIP 多模态模型: clip-ViT-L-14
+2025-09-20 06:14:02,704 - bzchat.utils.image_handler - INFO - __init__:33 - from image_handler: 图片存储路径: /home/xuyao/data/bzchat_pic
+2025-09-20 06:14:02,704 - bzchat.utils.image_describer - INFO - _load_model:35 - 正在加载图片描述模型: /home/xuyao/data/Qwen2.5-VL-3B-Instruct
+2025-09-20 06:14:06,900 - bzchat.utils.image_describer - INFO - _load_model:48 - 图片描述模型加载成功
+2025-09-20 06:14:07,476 - bzchat.services.milvus - ERROR - _connect:95 - 连接 Milvus 失败: <_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.UNIMPLEMENTED
+	details = ""
+	debug_error_string = "UNKNOWN:Error received from peer  {grpc_message:"", grpc_status:12}"
+>
+2025-09-20 06:14:07,476 - bzchat.main - ERROR - <module>:48 - 初始化Milvus存储器失败: <_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.UNIMPLEMENTED
+	details = ""
+	debug_error_string = "UNKNOWN:Error received from peer  {grpc_message:"", grpc_status:12}"
+>
+2025-09-20 06:14:07,672 - bzchat.services.milvus - INFO - _disconnect:102 - 已断开 Milvus 连接
+2025-09-20 06:17:10,168 - bzchat.services.milvus - INFO - __init__:57 - 成功加载 CLIP 多模态模型: clip-ViT-L-14
+2025-09-20 06:17:10,169 - bzchat.utils.image_handler - INFO - __init__:33 - from image_handler: 图片存储路径: /home/xuyao/data/bzchat_pic
+2025-09-20 06:17:10,169 - bzchat.utils.image_describer - INFO - _load_model:35 - 正在加载图片描述模型: /home/xuyao/data/Qwen2.5-VL-3B-Instruct
+2025-09-20 06:17:14,318 - bzchat.utils.image_describer - INFO - _load_model:48 - 图片描述模型加载成功
+2025-09-20 06:17:14,894 - bzchat.services.milvus - ERROR - _connect:95 - 连接 Milvus 失败: <_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.UNIMPLEMENTED
+	details = ""
+	debug_error_string = "UNKNOWN:Error received from peer  {grpc_status:12, grpc_message:""}"
+>
+2025-09-20 06:17:14,894 - bzchat.main - ERROR - <module>:48 - 初始化Milvus存储器失败: <_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.UNIMPLEMENTED
+	details = ""
+	debug_error_string = "UNKNOWN:Error received from peer  {grpc_status:12, grpc_message:""}"
+>
+2025-09-20 06:17:15,090 - bzchat.services.milvus - INFO - _disconnect:102 - 已断开 Milvus 连接
+2025-09-20 06:19:07,069 - bzchat.services.milvus - INFO - __init__:57 - 成功加载 CLIP 多模态模型: clip-ViT-L-14
+2025-09-20 06:19:07,069 - bzchat.utils.image_handler - INFO - __init__:33 - from image_handler: 图片存储路径: /home/xuyao/data/bzchat_pic
+2025-09-20 06:19:07,069 - bzchat.utils.image_describer - INFO - _load_model:35 - 正在加载图片描述模型: /home/xuyao/data/Qwen2.5-VL-3B-Instruct
+2025-09-20 06:19:11,243 - bzchat.utils.image_describer - INFO - _load_model:48 - 图片描述模型加载成功
+2025-09-20 06:19:11,325 - bzchat.services.milvus - ERROR - _connect:95 - 连接 Milvus 失败: <ConnectionConfigException: (code=1, message=Open local milvus failed)>
+2025-09-20 06:19:11,325 - bzchat.main - ERROR - <module>:48 - 初始化Milvus存储器失败: <ConnectionConfigException: (code=1, message=Open local milvus failed)>
+2025-09-20 06:19:11,325 - bzchat.services.milvus - INFO - _disconnect:102 - 已断开 Milvus 连接
+2025-09-20 06:20:19,609 - bzchat.services.milvus - INFO - __init__:57 - 成功加载 CLIP 多模态模型: clip-ViT-L-14
+2025-09-20 06:20:19,609 - bzchat.utils.image_handler - INFO - __init__:33 - from image_handler: 图片存储路径: /home/xuyao/data/bzchat_pic
+2025-09-20 06:20:19,609 - bzchat.utils.image_describer - INFO - _load_model:35 - 正在加载图片描述模型: /home/xuyao/data/Qwen2.5-VL-3B-Instruct
+2025-09-20 06:20:23,863 - bzchat.utils.image_describer - INFO - _load_model:48 - 图片描述模型加载成功
+2025-09-20 06:20:24,438 - bzchat.services.milvus - INFO - _connect:93 - 成功连接到 Milvus Lite 本地数据库
+2025-09-20 06:20:24,455 - bzchat.services.milvus - INFO - _create_collection:134 - 成功创建多模态集合: chat_messages
+2025-09-20 06:20:24,456 - bzchat.services.milvus - INFO - _create_index:169 - 正在为字段 'embedding' 创建索引 'embedding_idx'...
+2025-09-20 06:20:24,966 - bzchat.services.milvus - INFO - _create_index:176 - 成功创建向量索引 'embedding_idx' (type=IVF_FLAT, metric=COSINE)
+2025-09-20 06:20:24,968 - bzchat.services.milvus - INFO - __init__:83 - 集合 chat_messages 加载完成
+2025-09-20 06:21:46,989 - bzchat.services.milvus - INFO - _get_multimodal_embedding:221 - 生成文本向量
+2025-09-20 06:21:46,989 - bzchat.services.milvus - INFO - _get_multimodal_embedding:231 - 消息无图片内容
+2025-09-20 06:21:46,989 - bzchat.services.milvus - INFO - _get_multimodal_embedding:233 - 融合策略: priority
+2025-09-20 06:25:18,033 - bzchat.services.milvus - ERROR - store_message:331 - 存储消息失败: <MilvusException: (code=<bound method _InactiveRpcError.code of <_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.UNAVAILABLE
+	details = "failed to connect to all addresses; last error: UNKNOWN: unix:/tmp/tmpqyb1d98x_milvus_lite.db.sock: connect: Connection refused (111)"
+	debug_error_string = "UNKNOWN:Error received from peer  {grpc_message:"failed to connect to all addresses; last error: UNKNOWN: unix:/tmp/tmpqyb1d98x_milvus_lite.db.sock: connect: Connection refused (111)", grpc_status:14}"
+>>, message=[insert_rows] Retry run out of 75 retry times, message=failed to connect to all addresses; last error: UNKNOWN: unix:/tmp/tmpqyb1d98x_milvus_lite.db.sock: connect: Connection refused (111))>
+2025-09-20 07:19:47,901 - bzchat.services.milvus - INFO - _disconnect:102 - 已断开 Milvus 连接
+2025-09-20 08:07:49,441 - bzchat.services.milvus - INFO - __init__:57 - 成功加载 CLIP 多模态模型: clip-ViT-L-14
+2025-09-20 08:07:49,441 - bzchat.utils.image_handler - INFO - __init__:33 - from image_handler: 图片存储路径: /home/xuyao/data/bzchat_pic
+2025-09-20 08:07:49,441 - bzchat.utils.image_describer - INFO - _load_model:35 - 正在加载图片描述模型: /home/xuyao/data/Qwen2.5-VL-3B-Instruct
+2025-09-20 08:07:53,634 - bzchat.utils.image_describer - INFO - _load_model:48 - 图片描述模型加载成功
+2025-09-20 08:08:03,775 - bzchat.services.milvus - ERROR - _connect:96 - 连接 Milvus 失败: <MilvusException: (code=2, message=Fail connecting to server on localhost:19531, illegal connection params or server unavailable)>
+2025-09-20 08:08:03,775 - bzchat.main - ERROR - <module>:48 - 初始化Milvus存储器失败: <MilvusException: (code=2, message=Fail connecting to server on localhost:19531, illegal connection params or server unavailable)>
+2025-09-20 08:08:03,779 - bzchat.services.milvus - INFO - _disconnect:103 - 已断开 Milvus 连接
+2025-09-20 08:28:37,265 - bzchat.services.milvus - INFO - __init__:57 - 成功加载 CLIP 多模态模型: clip-ViT-L-14
+2025-09-20 08:28:37,265 - bzchat.utils.image_handler - INFO - __init__:33 - from image_handler: 图片存储路径: /home/xuyao/data/bzchat_pic
+2025-09-20 08:28:37,265 - bzchat.utils.image_describer - INFO - _load_model:35 - 正在加载图片描述模型: /home/xuyao/data/Qwen2.5-VL-3B-Instruct
+2025-09-20 08:28:41,473 - bzchat.utils.image_describer - INFO - _load_model:48 - 图片描述模型加载成功
+2025-09-20 08:28:42,044 - bzchat.services.milvus - INFO - _connect:95 - 成功连接到 Milvus Lite 本地数据库
+2025-09-20 08:28:42,051 - bzchat.services.milvus - INFO - __init__:74 - 集合 chat_messages 已存在，直接使用
+2025-09-20 08:28:42,053 - bzchat.services.milvus - INFO - _create_index:155 - 索引 'embedding_idx' 已存在，跳过创建
+2025-09-20 08:28:42,056 - bzchat.services.milvus - INFO - __init__:83 - 集合 chat_messages 加载完成
+2025-09-20 08:28:47,914 - bzchat.services.milvus - INFO - _get_multimodal_embedding:223 - 生成文本向量
+2025-09-20 08:28:47,914 - bzchat.services.milvus - INFO - _get_multimodal_embedding:233 - 消息无图片内容
+2025-09-20 08:28:47,914 - bzchat.services.milvus - INFO - _get_multimodal_embedding:235 - 融合策略: priority
+2025-09-20 08:32:18,946 - bzchat.services.milvus - ERROR - store_message:333 - 存储消息失败: <MilvusException: (code=<bound method _InactiveRpcError.code of <_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.UNAVAILABLE
+	details = "failed to connect to all addresses; last error: UNKNOWN: unix:/tmp/tmpm01osgig_milvus_lite.db.sock: connect: Connection refused (111)"
+	debug_error_string = "UNKNOWN:Error received from peer  {grpc_message:"failed to connect to all addresses; last error: UNKNOWN: unix:/tmp/tmpm01osgig_milvus_lite.db.sock: connect: Connection refused (111)", grpc_status:14}"
+>>, message=[insert_rows] Retry run out of 75 retry times, message=failed to connect to all addresses; last error: UNKNOWN: unix:/tmp/tmpm01osgig_milvus_lite.db.sock: connect: Connection refused (111))>
+2025-09-20 08:32:19,408 - bzchat.services.milvus - INFO - _disconnect:104 - 已断开 Milvus 连接
+2025-09-20 09:17:49,144 - bzchat.services.milvus - INFO - __init__:57 - 成功加载 CLIP 多模态模型: clip-ViT-L-14
+2025-09-20 09:17:49,145 - bzchat.utils.image_handler - INFO - __init__:33 - from image_handler: 图片存储路径: /home/xuyao/data/bzchat_pic
+2025-09-20 09:17:49,145 - bzchat.utils.image_describer - INFO - _load_model:35 - 正在加载图片描述模型: /home/xuyao/data/Qwen2.5-VL-3B-Instruct
+2025-09-20 09:17:53,327 - bzchat.utils.image_describer - INFO - _load_model:48 - 图片描述模型加载成功
+2025-09-20 09:17:54,797 - bzchat.services.milvus - INFO - _connect:95 - 成功连接到 Milvus Lite 本地数据库
+2025-09-20 09:17:54,961 - bzchat.services.milvus - INFO - _create_collection:136 - 成功创建多模态集合: chat_messages
+2025-09-20 09:17:54,962 - bzchat.services.milvus - INFO - _create_index:171 - 正在为字段 'embedding' 创建索引 'embedding_idx'...
+2025-09-20 09:17:55,565 - bzchat.services.milvus - INFO - _create_index:178 - 成功创建向量索引 'embedding_idx' (type=IVF_FLAT, metric=COSINE)
+2025-09-20 09:17:55,567 - bzchat.services.milvus - INFO - __init__:83 - 集合 chat_messages 加载完成
+2025-09-20 09:18:02,511 - bzchat.services.milvus - INFO - _get_multimodal_embedding:223 - 生成文本向量
+2025-09-20 09:18:02,511 - bzchat.services.milvus - INFO - _get_multimodal_embedding:233 - 消息无图片内容
+2025-09-20 09:18:02,511 - bzchat.services.milvus - INFO - _get_multimodal_embedding:235 - 融合策略: priority
+2025-09-20 09:21:33,553 - bzchat.services.milvus - ERROR - store_message:333 - 存储消息失败: <MilvusException: (code=<bound method _InactiveRpcError.code of <_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.UNAVAILABLE
+	details = "failed to connect to all addresses; last error: UNKNOWN: unix:/tmp/tmphcjo3wpv_milvus_lite.db.sock: connect: Connection refused (111)"
+	debug_error_string = "UNKNOWN:Error received from peer  {grpc_message:"failed to connect to all addresses; last error: UNKNOWN: unix:/tmp/tmphcjo3wpv_milvus_lite.db.sock: connect: Connection refused (111)", grpc_status:14}"
+>>, message=[insert_rows] Retry run out of 75 retry times, message=failed to connect to all addresses; last error: UNKNOWN: unix:/tmp/tmphcjo3wpv_milvus_lite.db.sock: connect: Connection refused (111))>
+2025-09-20 09:21:34,010 - bzchat.services.milvus - INFO - _disconnect:104 - 已断开 Milvus 连接
+2025-09-20 12:31:47,814 - bzchat.services.milvus - INFO - __init__:57 - 成功加载 CLIP 多模态模型: clip-ViT-L-14
+2025-09-20 12:31:47,814 - bzchat.utils.image_handler - INFO - __init__:33 - from image_handler: 图片存储路径: /home/xuyao/data/bzchat_pic
+2025-09-20 12:31:47,814 - bzchat.utils.image_describer - INFO - _load_model:35 - 正在加载图片描述模型: /home/xuyao/data/Qwen2.5-VL-3B-Instruct
+2025-09-20 12:31:52,104 - bzchat.utils.image_describer - INFO - _load_model:48 - 图片描述模型加载成功
+2025-09-20 12:31:52,679 - bzchat.services.milvus - INFO - _connect:95 - 成功连接到 Milvus Lite 本地数据库
+2025-09-20 12:31:52,686 - bzchat.services.milvus - INFO - __init__:74 - 集合 chat_messages 已存在，直接使用
+2025-09-20 12:31:52,687 - bzchat.services.milvus - INFO - _create_index:155 - 索引 'embedding_idx' 已存在，跳过创建
+2025-09-20 12:31:52,691 - bzchat.services.milvus - INFO - __init__:83 - 集合 chat_messages 加载完成
+2025-09-20 12:32:15,283 - bzchat.services.milvus - INFO - _get_multimodal_embedding:223 - 生成文本向量
+2025-09-20 12:32:15,283 - bzchat.services.milvus - INFO - _get_multimodal_embedding:233 - 消息无图片内容
+2025-09-20 12:32:15,283 - bzchat.services.milvus - INFO - _get_multimodal_embedding:235 - 融合策略: priority
+2025-09-20 12:33:33,210 - bzchat.services.milvus - INFO - __init__:57 - 成功加载 CLIP 多模态模型: clip-ViT-L-14
+2025-09-20 12:33:33,211 - bzchat.utils.image_handler - INFO - __init__:33 - from image_handler: 图片存储路径: /home/xuyao/data/bzchat_pic
+2025-09-20 12:33:33,211 - bzchat.utils.image_describer - INFO - _load_model:35 - 正在加载图片描述模型: /home/xuyao/data/Qwen2.5-VL-3B-Instruct
+2025-09-20 12:33:37,498 - bzchat.utils.image_describer - INFO - _load_model:48 - 图片描述模型加载成功
+2025-09-20 12:33:47,630 - bzchat.services.milvus - ERROR - _connect:98 - 连接 Milvus 失败: <MilvusException: (code=2, message=Fail connecting to server on localhost:19531, illegal connection params or server unavailable)>
+2025-09-20 12:33:47,631 - bzchat.main - ERROR - <module>:48 - 初始化Milvus存储器失败: <MilvusException: (code=2, message=Fail connecting to server on localhost:19531, illegal connection params or server unavailable)>
+2025-09-20 12:33:47,635 - bzchat.services.milvus - INFO - _disconnect:105 - 已断开 Milvus 连接
+2025-09-20 12:35:14,183 - bzchat.services.milvus - INFO - __init__:57 - 成功加载 CLIP 多模态模型: clip-ViT-L-14
+2025-09-20 12:35:14,184 - bzchat.utils.image_handler - INFO - __init__:33 - from image_handler: 图片存储路径: /home/xuyao/data/bzchat_pic
+2025-09-20 12:35:14,184 - bzchat.utils.image_describer - INFO - _load_model:35 - 正在加载图片描述模型: /home/xuyao/data/Qwen2.5-VL-3B-Instruct
+2025-09-20 12:35:18,453 - bzchat.utils.image_describer - INFO - _load_model:48 - 图片描述模型加载成功
+2025-09-20 12:35:18,469 - bzchat.services.milvus - INFO - _connect:96 - 成功连接到 Milvus 服务器 localhost:19530
+2025-09-20 12:35:18,682 - bzchat.services.milvus - INFO - _create_collection:137 - 成功创建多模态集合: chat_messages
+2025-09-20 12:35:18,690 - bzchat.services.milvus - INFO - _create_index:172 - 正在为字段 'embedding' 创建索引 'embedding_idx'...
+2025-09-20 12:35:19,293 - bzchat.services.milvus - INFO - _create_index:179 - 成功创建向量索引 'embedding_idx' (type=IVF_FLAT, metric=COSINE)
+2025-09-20 12:35:20,048 - bzchat.services.milvus - INFO - __init__:83 - 集合 chat_messages 加载完成
+2025-09-20 12:35:40,072 - bzchat.services.milvus - INFO - _get_multimodal_embedding:224 - 生成文本向量
+2025-09-20 12:35:40,073 - bzchat.services.milvus - INFO - _get_multimodal_embedding:234 - 消息无图片内容
+2025-09-20 12:35:40,073 - bzchat.services.milvus - INFO - _get_multimodal_embedding:236 - 融合策略: priority
+2025-09-20 12:35:40,079 - bzchat.services.milvus - ERROR - store_message:334 - 存储消息失败: <MilvusException: (code=1100, message=varchar field 'image_path' is illegal, array type mismatch: invalid parameter[expected=need string array][actual=got nil])>
+2025-09-20 12:46:45,613 - bzchat.services.milvus - INFO - _disconnect:105 - 已断开 Milvus 连接
+2025-09-20 12:47:03,959 - bzchat.services.milvus - INFO - __init__:57 - 成功加载 CLIP 多模态模型: clip-ViT-L-14
+2025-09-20 12:47:03,959 - bzchat.utils.image_handler - INFO - __init__:33 - from image_handler: 图片存储路径: /home/xuyao/data/bzchat_pic
+2025-09-20 12:47:03,959 - bzchat.utils.image_describer - INFO - _load_model:35 - 正在加载图片描述模型: /home/xuyao/data/Qwen2.5-VL-3B-Instruct
+2025-09-20 12:47:08,127 - bzchat.utils.image_describer - INFO - _load_model:48 - 图片描述模型加载成功
+2025-09-20 12:47:08,143 - bzchat.services.milvus - INFO - _connect:96 - 成功连接到 Milvus 服务器 localhost:19530
+2025-09-20 12:47:08,154 - bzchat.services.milvus - INFO - __init__:74 - 集合 chat_messages 已存在，直接使用
+2025-09-20 12:47:08,158 - bzchat.services.milvus - INFO - _create_index:156 - 索引 'embedding_idx' 已存在，跳过创建
+2025-09-20 12:47:08,167 - bzchat.services.milvus - INFO - __init__:83 - 集合 chat_messages 加载完成
+2025-09-20 12:47:18,178 - bzchat.services.milvus - INFO - _get_multimodal_embedding:224 - 生成文本向量
+2025-09-20 12:47:18,178 - bzchat.services.milvus - INFO - _get_multimodal_embedding:234 - 消息无图片内容
+2025-09-20 12:47:18,178 - bzchat.services.milvus - INFO - _get_multimodal_embedding:236 - 融合策略: priority
+2025-09-20 12:47:21,252 - bzchat.services.milvus - INFO - store_message:330 - 成功存储多模态消息: 9abcfd34-57b7-46f0-8669-2f2fd07cc3aa
+2025-09-20 12:47:21,266 - bzchat.services.milvus - INFO - get_recent_messages:370 - 获取到 1 条最近消息
+2025-09-20 12:47:21,277 - bzchat.services.milvus - INFO - search_similar_messages:422 - 找到 1 条相似消息
+2025-09-20 12:47:21,278 - bzchat.services.milvus - INFO - get_context_messages:486 - 获取到 1 条上下文消息（去重后）
+2025-09-20 12:47:21,278 - bzchat.services.deepseek - INFO - chat_completion:68 - [DEBUG] 发送到API的消息数量: 1
+2025-09-20 12:47:21,286 - bzchat.services.deepseek - INFO - _stream_response:138 - [DEBUG] 发送流式请求到DeepSeek API
+2025-09-20 12:50:29,250 - bzchat.services.milvus - INFO - _disconnect:105 - 已断开 Milvus 连接
+2025-09-20 12:57:50,534 - bzchat.services.milvus - INFO - __init__:57 - 成功加载 CLIP 多模态模型: clip-ViT-L-14
+2025-09-20 12:57:50,535 - bzchat.utils.image_handler - INFO - __init__:33 - from image_handler: 图片存储路径: /home/xuyao/data/bzchat_pic
+2025-09-20 12:57:50,535 - bzchat.utils.image_describer - INFO - _load_model:35 - 正在加载图片描述模型: /home/xuyao/data/Qwen2.5-VL-3B-Instruct
+2025-09-20 12:57:54,648 - bzchat.utils.image_describer - INFO - _load_model:48 - 图片描述模型加载成功
+2025-09-20 12:57:54,667 - bzchat.services.milvus - INFO - _connect:96 - 成功连接到 Milvus 服务器 localhost:19530
+2025-09-20 12:57:54,679 - bzchat.services.milvus - INFO - __init__:74 - 集合 chat_messages 已存在，直接使用
+2025-09-20 12:57:54,682 - bzchat.services.milvus - INFO - _create_index:156 - 索引 'embedding_idx' 已存在，跳过创建
+2025-09-20 12:57:54,690 - bzchat.services.milvus - INFO - __init__:83 - 集合 chat_messages 加载完成
+2025-09-20 12:57:54,705 - bzchat.services.deepseek - INFO - chat_completion:68 - [DEBUG] 发送到API的消息数量: 1
+2025-09-20 12:57:54,705 - bzchat.services.deepseek - INFO - _non_stream_response:99 - [DEBUG] 发送请求到DeepSeek API: https://ark.cn-beijing.volces.com/api/v3/chat/completions
+2025-09-20 12:59:49,868 - bzchat.services.milvus - INFO - _get_multimodal_embedding:224 - 生成文本向量
+2025-09-20 12:59:49,869 - bzchat.services.milvus - INFO - _get_multimodal_embedding:234 - 消息无图片内容
+2025-09-20 12:59:49,869 - bzchat.services.milvus - INFO - _get_multimodal_embedding:236 - 融合策略: priority
+2025-09-20 12:59:53,210 - bzchat.services.milvus - INFO - store_message:329 - 成功存储多模态消息: 64861680-fa10-4c09-af58-56d677aeb942
+2025-09-20 12:59:53,218 - bzchat.services.milvus - INFO - get_recent_messages:369 - 获取到 2 条最近消息
+2025-09-20 12:59:53,231 - bzchat.services.milvus - INFO - search_similar_messages:421 - 找到 2 条相似消息
+2025-09-20 12:59:53,231 - bzchat.services.milvus - INFO - get_context_messages:485 - 获取到 2 条上下文消息（去重后）
+2025-09-20 12:59:53,231 - bzchat.services.deepseek - INFO - chat_completion:68 - [DEBUG] 发送到API的消息数量: 2
+2025-09-20 12:59:53,231 - bzchat.services.deepseek - INFO - _non_stream_response:99 - [DEBUG] 发送请求到DeepSeek API: https://ark.cn-beijing.volces.com/api/v3/chat/completions
+2025-09-20 12:59:53,381 - bzchat.services.deepseek - ERROR - _non_stream_response:104 - [ERROR] 火山引擎API错误响应: {"error":{"code":"InvalidEndpointOrModel.NotFound","message":"The model or endpoint gpt-3.5-turbo does not exist or you do not have access to it. Request id: 02175837319334130042b102d68b6a2a7bacd50846f32a65630d3","param":"","type":"Not Found"}}
+2025-09-20 13:03:04,204 - bzchat.services.milvus - INFO - _disconnect:105 - 已断开 Milvus 连接
+2025-09-20 13:03:19,221 - bzchat.services.milvus - INFO - __init__:57 - 成功加载 CLIP 多模态模型: clip-ViT-L-14
+2025-09-20 13:03:19,221 - bzchat.utils.image_handler - INFO - __init__:33 - from image_handler: 图片存储路径: /home/xuyao/data/bzchat_pic
+2025-09-20 13:03:19,221 - bzchat.utils.image_describer - INFO - _load_model:35 - 正在加载图片描述模型: /home/xuyao/data/Qwen2.5-VL-3B-Instruct
+2025-09-20 13:03:23,395 - bzchat.utils.image_describer - INFO - _load_model:48 - 图片描述模型加载成功
+2025-09-20 13:03:23,409 - bzchat.services.milvus - INFO - _connect:96 - 成功连接到 Milvus 服务器 localhost:19530
+2025-09-20 13:03:23,419 - bzchat.services.milvus - INFO - __init__:74 - 集合 chat_messages 已存在，直接使用
+2025-09-20 13:03:23,423 - bzchat.services.milvus - INFO - _create_index:156 - 索引 'embedding_idx' 已存在，跳过创建
+2025-09-20 13:03:23,433 - bzchat.services.milvus - INFO - __init__:83 - 集合 chat_messages 加载完成
+2025-09-20 13:03:27,453 - bzchat.services.milvus - INFO - _get_multimodal_embedding:224 - 生成文本向量
+2025-09-20 13:03:27,453 - bzchat.services.milvus - INFO - _get_multimodal_embedding:234 - 消息无图片内容
+2025-09-20 13:03:27,453 - bzchat.services.milvus - INFO - _get_multimodal_embedding:236 - 融合策略: priority
+2025-09-20 13:03:30,510 - bzchat.services.milvus - INFO - store_message:329 - 成功存储多模态消息: 4f477a88-469e-46b4-950a-6f81399bfcbc
+2025-09-20 13:03:30,537 - bzchat.services.milvus - INFO - get_recent_messages:369 - 获取到 3 条最近消息
+2025-09-20 13:03:30,549 - bzchat.services.milvus - INFO - search_similar_messages:421 - 找到 3 条相似消息
+2025-09-20 13:03:30,549 - bzchat.services.milvus - INFO - get_context_messages:485 - 获取到 3 条上下文消息（去重后）
+2025-09-20 13:03:30,550 - bzchat.services.deepseek - INFO - chat_completion:68 - [DEBUG] 发送到API的消息数量: 3
+2025-09-20 13:03:30,550 - bzchat.services.deepseek - INFO - _non_stream_response:99 - [DEBUG] 发送请求到DeepSeek API: https://ark.cn-beijing.volces.com/api/v3/chat/completions
+2025-09-20 13:05:16,341 - bzchat.services.milvus - INFO - _get_multimodal_embedding:224 - 生成文本向量
+2025-09-20 13:05:16,341 - bzchat.services.milvus - INFO - _get_multimodal_embedding:234 - 消息无图片内容
+2025-09-20 13:05:16,341 - bzchat.services.milvus - INFO - _get_multimodal_embedding:236 - 融合策略: priority
+2025-09-20 13:05:19,904 - bzchat.services.milvus - INFO - store_message:329 - 成功存储多模态消息: 078cd7af-2d43-479d-932e-2ed900b2a21e
+2025-09-20 13:05:19,911 - bzchat.services.milvus - INFO - get_recent_messages:369 - 获取到 4 条最近消息
+2025-09-20 13:05:19,918 - bzchat.services.milvus - INFO - search_similar_messages:421 - 找到 4 条相似消息
+2025-09-20 13:05:19,918 - bzchat.services.milvus - INFO - get_context_messages:485 - 获取到 4 条上下文消息（去重后）
+2025-09-20 13:05:19,918 - bzchat.services.deepseek - INFO - chat_completion:68 - [DEBUG] 发送到API的消息数量: 4
+2025-09-20 13:05:19,929 - bzchat.services.deepseek - INFO - _stream_response:138 - [DEBUG] 发送流式请求到DeepSeek API
+2025-09-20 13:08:08,451 - bzchat.services.milvus - INFO - _get_multimodal_embedding:224 - 生成文本向量
+2025-09-20 13:08:08,451 - bzchat.services.milvus - INFO - _get_multimodal_embedding:234 - 消息无图片内容
+2025-09-20 13:08:08,452 - bzchat.services.milvus - INFO - _get_multimodal_embedding:236 - 融合策略: priority
+2025-09-20 13:08:11,385 - bzchat.services.milvus - INFO - store_message:329 - 成功存储多模态消息: 8bc52c79-d180-402d-8164-f4e98494ec4d
+2025-09-20 13:08:11,392 - bzchat.services.milvus - INFO - get_recent_messages:369 - 获取到 5 条最近消息
+2025-09-20 13:08:11,401 - bzchat.services.milvus - INFO - search_similar_messages:421 - 找到 5 条相似消息
+2025-09-20 13:08:11,401 - bzchat.services.milvus - INFO - get_context_messages:485 - 获取到 5 条上下文消息（去重后）
+2025-09-20 13:08:11,401 - bzchat.services.deepseek - INFO - chat_completion:68 - [DEBUG] 发送到API的消息数量: 5
+2025-09-20 13:08:11,402 - bzchat.services.deepseek - INFO - _stream_response:138 - [DEBUG] 发送流式请求到DeepSeek API
+2025-09-20 13:18:06,322 - bzchat.utils.image_handler - INFO - save_image_from_binary:106 - from image_handler: 图片保存成功: user_admin/session_total/image_e5a286c7-ed57-45fa-bd7f-24d5a38639a9.png
+2025-09-20 13:18:06,325 - bzchat.services.milvus - INFO - store_message:286 - 保存图片成功: user_admin/session_total/image_e5a286c7-ed57-45fa-bd7f-24d5a38639a9.png
+2025-09-20 13:18:06,358 - bzchat.services.milvus - INFO - _get_multimodal_embedding:224 - 生成文本向量
+2025-09-20 13:18:07,170 - bzchat.services.milvus - INFO - _get_embedding:203 - 生成图片向量成功
+2025-09-20 13:18:07,171 - bzchat.services.milvus - INFO - _get_multimodal_embedding:232 - 生成图片向量
+2025-09-20 13:18:07,171 - bzchat.services.milvus - INFO - _get_multimodal_embedding:236 - 融合策略: priority
+2025-09-20 13:18:19,581 - bzchat.utils.image_describer - INFO - describe_image:155 - 成功生成图片描述: /home/xuyao/data/bzchat_pic/user_admin/session_total/image_e5a286c7-ed57-45fa-bd7f-24d5a38639a9.png
+2025-09-20 13:18:19,581 - bzchat.services.milvus - INFO - store_message:306 - 生成图片描述成功: 【场景类型】  
+室内
+
+【主要对象】  
+- 一位穿着传统服饰的女性角色，站在窗前。
+- 一只黑色的鸟儿停在她的肩膀上。
+
+【文字内容】  
+无
+
+【颜色与风格】  
+整体色调柔和，以白色和淡绿色为主，带有淡淡的阴影效果。风格偏向写实，细节丰富。
+
+【潜在意图或上下文线索】  
+这幅图可能是为了展示传统服饰之美，或者作为一幅艺术作品来欣赏。背景中的窗户和鸟儿增添了一丝自然的气息，可能暗示着宁静和优雅的主题。
+
+【注意】  
+以上描述基于图片中可见的内容，未涉及任何推测或假设。
+
+【上下文消息】  
+无
+2025-09-20 13:18:22,664 - bzchat.services.milvus - INFO - store_message:329 - 成功存储多模态消息: 25b3275b-af68-4c67-8b3a-38ad5aa381a4
+2025-09-20 13:18:22,671 - bzchat.services.milvus - INFO - get_recent_messages:369 - 获取到 6 条最近消息
+2025-09-20 13:18:22,679 - bzchat.services.milvus - INFO - search_similar_messages:421 - 找到 6 条相似消息
+2025-09-20 13:18:22,679 - bzchat.services.milvus - INFO - get_context_messages:485 - 获取到 6 条上下文消息（去重后）
+2025-09-20 13:18:22,679 - bzchat.services.deepseek - INFO - chat_completion:68 - [DEBUG] 发送到API的消息数量: 6
+2025-09-20 13:18:22,679 - bzchat.services.deepseek - INFO - _non_stream_response:99 - [DEBUG] 发送请求到DeepSeek API: https://ark.cn-beijing.volces.com/api/v3/chat/completions
+2025-09-20 13:19:46,010 - bzchat.utils.image_handler - INFO - save_image_from_binary:106 - from image_handler: 图片保存成功: user_admin/session_total/image_049c4517-daec-4dfe-bccc-5a06f3380b53.png
+2025-09-20 13:19:46,013 - bzchat.services.milvus - INFO - store_message:286 - 保存图片成功: user_admin/session_total/image_049c4517-daec-4dfe-bccc-5a06f3380b53.png
+2025-09-20 13:19:46,050 - bzchat.services.milvus - INFO - _get_multimodal_embedding:224 - 生成文本向量
+2025-09-20 13:19:46,768 - bzchat.services.milvus - INFO - _get_embedding:203 - 生成图片向量成功
+2025-09-20 13:19:46,768 - bzchat.services.milvus - INFO - _get_multimodal_embedding:232 - 生成图片向量
+2025-09-20 13:19:46,768 - bzchat.services.milvus - INFO - _get_multimodal_embedding:236 - 融合策略: priority
+2025-09-20 13:20:00,734 - bzchat.utils.image_describer - INFO - describe_image:155 - 成功生成图片描述: /home/xuyao/data/bzchat_pic/user_admin/session_total/image_049c4517-daec-4dfe-bccc-5a06f3380b53.png
+2025-09-20 13:20:00,744 - bzchat.services.milvus - INFO - store_message:306 - 生成图片描述成功: 【场景类型】  
+室内
+
+【主要对象】  
+- 一位穿着传统服饰的女性角色，站在窗前。
+- 一只黑色的鸟儿停在她的肩膀上。
+
+【文字内容】  
+无
+
+【颜色与风格】  
+整体色调柔和，以白色和淡绿色为主，带有淡淡的阴影效果。风格偏向写实，细节丰富。
+
+【潜在意图或上下文线索】  
+这幅图可能是为了展示传统服饰之美，或者作为一幅艺术作品来欣赏。背景中的窗户和鸟儿增添了一丝自然的气息，可能暗示着宁静和优雅的主题。
+
+【注意】  
+以上描述基于图片中可见的内容，未涉及任何推测或假设。
+
+【上下文消息】  
+无
+2025-09-20 13:20:03,833 - bzchat.services.milvus - INFO - store_message:329 - 成功存储多模态消息: ef53502f-c190-484e-912a-de614635476b
+2025-09-20 13:20:03,846 - bzchat.services.milvus - INFO - get_recent_messages:369 - 获取到 7 条最近消息
+2025-09-20 13:20:03,858 - bzchat.services.milvus - INFO - search_similar_messages:421 - 找到 7 条相似消息
+2025-09-20 13:20:03,858 - bzchat.services.milvus - INFO - get_context_messages:485 - 获取到 7 条上下文消息（去重后）
+2025-09-20 13:20:03,858 - bzchat.services.deepseek - INFO - chat_completion:68 - [DEBUG] 发送到API的消息数量: 7
+2025-09-20 13:20:03,858 - bzchat.services.deepseek - INFO - _non_stream_response:99 - [DEBUG] 发送请求到DeepSeek API: https://ark.cn-beijing.volces.com/api/v3/chat/completions
+2025-09-20 13:21:17,164 - bzchat.utils.image_handler - INFO - save_image_from_binary:106 - from image_handler: 图片保存成功: user_admin/session_total/image_131c2b00-a7ab-4bd5-b9e2-10537da2e629.png
+2025-09-20 13:21:17,167 - bzchat.services.milvus - INFO - store_message:286 - 保存图片成功: user_admin/session_total/image_131c2b00-a7ab-4bd5-b9e2-10537da2e629.png
+2025-09-20 13:21:17,209 - bzchat.services.milvus - INFO - _get_multimodal_embedding:224 - 生成文本向量
+2025-09-20 13:21:17,915 - bzchat.services.milvus - INFO - _get_embedding:203 - 生成图片向量成功
+2025-09-20 13:21:17,915 - bzchat.services.milvus - INFO - _get_multimodal_embedding:232 - 生成图片向量
+2025-09-20 13:21:17,915 - bzchat.services.milvus - INFO - _get_multimodal_embedding:236 - 融合策略: priority
+2025-09-20 13:21:31,937 - bzchat.utils.image_describer - INFO - describe_image:155 - 成功生成图片描述: /home/xuyao/data/bzchat_pic/user_admin/session_total/image_131c2b00-a7ab-4bd5-b9e2-10537da2e629.png
+2025-09-20 13:21:31,948 - bzchat.services.milvus - INFO - store_message:306 - 生成图片描述成功: 【场景类型】  
+室内
+
+【主要对象】  
+- 一位穿着传统服饰的女性角色，站在窗前。
+- 一只黑色的鸟儿停在她的肩膀上。
+
+【文字内容】  
+无
+
+【颜色与风格】  
+整体色调柔和，以白色和淡绿色为主，带有淡淡的阴影效果。风格偏向写实，细节丰富。
+
+【潜在意图或上下文线索】  
+这幅图可能是为了展示传统服饰之美，或者作为一幅艺术作品来欣赏。背景中的窗户和鸟儿增添了一丝自然的气息，可能暗示着宁静和优雅的主题。
+
+【注意】  
+以上描述基于图片中可见的内容，未涉及任何推测或假设。
+
+【上下文消息】  
+无
+2025-09-20 13:21:35,229 - bzchat.services.milvus - INFO - store_message:329 - 成功存储多模态消息: 826a19a3-7a7e-49d9-a923-29c8677be298
+2025-09-20 13:21:35,239 - bzchat.services.milvus - INFO - get_recent_messages:369 - 获取到 8 条最近消息
+2025-09-20 13:21:35,249 - bzchat.services.milvus - INFO - search_similar_messages:421 - 找到 8 条相似消息
+2025-09-20 13:21:35,249 - bzchat.services.milvus - INFO - get_context_messages:485 - 获取到 8 条上下文消息（去重后）
+2025-09-20 13:21:35,250 - bzchat.services.deepseek - INFO - chat_completion:68 - [DEBUG] 发送到API的消息数量: 8
+2025-09-20 13:21:35,250 - bzchat.services.deepseek - INFO - _non_stream_response:99 - [DEBUG] 发送请求到DeepSeek API: https://ark.cn-beijing.volces.com/api/v3/chat/completions
+2025-09-20 13:25:13,503 - bzchat.services.milvus - INFO - _disconnect:105 - 已断开 Milvus 连接
+2025-09-20 13:29:20,824 - bzchat.services.milvus - INFO - __init__:57 - 成功加载 CLIP 多模态模型: clip-ViT-L-14
+2025-09-20 13:29:20,824 - bzchat.utils.image_handler - INFO - __init__:33 - from image_handler: 图片存储路径: /home/xuyao/data/bzchat_pic
+2025-09-20 13:29:20,824 - bzchat.utils.image_describer - INFO - _load_model:35 - 正在加载图片描述模型: /home/xuyao/data/Qwen2.5-VL-3B-Instruct
+2025-09-20 13:29:25,024 - bzchat.utils.image_describer - INFO - _load_model:48 - 图片描述模型加载成功
+2025-09-20 13:29:25,040 - bzchat.services.milvus - INFO - _connect:96 - 成功连接到 Milvus 服务器 localhost:19530
+2025-09-20 13:29:25,050 - bzchat.services.milvus - INFO - __init__:74 - 集合 chat_messages 已存在，直接使用
+2025-09-20 13:29:25,053 - bzchat.services.milvus - INFO - _create_index:156 - 索引 'embedding_idx' 已存在，跳过创建
+2025-09-20 13:29:25,062 - bzchat.services.milvus - INFO - __init__:83 - 集合 chat_messages 加载完成
+2025-09-20 13:30:10,861 - bzchat.utils.image_handler - INFO - save_image_from_binary:106 - from image_handler: 图片保存成功: user_admin/session_total/image_a3297217-5cf6-415a-ba31-4883f15e105d.png
+2025-09-20 13:30:10,861 - bzchat.services.milvus - INFO - store_message:286 - 保存图片成功: user_admin/session_total/image_a3297217-5cf6-415a-ba31-4883f15e105d.png
+2025-09-20 13:30:11,129 - bzchat.services.milvus - INFO - _get_multimodal_embedding:224 - 生成文本向量
+2025-09-20 13:30:11,267 - bzchat.services.milvus - INFO - _get_embedding:203 - 生成图片向量成功
+2025-09-20 13:30:11,267 - bzchat.services.milvus - INFO - _get_multimodal_embedding:232 - 生成图片向量
+2025-09-20 13:30:11,267 - bzchat.services.milvus - INFO - _get_multimodal_embedding:236 - 融合策略: priority
+2025-09-20 13:30:22,241 - bzchat.utils.image_describer - INFO - describe_image:155 - 成功生成图片描述: /home/xuyao/data/bzchat_pic/user_admin/session_total/image_a3297217-5cf6-415a-ba31-4883f15e105d.png
+2025-09-20 13:30:22,241 - bzchat.services.milvus - INFO - store_message:306 - 生成图片描述成功: 【场景类型】  
+室外
+
+【主要对象】  
+- 工地建筑工地：位于图片中央，正在进行建设，周围有建筑物环绕。
+- 施工设备：散落在工地各处，包括起重机、挖掘机等。
+- 草坪：在工地周围，部分区域被绿色植物覆盖。
+
+【文字内容】  
+- “吴永辉”
+- “黄梅雨季，雨水调蓄工程的工地。”
+- “上海市·复旦大学邯郸校区逸夫楼”
+
+【颜色与风格】  
+- 整体色调以灰色和蓝色为主，施工场地为混凝土和金属材料，背景中的建筑物为白色和灰色。
+- 光影效果较为柔和，没有明显的阴影。
+
+【潜在意图或上下文线索】  
+- 社交分享：发布者可能是工地工人或相关负责人，分享施工现场的照片，并附上地点信息。
+
+【注意】  
+- 以上描述基于图片中可见的内容，未涉及图片外的信息。
+
+【上下文消息】
+随图片而来的上下文消息（如果有）：
+看到一个朋友圈
+2025-09-20 13:30:25,315 - bzchat.services.milvus - INFO - store_message:329 - 成功存储多模态消息: 01e807f8-feb8-4cd1-8ac9-e92f3bf0823a
+2025-09-20 13:30:25,329 - bzchat.services.milvus - INFO - get_recent_messages:369 - 获取到 9 条最近消息
+2025-09-20 13:30:25,343 - bzchat.services.milvus - INFO - search_similar_messages:421 - 找到 9 条相似消息
+2025-09-20 13:30:25,343 - bzchat.services.milvus - INFO - get_context_messages:485 - 获取到 9 条上下文消息（去重后）
+2025-09-20 13:30:25,344 - bzchat.services.deepseek - INFO - chat_completion:68 - [DEBUG] 发送到API的消息数量: 9
+2025-09-20 13:30:25,356 - bzchat.services.deepseek - INFO - _stream_response:138 - [DEBUG] 发送流式请求到DeepSeek API
+2025-09-20 13:30:50,891 - bzchat.services.milvus - INFO - _get_multimodal_embedding:224 - 生成文本向量
+2025-09-20 13:30:50,891 - bzchat.services.milvus - INFO - _get_multimodal_embedding:234 - 消息无图片内容
+2025-09-20 13:30:50,891 - bzchat.services.milvus - INFO - _get_multimodal_embedding:236 - 融合策略: priority
+2025-09-20 13:30:54,482 - bzchat.services.milvus - INFO - store_message:329 - 成功存储多模态消息: 4ba32e14-bd02-435e-8674-7778c3b85a80
+2025-09-20 13:30:54,489 - bzchat.services.milvus - INFO - get_recent_messages:369 - 获取到 10 条最近消息
+2025-09-20 13:30:54,497 - bzchat.services.milvus - INFO - search_similar_messages:421 - 找到 10 条相似消息
+2025-09-20 13:30:54,497 - bzchat.services.milvus - INFO - get_context_messages:485 - 获取到 10 条上下文消息（去重后）
+2025-09-20 13:30:54,498 - bzchat.services.deepseek - INFO - chat_completion:68 - [DEBUG] 发送到API的消息数量: 10
+2025-09-20 13:30:54,498 - bzchat.services.deepseek - INFO - _non_stream_response:99 - [DEBUG] 发送请求到DeepSeek API: https://ark.cn-beijing.volces.com/api/v3/chat/completions
+2025-09-20 13:36:16,647 - bzchat.services.milvus - INFO - _disconnect:105 - 已断开 Milvus 连接

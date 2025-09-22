@@ -14,7 +14,10 @@ import uvicorn
 # 导入自定义模块
 from models.ChatCompletionRequest import ChatCompletionRequest
 from services.milvus import MilvusMessageStore
-from utils.log import setup_logger
+from utils.log import setup_root_logger, get_logger
+from utils.message_convert import search_messages_to_api_messages
+from services.deepseek import DeepSeekAPI
+
 
 # FastAPI 应用
 app = FastAPI(title="Enhanced OpenAI Compatible API Server", version="2.0.0")
@@ -28,48 +31,105 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-# 初始化增强版 API 客户端
-# try:
-#     enhanced_api = EnhancedVolcEngineAPI(
-#         api_key
-#         milvus_host="localhost",
-#         milvus_port=19530
-#     )
-# except Exception as e:
-#     print(f"[ERROR] 初始化API客户端失败: {e}")
-#     enhanced_api = None
+# 首先设置根logger - 这很重要，必须在导入其他模块前设置
+root_logger = setup_root_logger("logs/total.log")
+
+# 获取主服务logger
+logger = get_logger("main")
+
+# 初始化存储器
+try:
+    milvus = MilvusMessageStore(
+        host="localhost",
+        port=19530,
+        collection_name="chat_messages"
+    )
+except Exception as e:
+    logger.error(f"初始化Milvus存储器失败: {e}")
+    milvus = None
+
+# 初始化DeepSeek API客户端
+deepseekApi = DeepSeekAPI()
+
+async def test_milvus_connection():
+    # 简单测试
+    from models import ReceivedMessage
+    store = MilvusMessageStore(
+        collection_name="chat_messages_test"
+    )
+    print("MilvusMessageStore 初始化完成")
+    # 可以添加更多测试代码
+    message = {
+        "role": "user",
+        "content": "测试消息",
+    }
+    await store.store_message(ReceivedMessage(**message))
+
+# 测试Deepseek api功能
+async def test_deepseek_api():
+    from models import ApiMessage
+    test_messages = [
+        {
+            "role": "user",
+            "content": "你好，请介绍一下你自己。",
+            "id": "user_text_001"
+        }
+    ]
+    try:
+        response = await deepseekApi.chat_completion(
+            messages=[ApiMessage(**msg) for msg in test_messages],
+            stream=False
+        )
+        print("DeepSeek API 响应:")
+        print(response)
+    except Exception as e:
+        print(f"DeepSeek API 测试异常: {e}")
+    
 
 @app.post("/chat/completions")
 async def chat_completions(request: ChatCompletionRequest):
     """增强版聊天补全端点，支持上下文检索"""
     # 存储收到的消息
     msg = request.messages[-1]  # 从前端给的最后一条消息是最新用户消息
-    msg = await milvus_store.store_message(msg)  # 存储消息，返回StoredMessage或None
-    if msg:
-        context_messages = await milvus_store.get_context_messages(msg)
-
-    return None
-    # try:
-        
-    #     if request.stream:
-    #         # 流式响应
-    #         generator = await enhanced_api.chat_completion(request)
-    #         return StreamingResponse(
-    #             generator,
-    #             media_type="text/plain",
-    #             headers={
-    #                 "Cache-Control": "no-cache",
-    #                 "Connection": "keep-alive",
-    #                 "Content-Type": "text/plain; charset=utf-8"
-    #             }
-    #         )
-    #     else:
-    #         # 非流式响应
-    #         response = await enhanced_api.chat_completion(request)
-    #         return response
+    stored_msg = await milvus.store_message(msg)  # 存储消息，返回StoredMessage或None
+    if stored_msg is None:
+        raise HTTPException(status_code=500, detail="Failed to store message")
+    
+    context_messages = await milvus.get_context_messages(stored_msg)
+    api_messages = search_messages_to_api_messages(context_messages)
+    
+    try:
+        if request.stream:
+            # 流式响应
+            generator = await deepseekApi.chat_completion(
+                messages=api_messages,
+                max_tokens=request.max_tokens or 3000,
+                temperature=request.temperature or 0.7,
+                stream=True,
+                # model=request.model
+            )
+            return StreamingResponse(
+                generator,
+                media_type="text/plain",
+                headers={
+                    "Cache-Control": "no-cache",
+                    "Connection": "keep-alive",
+                    "Content-Type": "text/plain; charset=utf-8"
+                }
+            )
+        else:
+            # 非流式响应
+            response = await deepseekApi.chat_completion(
+                messages=api_messages,
+                max_tokens=request.max_tokens or 3000,
+                temperature=request.temperature or 0.7,
+                stream=False,
+                # model=request.model
+            )
+            return response
             
-    # except Exception as e:
-    #     raise HTTPException(status_code=500, detail=str(e))
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=str(e))
 
 @app.get("/")
 async def root():
@@ -89,15 +149,6 @@ async def root():
     }
 
 if __name__ == "__main__":
-    logger = setup_logger("logs/total.log")
-    
-    # 初始化存储器
-    milvus_store = MilvusMessageStore(
-        host="localhost",
-        port=19530,
-        collection_name="chat_messages"
-    )
-    
     # 启动服务器
     uvicorn.run(
         app, 

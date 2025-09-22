@@ -10,8 +10,9 @@ import logging
 from typing import Optional, Tuple
 from PIL import Image
 from pathlib import Path
+from utils.log import get_logger
 
-logger = logging.getLogger(__name__)
+logger = get_logger(__name__)
 
 class ImageHandler:
     """图片处理工具类"""

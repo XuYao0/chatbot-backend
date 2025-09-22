@@ -15,7 +15,8 @@ class StoredMessage(BaseModel):
     role: str = Field(..., description="消息角色: system, user, assistant")
     text_content: str = Field(default="", description="消息的文本内容")
     has_image: bool = Field(default=False, description="是否包含图片")
-    image_paths: Optional[List[str]] = Field(default=None, description="消息中包含的图片文件路径列表")
+    image_path: Optional[str] = Field(default=None, description="消息中包含的图片文件路径")
+    image_desc: Optional[str] = Field(default=None, description="图片的描述")
     
     embedding: Optional[List[float]] = Field(default=None, description="消息的向量表示（CLIP模型生成）")
     
@@ -29,7 +30,8 @@ class StoredMessage(BaseModel):
             "role": self.role,
             "text_content": self.text_content,
             "has_image": self.has_image,
-            "image_paths": json.dumps(self.image_paths) if self.image_paths else "[]",
+            "image_path": self.image_path,
+            "image_desc": self.image_desc,
             "embedding": self.embedding,
         }
 
@@ -42,6 +44,7 @@ class StoredMessage(BaseModel):
             role=data.get("role", ""),
             text_content=data.get("text_content", ""),
             has_image=data.get("has_image", False),
-            image_paths=data.get("image_paths", []),
+            image_path=data.get("image_path"),
+            image_desc=data.get("image_desc"),
             embedding=data.get("embedding"),
         )

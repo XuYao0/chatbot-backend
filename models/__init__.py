@@ -7,6 +7,7 @@ from .ReceivedMessage import ReceivedMessage, ContentItem
 from .StoredMessage import StoredMessage
 from .SearchMessage import SearchMessage
 from .ChatCompletionRequest import ChatCompletionRequest
+from .ApiMessage import ApiMessage
 
 # 定义包的公共接口
 __all__ = [
@@ -22,4 +23,7 @@ __all__ = [
     
     # API请求模型
     "ChatCompletionRequest",
+
+    # 送给LLM API的消息类型
+    "ApiMessage"
 ]

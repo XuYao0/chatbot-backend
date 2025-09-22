@@ -5,6 +5,7 @@ from pydantic import BaseModel, Field
 from typing import Optional, Dict, Any
 import time
 import json
+from typing import List
 
 class SearchMessage(BaseModel):
     """从Milvus搜索返回的消息模型"""
@@ -14,6 +15,7 @@ class SearchMessage(BaseModel):
     text_content: str = Field(default="", description="消息的文本内容")
     has_image: bool = Field(default=False, description="是否包含图片")
     image_path: Optional[str] = Field(default=None, description="图片路径（带pic_stored_path前缀）")
+    image_desc: Optional[str] = Field(default=None, description="图片的描述列表")
     
     # 可选的相似度评分字段
     similarity_score: Optional[float] = Field(default=None, description="与查询的相似度评分")
@@ -24,38 +26,20 @@ class SearchMessage(BaseModel):
         从Milvus搜索结果创建SearchMessage对象
         
         Args:
-            hit_data: Milvus返回的hit数据，例如:
-                {
-                    "id": "msg_12345678",
-                    "role": "user", 
-                    "text_content": "请帮我分析这张图片中的内容",
-                    "timestamp": 1703030400.123,
-                    "session_id": "session_abc123",
-                    "user_id": "user_001",
-                    "has_image": True,
-                    "image_paths": '["uploads/2023/12/19/chat_img_001.jpg"]',
-                    "score": 0.8756  # Milvus相似度评分
-                }
-            pic_stored_path: 图片存储路径前缀，例如 "/home/xuyao/data/bzchat_pic"
-            
+            hit_data: Milvus返回的hit数据
+            pic_stored_path: 图片存储路径前缀
+
         Returns:
             SearchMessage对象
         """
-        # 处理图片路径，添加前缀
         image_path = None
-        if hit_data.get("has_image") and hit_data.get("image_paths"):
-            # 假设image_paths是JSON字符串或列表
-            paths = hit_data.get("image_paths", "[]")
-            if isinstance(paths, str):
-                try:
-                    paths = json.loads(paths)
-                except:
-                    paths = []
-            
-            if paths and len(paths) > 0:
-                # 添加pic_stored_path前缀
-                raw_path = paths[0]  # 取第一个图片路径
-                image_path = f"{pic_stored_path}/{raw_path}" if pic_stored_path else raw_path
+        if hit_data.get("has_image") and hit_data.get("image_path"):
+            raw_path = hit_data.get("image_path")
+            # 如果需要添加前缀且路径不是绝对路径
+            if raw_path and pic_stored_path and not raw_path.startswith("/"):
+                image_path = f"{pic_stored_path}/{raw_path}"
+            else:
+                image_path = raw_path
         
         return cls(
             id=hit_data.get("id", ""),
@@ -64,6 +48,7 @@ class SearchMessage(BaseModel):
             text_content=hit_data.get("text_content", ""),
             has_image=hit_data.get("has_image", False),
             image_path=image_path,
+            image_desc=hit_data.get("image_desc"),
             similarity_score=hit_data.get("score")  # Milvus返回的相似度评分
         )
     
@@ -76,5 +61,20 @@ class SearchMessage(BaseModel):
             "text_content": self.text_content,
             "has_image": self.has_image,
             "image_path": self.image_path,
+            "image_desc": self.image_desc,
             "similarity_score": self.similarity_score
         }
+    
+    @classmethod
+    def from_dict(cls, data: Dict[str, Any]) -> "SearchMessage":
+        """从字典创建SearchMessage对象"""
+        return cls(
+            id=data.get("id", ""),
+            timestamp=data.get("timestamp", time.time()),
+            role=data.get("role", ""),
+            text_content=data.get("text_content", ""),
+            has_image=data.get("has_image", False),
+            image_path=data.get("image_path"),
+            image_desc=data.get("image_desc"),
+            similarity_score=data.get("similarity_score")
+        )
