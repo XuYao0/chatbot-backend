@@ -801,3 +801,1156 @@ embedding
 2025-09-20 13:30:54,498 - bzchat.services.deepseek - INFO - chat_completion:68 - [DEBUG] 发送到API的消息数量: 10
 2025-09-20 13:30:54,498 - bzchat.services.deepseek - INFO - _non_stream_response:99 - [DEBUG] 发送请求到DeepSeek API: https://ark.cn-beijing.volces.com/api/v3/chat/completions
 2025-09-20 13:36:16,647 - bzchat.services.milvus - INFO - _disconnect:105 - 已断开 Milvus 连接
+2025-09-22 06:26:25,542 - bzchat.services.milvus - INFO - __init__:57 - 成功加载 CLIP 多模态模型: clip-ViT-L-14
+2025-09-22 06:26:25,543 - bzchat.utils.image_handler - INFO - __init__:33 - from image_handler: 图片存储路径: /home/xuyao/data/bzchat_pic
+2025-09-22 06:26:25,543 - bzchat.utils.image_describer - INFO - _load_model:35 - 正在加载图片描述模型: /home/xuyao/data/Qwen2.5-VL-3B-Instruct
+2025-09-22 06:26:29,765 - bzchat.utils.image_describer - INFO - _load_model:48 - 图片描述模型加载成功
+2025-09-22 06:26:29,780 - bzchat.services.milvus - INFO - _connect:96 - 成功连接到 Milvus 服务器 localhost:19530
+2025-09-22 06:26:29,789 - bzchat.services.milvus - INFO - __init__:74 - 集合 chat_messages 已存在，直接使用
+2025-09-22 06:26:29,792 - bzchat.services.milvus - INFO - _create_index:156 - 索引 'embedding_idx' 已存在，跳过创建
+2025-09-22 06:26:29,801 - bzchat.services.milvus - INFO - __init__:83 - 集合 chat_messages 加载完成
+2025-09-22 06:27:39,148 - bzchat.services.milvus - INFO - _get_multimodal_embedding:224 - 生成文本向量
+2025-09-22 06:27:39,148 - bzchat.services.milvus - INFO - _get_multimodal_embedding:234 - 消息无图片内容
+2025-09-22 06:27:39,148 - bzchat.services.milvus - INFO - _get_multimodal_embedding:236 - 融合策略: priority
+2025-09-22 06:27:41,842 - bzchat.services.milvus - INFO - store_message:329 - 成功存储多模态消息: 923411a0-7c72-46ae-93dc-dc280836a059
+2025-09-22 06:27:41,854 - bzchat.services.milvus - INFO - get_recent_messages:369 - 获取到 11 条最近消息
+2025-09-22 06:27:41,864 - bzchat.services.milvus - INFO - search_similar_messages:421 - 找到 10 条相似消息
+2025-09-22 06:27:41,864 - bzchat.services.milvus - INFO - get_context_messages:485 - 获取到 11 条上下文消息（去重后）
+2025-09-22 06:27:41,865 - bzchat.services.deepseek - INFO - chat_completion:68 - [DEBUG] 发送到API的消息数量: 11
+2025-09-22 06:27:41,865 - bzchat.services.deepseek - INFO - _non_stream_response:99 - [DEBUG] 发送请求到DeepSeek API: https://ark.cn-beijing.volces.com/api/v3/chat/completions
+2025-09-22 07:02:38,531 - bzchat.services.milvus - INFO - _disconnect:105 - 已断开 Milvus 连接
+2025-09-22 07:06:52,848 - bzchat.services.milvus - INFO - __init__:57 - 成功加载 CLIP 多模态模型: clip-ViT-L-14
+2025-09-22 07:06:52,848 - bzchat.utils.image_handler - INFO - __init__:33 - from image_handler: 图片存储路径: /home/xuyao/data/bzchat_pic
+2025-09-22 07:06:52,848 - bzchat.utils.image_describer - INFO - _load_model:35 - 正在加载图片描述模型: /home/xuyao/data/Qwen2.5-VL-3B-Instruct
+2025-09-22 07:06:57,090 - bzchat.utils.image_describer - INFO - _load_model:48 - 图片描述模型加载成功
+2025-09-22 07:06:57,104 - bzchat.services.milvus - INFO - _connect:96 - 成功连接到 Milvus 服务器 localhost:19530
+2025-09-22 07:06:57,286 - bzchat.services.milvus - INFO - _create_collection:137 - 成功创建多模态集合: chat_messages
+2025-09-22 07:06:57,294 - bzchat.services.milvus - INFO - _create_index:172 - 正在为字段 'embedding' 创建索引 'embedding_idx'...
+2025-09-22 07:06:57,839 - bzchat.services.milvus - INFO - _create_index:179 - 成功创建向量索引 'embedding_idx' (type=IVF_FLAT, metric=COSINE)
+2025-09-22 07:06:58,580 - bzchat.services.milvus - INFO - __init__:83 - 集合 chat_messages 加载完成
+2025-09-22 07:08:14,362 - bzchat.services.milvus - INFO - _get_multimodal_embedding:224 - 生成文本向量
+2025-09-22 07:08:14,362 - bzchat.services.milvus - INFO - _get_multimodal_embedding:234 - 消息无图片内容
+2025-09-22 07:08:14,362 - bzchat.services.milvus - INFO - _get_multimodal_embedding:236 - 融合策略: priority
+2025-09-22 07:08:17,360 - bzchat.services.milvus - INFO - store_message:329 - 成功存储多模态消息: d54d9d15-1669-4b63-957e-5ffd52695a90
+2025-09-22 07:08:17,369 - bzchat.services.milvus - INFO - get_recent_messages:369 - 获取到 1 条最近消息
+2025-09-22 07:08:17,377 - bzchat.services.milvus - INFO - search_similar_messages:421 - 找到 1 条相似消息
+2025-09-22 07:08:17,377 - bzchat.services.milvus - INFO - get_context_messages:485 - 获取到 1 条上下文消息（去重后）
+2025-09-22 07:08:17,378 - bzchat.main - INFO - chat_completions:120 - 送到 DeepSeek API 的消息: [ApiMessage(role='system', content='你是一个有帮助的助手。以下内容包括用户与你聊天的历史消息，以及用户最近一次发送的消息，请参考历史消息和你的知识来回答用户最近一次发送的消息'), ApiMessage(role='user', content='你好')]
+2025-09-22 07:08:17,378 - bzchat.services.deepseek - INFO - chat_completion:68 - [DEBUG] 发送到API的消息数量: 2
+2025-09-22 07:08:19,198 - bzchat.services.milvus - INFO - _get_multimodal_embedding:224 - 生成文本向量
+2025-09-22 07:08:19,198 - bzchat.services.milvus - INFO - _get_multimodal_embedding:234 - 消息无图片内容
+2025-09-22 07:08:19,199 - bzchat.services.milvus - INFO - _get_multimodal_embedding:236 - 融合策略: priority
+2025-09-22 07:08:28,032 - bzchat.services.milvus - INFO - store_message:329 - 成功存储多模态消息: cab9bd9c-4c89-4b7b-99c7-9b6e02ebe687
+2025-09-22 07:08:28,038 - bzchat.services.milvus - INFO - get_recent_messages:369 - 获取到 2 条最近消息
+2025-09-22 07:08:28,045 - bzchat.services.milvus - INFO - search_similar_messages:421 - 找到 2 条相似消息
+2025-09-22 07:08:28,046 - bzchat.services.milvus - INFO - get_context_messages:485 - 获取到 2 条上下文消息（去重后）
+2025-09-22 07:08:28,046 - bzchat.main - INFO - chat_completions:120 - 送到 DeepSeek API 的消息: [ApiMessage(role='system', content='你是一个有帮助的助手。以下内容包括用户与你聊天的历史消息，以及用户最近一次发送的消息，请参考历史消息和你的知识来回答用户最近一次发送的消息'), ApiMessage(role='user', content='你好'), ApiMessage(role='user', content='你好')]
+2025-09-22 07:08:28,046 - bzchat.services.deepseek - INFO - chat_completion:68 - [DEBUG] 发送到API的消息数量: 3
+2025-09-22 07:08:31,493 - bzchat.services.milvus - INFO - _get_multimodal_embedding:224 - 生成文本向量
+2025-09-22 07:08:31,493 - bzchat.services.milvus - INFO - _get_multimodal_embedding:234 - 消息无图片内容
+2025-09-22 07:08:31,493 - bzchat.services.milvus - INFO - _get_multimodal_embedding:236 - 融合策略: priority
+2025-09-22 07:08:38,009 - bzchat.services.milvus - INFO - store_message:329 - 成功存储多模态消息: e3538e1e-abe3-4554-8242-9477bc76f6ba
+2025-09-22 07:08:38,022 - bzchat.services.milvus - INFO - get_recent_messages:369 - 获取到 3 条最近消息
+2025-09-22 07:08:38,030 - bzchat.services.milvus - INFO - search_similar_messages:421 - 找到 3 条相似消息
+2025-09-22 07:08:38,030 - bzchat.services.milvus - INFO - get_context_messages:485 - 获取到 3 条上下文消息（去重后）
+2025-09-22 07:08:38,030 - bzchat.main - INFO - chat_completions:120 - 送到 DeepSeek API 的消息: [ApiMessage(role='system', content='你是一个有帮助的助手。以下内容包括用户与你聊天的历史消息，以及用户最近一次发送的消息，请参考历史消息和你的知识来回答用户最近一次发送的消息'), ApiMessage(role='user', content='你好'), ApiMessage(role='user', content='你好'), ApiMessage(role='user', content='你好')]
+2025-09-22 07:08:38,030 - bzchat.services.deepseek - INFO - chat_completion:68 - [DEBUG] 发送到API的消息数量: 4
+2025-09-22 07:08:45,545 - bzchat.services.milvus - INFO - _get_multimodal_embedding:224 - 生成文本向量
+2025-09-22 07:08:45,545 - bzchat.services.milvus - INFO - _get_multimodal_embedding:234 - 消息无图片内容
+2025-09-22 07:08:45,545 - bzchat.services.milvus - INFO - _get_multimodal_embedding:236 - 融合策略: priority
+2025-09-22 07:08:48,347 - bzchat.services.milvus - INFO - store_message:329 - 成功存储多模态消息: 470b0345-ee2c-4c31-8e05-a7db35f2aa38
+2025-09-22 07:08:48,353 - bzchat.services.milvus - INFO - get_recent_messages:369 - 获取到 4 条最近消息
+2025-09-22 07:08:48,360 - bzchat.services.milvus - INFO - search_similar_messages:421 - 找到 4 条相似消息
+2025-09-22 07:08:48,360 - bzchat.services.milvus - INFO - get_context_messages:485 - 获取到 4 条上下文消息（去重后）
+2025-09-22 07:08:48,360 - bzchat.main - INFO - chat_completions:120 - 送到 DeepSeek API 的消息: [ApiMessage(role='system', content='你是一个有帮助的助手。以下内容包括用户与你聊天的历史消息，以及用户最近一次发送的消息，请参考历史消息和你的知识来回答用户最近一次发送的消息'), ApiMessage(role='user', content='你好'), ApiMessage(role='user', content='你好'), ApiMessage(role='user', content='你好'), ApiMessage(role='user', content='你好')]
+2025-09-22 07:08:48,360 - bzchat.services.deepseek - INFO - chat_completion:68 - [DEBUG] 发送到API的消息数量: 5
+2025-09-22 07:08:51,160 - bzchat.services.milvus - INFO - _disconnect:105 - 已断开 Milvus 连接
+2025-09-22 07:14:06,589 - bzchat.services.milvus - INFO - __init__:57 - 成功加载 CLIP 多模态模型: clip-ViT-L-14
+2025-09-22 07:14:06,590 - bzchat.utils.image_handler - INFO - __init__:33 - from image_handler: 图片存储路径: /home/xuyao/data/bzchat_pic
+2025-09-22 07:14:06,590 - bzchat.utils.image_describer - INFO - _load_model:35 - 正在加载图片描述模型: /home/xuyao/data/Qwen2.5-VL-3B-Instruct
+2025-09-22 07:14:10,815 - bzchat.utils.image_describer - INFO - _load_model:48 - 图片描述模型加载成功
+2025-09-22 07:14:10,828 - bzchat.services.milvus - INFO - _connect:96 - 成功连接到 Milvus 服务器 localhost:19530
+2025-09-22 07:14:10,836 - bzchat.services.milvus - INFO - __init__:74 - 集合 chat_messages 已存在，直接使用
+2025-09-22 07:14:10,838 - bzchat.services.milvus - INFO - _create_index:156 - 索引 'embedding_idx' 已存在，跳过创建
+2025-09-22 07:14:10,845 - bzchat.services.milvus - INFO - __init__:83 - 集合 chat_messages 加载完成
+2025-09-22 07:14:48,331 - bzchat.services.milvus - INFO - _get_multimodal_embedding:224 - 生成文本向量
+2025-09-22 07:14:48,331 - bzchat.services.milvus - INFO - _get_multimodal_embedding:234 - 消息无图片内容
+2025-09-22 07:14:48,331 - bzchat.services.milvus - INFO - _get_multimodal_embedding:236 - 融合策略: priority
+2025-09-22 07:14:51,394 - bzchat.services.milvus - INFO - store_message:329 - 成功存储多模态消息: 16103cc2-a95d-443f-aa74-444f7f02069f
+2025-09-22 07:14:51,407 - bzchat.services.milvus - INFO - get_recent_messages:369 - 获取到 5 条最近消息
+2025-09-22 07:14:51,417 - bzchat.services.milvus - INFO - search_similar_messages:421 - 找到 5 条相似消息
+2025-09-22 07:14:51,417 - bzchat.services.milvus - INFO - get_context_messages:485 - 获取到 5 条上下文消息（去重后）
+2025-09-22 07:14:51,417 - bzchat.main - INFO - chat_completions:120 - 送到 DeepSeek API 的消息: [ApiMessage(role='system', content='你是一个有帮助的助手。以下内容包括用户与你聊天的历史消息，以及用户最后一次发送的消息，请参考历史消息和你的知识来回答用户最近一次发送的消息'), ApiMessage(role='user', content='这是一条测试信息'), ApiMessage(role='user', content='你好'), ApiMessage(role='user', content='你好'), ApiMessage(role='user', content='你好'), ApiMessage(role='user', content='你好')]
+2025-09-22 07:14:51,418 - bzchat.services.deepseek - INFO - chat_completion:68 - [DEBUG] 发送到API的消息数量: 6
+2025-09-22 07:14:51,418 - bzchat.services.deepseek - INFO - _non_stream_response:101 - [DEBUG] 发送请求到DeepSeek API: https://ark.cn-beijing.volces.com/api/v3/chat/completions
+2025-09-22 07:15:48,722 - bzchat.services.milvus - INFO - _disconnect:105 - 已断开 Milvus 连接
+2025-09-22 07:16:10,178 - bzchat.services.milvus - INFO - __init__:57 - 成功加载 CLIP 多模态模型: clip-ViT-L-14
+2025-09-22 07:16:10,178 - bzchat.utils.image_handler - INFO - __init__:33 - from image_handler: 图片存储路径: /home/xuyao/data/bzchat_pic
+2025-09-22 07:16:10,178 - bzchat.utils.image_describer - INFO - _load_model:35 - 正在加载图片描述模型: /home/xuyao/data/Qwen2.5-VL-3B-Instruct
+2025-09-22 07:16:14,351 - bzchat.utils.image_describer - INFO - _load_model:48 - 图片描述模型加载成功
+2025-09-22 07:16:14,366 - bzchat.services.milvus - INFO - _connect:96 - 成功连接到 Milvus 服务器 localhost:19530
+2025-09-22 07:16:14,378 - bzchat.services.milvus - INFO - __init__:74 - 集合 chat_messages 已存在，直接使用
+2025-09-22 07:16:14,382 - bzchat.services.milvus - INFO - _create_index:156 - 索引 'embedding_idx' 已存在，跳过创建
+2025-09-22 07:16:14,391 - bzchat.services.milvus - INFO - __init__:83 - 集合 chat_messages 加载完成
+2025-09-22 07:16:17,570 - bzchat.services.milvus - INFO - _get_multimodal_embedding:224 - 生成文本向量
+2025-09-22 07:16:17,570 - bzchat.services.milvus - INFO - _get_multimodal_embedding:234 - 消息无图片内容
+2025-09-22 07:16:17,570 - bzchat.services.milvus - INFO - _get_multimodal_embedding:236 - 融合策略: priority
+2025-09-22 07:16:20,640 - bzchat.services.milvus - INFO - store_message:329 - 成功存储多模态消息: 46e7f894-6b23-4a7a-9a2c-69b7effc7ef4
+2025-09-22 07:16:20,648 - bzchat.services.milvus - INFO - get_recent_messages:369 - 获取到 6 条最近消息
+2025-09-22 07:16:20,657 - bzchat.services.milvus - INFO - search_similar_messages:421 - 找到 6 条相似消息
+2025-09-22 07:16:20,657 - bzchat.services.milvus - INFO - get_context_messages:485 - 获取到 6 条上下文消息（去重后）
+2025-09-22 07:16:20,658 - bzchat.main - INFO - chat_completions:120 - 送到 DeepSeek API 的消息: [ApiMessage(role='user', content='你是一个有帮助的助手。以下内容包括用户与你聊天的历史消息，以及用户最后一次发送的消息，请参考历史消息和你的知识来回答用户最近一次发送的消息'), ApiMessage(role='user', content='这是一条测试信息'), ApiMessage(role='user', content='这是一条测试信息'), ApiMessage(role='user', content='你好'), ApiMessage(role='user', content='你好'), ApiMessage(role='user', content='你好'), ApiMessage(role='user', content='你好')]
+2025-09-22 07:16:20,658 - bzchat.services.deepseek - INFO - chat_completion:68 - [DEBUG] 发送到API的消息数量: 7
+2025-09-22 07:16:20,658 - bzchat.services.deepseek - INFO - _non_stream_response:101 - [DEBUG] 发送请求到DeepSeek API: https://ark.cn-beijing.volces.com/api/v3/chat/completions
+2025-09-22 07:28:20,398 - bzchat.services.milvus - INFO - _disconnect:105 - 已断开 Milvus 连接
+2025-09-22 07:28:31,205 - bzchat.services.milvus - INFO - __init__:57 - 成功加载 CLIP 多模态模型: clip-ViT-L-14
+2025-09-22 07:28:31,206 - bzchat.utils.image_handler - INFO - __init__:33 - from image_handler: 图片存储路径: /home/xuyao/data/bzchat_pic
+2025-09-22 07:28:31,206 - bzchat.utils.image_describer - INFO - _load_model:35 - 正在加载图片描述模型: /home/xuyao/data/Qwen2.5-VL-3B-Instruct
+2025-09-22 07:28:35,401 - bzchat.utils.image_describer - INFO - _load_model:48 - 图片描述模型加载成功
+2025-09-22 07:28:35,416 - bzchat.services.milvus - INFO - _connect:96 - 成功连接到 Milvus 服务器 localhost:19530
+2025-09-22 07:28:35,428 - bzchat.services.milvus - INFO - __init__:74 - 集合 chat_messages 已存在，直接使用
+2025-09-22 07:28:35,431 - bzchat.services.milvus - INFO - _create_index:156 - 索引 'embedding_idx' 已存在，跳过创建
+2025-09-22 07:28:35,440 - bzchat.services.milvus - INFO - __init__:83 - 集合 chat_messages 加载完成
+2025-09-22 07:29:12,964 - bzchat.services.milvus - INFO - _get_multimodal_embedding:224 - 生成文本向量
+2025-09-22 07:29:12,964 - bzchat.services.milvus - INFO - _get_multimodal_embedding:234 - 消息无图片内容
+2025-09-22 07:29:12,964 - bzchat.services.milvus - INFO - _get_multimodal_embedding:236 - 融合策略: priority
+2025-09-22 07:29:16,054 - bzchat.services.milvus - INFO - store_message:329 - 成功存储多模态消息: 3388300a-1dfc-4593-a845-714cb51ee561
+2025-09-22 07:29:16,071 - bzchat.services.milvus - INFO - get_recent_messages:369 - 获取到 7 条最近消息
+2025-09-22 07:29:16,081 - bzchat.services.milvus - INFO - search_similar_messages:421 - 找到 7 条相似消息
+2025-09-22 07:29:16,081 - bzchat.services.milvus - INFO - get_context_messages:485 - 获取到 7 条上下文消息（去重后）
+2025-09-22 07:29:16,082 - bzchat.main - INFO - chat_completions:120 - 送到 DeepSeek API 的消息: [ApiMessage(role='user', content='你是一个有帮助的助手。以下内容包括用户与你聊天的历史消息，以及用户最后一次发送的消息，请参考历史消息和你的知识来回答用户最近一次发送的消息'), ApiMessage(role='user', content='这是一条测试信息'), ApiMessage(role='user', content='这是一条测试信息'), ApiMessage(role='user', content='这是一条测试信息'), ApiMessage(role='user', content='你好'), ApiMessage(role='user', content='你好'), ApiMessage(role='user', content='你好'), ApiMessage(role='user', content='你好')]
+2025-09-22 07:29:16,082 - bzchat.services.deepseek - INFO - chat_completion:68 - [DEBUG] 发送到API的消息数量: 8
+2025-09-22 07:29:16,082 - bzchat.services.deepseek - INFO - _non_stream_response:99 - [DEBUG] 发送请求到DeepSeek API: https://ark.cn-beijing.volces.com/api/v3/chat/completions
+2025-09-22 07:31:20,705 - bzchat.services.milvus - INFO - _disconnect:105 - 已断开 Milvus 连接
+2025-09-22 07:31:33,432 - bzchat.services.milvus - INFO - __init__:57 - 成功加载 CLIP 多模态模型: clip-ViT-L-14
+2025-09-22 07:31:33,432 - bzchat.utils.image_handler - INFO - __init__:33 - from image_handler: 图片存储路径: /home/xuyao/data/bzchat_pic
+2025-09-22 07:31:33,432 - bzchat.utils.image_describer - INFO - _load_model:35 - 正在加载图片描述模型: /home/xuyao/data/Qwen2.5-VL-3B-Instruct
+2025-09-22 07:31:37,703 - bzchat.utils.image_describer - INFO - _load_model:48 - 图片描述模型加载成功
+2025-09-22 07:31:37,717 - bzchat.services.milvus - INFO - _connect:96 - 成功连接到 Milvus 服务器 localhost:19530
+2025-09-22 07:31:37,724 - bzchat.services.milvus - INFO - __init__:74 - 集合 chat_messages 已存在，直接使用
+2025-09-22 07:31:37,726 - bzchat.services.milvus - INFO - _create_index:156 - 索引 'embedding_idx' 已存在，跳过创建
+2025-09-22 07:31:37,734 - bzchat.services.milvus - INFO - __init__:83 - 集合 chat_messages 加载完成
+2025-09-22 07:34:42,569 - bzchat.services.milvus - INFO - _get_multimodal_embedding:224 - 生成文本向量
+2025-09-22 07:34:42,569 - bzchat.services.milvus - INFO - _get_multimodal_embedding:234 - 消息无图片内容
+2025-09-22 07:34:42,569 - bzchat.services.milvus - INFO - _get_multimodal_embedding:236 - 融合策略: priority
+2025-09-22 07:34:45,576 - bzchat.services.milvus - INFO - store_message:329 - 成功存储多模态消息: 30375ce3-694d-4649-97e7-832db68df3f0
+2025-09-22 07:34:45,586 - bzchat.services.milvus - INFO - get_recent_messages:369 - 获取到 8 条最近消息
+2025-09-22 07:34:45,595 - bzchat.services.milvus - INFO - search_similar_messages:421 - 找到 8 条相似消息
+2025-09-22 07:34:45,596 - bzchat.services.milvus - INFO - get_context_messages:485 - 获取到 8 条上下文消息（去重后）
+2025-09-22 07:34:45,596 - bzchat.main - INFO - chat_completions:120 - 送到 DeepSeek API 的消息: [ApiMessage(role='user', content='你是一个有帮助的助手。以下内容包括用户与你聊天的历史消息，以及用户最后一次发送的消息，请参考历史消息和你的知识来回答用户最近一次发送的消息'), ApiMessage(role='user', content='这是一条测试信息'), ApiMessage(role='user', content='这是一条测试信息'), ApiMessage(role='user', content='这是一条测试信息'), ApiMessage(role='user', content='这是一条测试信息'), ApiMessage(role='user', content='你好'), ApiMessage(role='user', content='你好'), ApiMessage(role='user', content='你好'), ApiMessage(role='user', content='你好')]
+2025-09-22 07:34:45,597 - bzchat.services.deepseek - INFO - chat_completion:68 - [DEBUG] 发送到API的消息数量: 9
+2025-09-22 07:34:45,597 - bzchat.services.deepseek - INFO - _non_stream_response:99 - [DEBUG] 发送请求到DeepSeek API: https://ark.cn-beijing.volces.com/api/v3/chat/completions
+2025-09-22 07:38:19,014 - bzchat.services.milvus - INFO - _disconnect:105 - 已断开 Milvus 连接
+2025-09-22 07:38:47,833 - bzchat.services.milvus - INFO - __init__:57 - 成功加载 CLIP 多模态模型: clip-ViT-L-14
+2025-09-22 07:38:47,833 - bzchat.utils.image_handler - INFO - __init__:33 - from image_handler: 图片存储路径: /home/xuyao/data/bzchat_pic
+2025-09-22 07:38:47,833 - bzchat.utils.image_describer - INFO - _load_model:35 - 正在加载图片描述模型: /home/xuyao/data/Qwen2.5-VL-3B-Instruct
+2025-09-22 07:38:52,042 - bzchat.utils.image_describer - INFO - _load_model:48 - 图片描述模型加载成功
+2025-09-22 07:38:52,058 - bzchat.services.milvus - INFO - _connect:96 - 成功连接到 Milvus 服务器 localhost:19530
+2025-09-22 07:38:52,245 - bzchat.services.milvus - INFO - _create_collection:137 - 成功创建多模态集合: chat_messages
+2025-09-22 07:38:52,251 - bzchat.services.milvus - INFO - _create_index:172 - 正在为字段 'embedding' 创建索引 'embedding_idx'...
+2025-09-22 07:38:52,778 - bzchat.services.milvus - INFO - _create_index:179 - 成功创建向量索引 'embedding_idx' (type=IVF_FLAT, metric=COSINE)
+2025-09-22 07:38:53,719 - bzchat.services.milvus - INFO - __init__:83 - 集合 chat_messages 加载完成
+2025-09-22 07:39:08,474 - bzchat.services.milvus - INFO - _get_multimodal_embedding:224 - 生成文本向量
+2025-09-22 07:39:08,474 - bzchat.services.milvus - INFO - _get_multimodal_embedding:234 - 消息无图片内容
+2025-09-22 07:39:08,474 - bzchat.services.milvus - INFO - _get_multimodal_embedding:236 - 融合策略: priority
+2025-09-22 07:39:11,645 - bzchat.services.milvus - INFO - store_message:329 - 成功存储多模态消息: a0f071f3-08f3-4949-baf8-543d449c89fa
+2025-09-22 07:39:11,653 - bzchat.services.milvus - INFO - get_recent_messages:369 - 获取到 1 条最近消息
+2025-09-22 07:39:11,661 - bzchat.services.milvus - INFO - search_similar_messages:421 - 找到 1 条相似消息
+2025-09-22 07:39:11,661 - bzchat.services.milvus - INFO - get_context_messages:485 - 获取到 1 条上下文消息（去重后）
+2025-09-22 07:39:11,662 - bzchat.main - INFO - chat_completions:120 - 送到 DeepSeek API 的消息: [ApiMessage(role='user', content='你是一个有帮助的助手。以下内容包括用户与你聊天的历史消息，以及用户最后一次发送的消息，请参考历史消息和你的知识来回答用户最近一次发送的消息'), ApiMessage(role='user', content='你好')]
+2025-09-22 07:39:11,662 - bzchat.services.deepseek - INFO - chat_completion:68 - [DEBUG] 发送到API的消息数量: 2
+2025-09-22 07:39:13,392 - bzchat.services.milvus - INFO - _get_multimodal_embedding:224 - 生成文本向量
+2025-09-22 07:39:13,392 - bzchat.services.milvus - INFO - _get_multimodal_embedding:234 - 消息无图片内容
+2025-09-22 07:39:13,392 - bzchat.services.milvus - INFO - _get_multimodal_embedding:236 - 融合策略: priority
+2025-09-22 07:39:22,925 - bzchat.services.milvus - INFO - store_message:329 - 成功存储多模态消息: 24a5a9e7-a5ab-4584-adb3-babf510cf220
+2025-09-22 07:39:22,935 - bzchat.services.milvus - INFO - get_recent_messages:369 - 获取到 2 条最近消息
+2025-09-22 07:39:22,941 - bzchat.services.milvus - INFO - search_similar_messages:421 - 找到 2 条相似消息
+2025-09-22 07:39:22,941 - bzchat.services.milvus - INFO - get_context_messages:485 - 获取到 2 条上下文消息（去重后）
+2025-09-22 07:39:22,942 - bzchat.main - INFO - chat_completions:120 - 送到 DeepSeek API 的消息: [ApiMessage(role='user', content='你是一个有帮助的助手。以下内容包括用户与你聊天的历史消息，以及用户最后一次发送的消息，请参考历史消息和你的知识来回答用户最近一次发送的消息'), ApiMessage(role='user', content='你好'), ApiMessage(role='user', content='你好')]
+2025-09-22 07:39:22,942 - bzchat.services.deepseek - INFO - chat_completion:68 - [DEBUG] 发送到API的消息数量: 3
+2025-09-22 07:39:23,438 - bzchat.services.milvus - INFO - _disconnect:105 - 已断开 Milvus 连接
+2025-09-22 07:41:01,289 - bzchat.services.milvus - INFO - __init__:57 - 成功加载 CLIP 多模态模型: clip-ViT-L-14
+2025-09-22 07:41:01,289 - bzchat.utils.image_handler - INFO - __init__:33 - from image_handler: 图片存储路径: /home/xuyao/data/bzchat_pic
+2025-09-22 07:41:01,289 - bzchat.utils.image_describer - INFO - _load_model:35 - 正在加载图片描述模型: /home/xuyao/data/Qwen2.5-VL-3B-Instruct
+2025-09-22 07:41:05,504 - bzchat.utils.image_describer - INFO - _load_model:48 - 图片描述模型加载成功
+2025-09-22 07:41:05,520 - bzchat.services.milvus - INFO - _connect:96 - 成功连接到 Milvus 服务器 localhost:19530
+2025-09-22 07:41:05,691 - bzchat.services.milvus - INFO - _create_collection:137 - 成功创建多模态集合: chat_messages
+2025-09-22 07:41:05,697 - bzchat.services.milvus - INFO - _create_index:172 - 正在为字段 'embedding' 创建索引 'embedding_idx'...
+2025-09-22 07:41:06,249 - bzchat.services.milvus - INFO - _create_index:179 - 成功创建向量索引 'embedding_idx' (type=IVF_FLAT, metric=COSINE)
+2025-09-22 07:41:06,987 - bzchat.services.milvus - INFO - __init__:83 - 集合 chat_messages 加载完成
+2025-09-22 07:41:13,521 - bzchat.services.milvus - INFO - _get_multimodal_embedding:224 - 生成文本向量
+2025-09-22 07:41:13,521 - bzchat.services.milvus - INFO - _get_multimodal_embedding:234 - 消息无图片内容
+2025-09-22 07:41:13,521 - bzchat.services.milvus - INFO - _get_multimodal_embedding:236 - 融合策略: priority
+2025-09-22 07:41:16,586 - bzchat.services.milvus - INFO - store_message:329 - 成功存储多模态消息: b332028f-fed4-4ad3-88d7-d8a1a0d71209
+2025-09-22 07:41:16,596 - bzchat.services.milvus - INFO - get_recent_messages:369 - 获取到 1 条最近消息
+2025-09-22 07:41:16,604 - bzchat.services.milvus - INFO - search_similar_messages:421 - 找到 1 条相似消息
+2025-09-22 07:41:16,605 - bzchat.services.milvus - INFO - get_context_messages:485 - 获取到 1 条上下文消息（去重后）
+2025-09-22 07:41:16,605 - bzchat.main - INFO - chat_completions:120 - 送到 DeepSeek API 的消息: [ApiMessage(role='user', content='你是一个有帮助的助手。以下内容包括用户与你聊天的历史消息，以及用户最后一次发送的消息，请参考历史消息和你的知识来回答用户最近一次发送的消息'), ApiMessage(role='user', content='这是一条测试信息')]
+2025-09-22 07:41:16,605 - bzchat.services.deepseek - INFO - chat_completion:68 - [DEBUG] 发送到API的消息数量: 2
+2025-09-22 07:41:16,605 - bzchat.services.deepseek - INFO - _non_stream_response:99 - [DEBUG] 发送请求到DeepSeek API: https://ark.cn-beijing.volces.com/api/v3/chat/completions
+2025-09-22 07:41:26,421 - bzchat.main - INFO - chat_completions:171 - DeepSeek API 非流式响应: 
+你好！👋 这是一条测试信息的回复～ 如果你有任何问题，或者想聊聊学习、工作、生活相关的话题，我随时在这里！😊 需要我帮忙做什么呢？
+2025-09-22 07:41:26,452 - bzchat.services.milvus - INFO - _get_multimodal_embedding:224 - 生成文本向量
+2025-09-22 07:41:26,452 - bzchat.services.milvus - INFO - _get_multimodal_embedding:234 - 消息无图片内容
+2025-09-22 07:41:26,452 - bzchat.services.milvus - INFO - _get_multimodal_embedding:236 - 融合策略: priority
+2025-09-22 07:41:29,511 - bzchat.services.milvus - INFO - store_message:329 - 成功存储多模态消息: e88a76eb-43a6-4dca-a0ff-bad328808dc3
+2025-09-22 07:41:29,544 - bzchat.services.milvus - INFO - _get_multimodal_embedding:224 - 生成文本向量
+2025-09-22 07:41:29,544 - bzchat.services.milvus - INFO - _get_multimodal_embedding:234 - 消息无图片内容
+2025-09-22 07:41:29,544 - bzchat.services.milvus - INFO - _get_multimodal_embedding:236 - 融合策略: priority
+2025-09-22 07:41:38,140 - bzchat.services.milvus - INFO - store_message:329 - 成功存储多模态消息: 97d53a4e-869a-4122-9413-9151343d2678
+2025-09-22 07:41:38,149 - bzchat.services.milvus - INFO - get_recent_messages:369 - 获取到 3 条最近消息
+2025-09-22 07:41:38,156 - bzchat.services.milvus - INFO - search_similar_messages:421 - 找到 3 条相似消息
+2025-09-22 07:41:38,157 - bzchat.services.milvus - INFO - get_context_messages:485 - 获取到 3 条上下文消息（去重后）
+2025-09-22 07:41:38,157 - bzchat.main - INFO - chat_completions:120 - 送到 DeepSeek API 的消息: [ApiMessage(role='user', content='你是一个有帮助的助手。以下内容包括用户与你聊天的历史消息，以及用户最后一次发送的消息，请参考历史消息和你的知识来回答用户最近一次发送的消息'), ApiMessage(role='user', content='这是一条测试信息'), ApiMessage(role='assistant', content='\n你好！👋 这是一条测试信息的回复～ 如果你有任何问题，或者想聊聊学习、工作、生活相关的话题，我随时在这里！😊 需要我帮忙做什么呢？'), ApiMessage(role='user', content='你好')]
+2025-09-22 07:41:38,157 - bzchat.services.deepseek - INFO - chat_completion:68 - [DEBUG] 发送到API的消息数量: 4
+2025-09-22 07:42:14,460 - bzchat.services.milvus - INFO - _get_multimodal_embedding:224 - 生成文本向量
+2025-09-22 07:42:14,460 - bzchat.services.milvus - INFO - _get_multimodal_embedding:234 - 消息无图片内容
+2025-09-22 07:42:14,460 - bzchat.services.milvus - INFO - _get_multimodal_embedding:236 - 融合策略: priority
+2025-09-22 07:42:17,570 - bzchat.services.milvus - INFO - store_message:329 - 成功存储多模态消息: 505c59fd-90c6-4684-a426-e5e1991f30b8
+2025-09-22 07:42:17,577 - bzchat.services.milvus - INFO - get_recent_messages:369 - 获取到 4 条最近消息
+2025-09-22 07:42:17,584 - bzchat.services.milvus - INFO - search_similar_messages:421 - 找到 4 条相似消息
+2025-09-22 07:42:17,584 - bzchat.services.milvus - INFO - get_context_messages:485 - 获取到 4 条上下文消息（去重后）
+2025-09-22 07:42:17,584 - bzchat.main - INFO - chat_completions:120 - 送到 DeepSeek API 的消息: [ApiMessage(role='user', content='你是一个有帮助的助手。以下内容包括用户与你聊天的历史消息，以及用户最后一次发送的消息，请参考历史消息和你的知识来回答用户最近一次发送的消息'), ApiMessage(role='user', content='这是一条测试信息'), ApiMessage(role='assistant', content='\n你好！👋 这是一条测试信息的回复～ 如果你有任何问题，或者想聊聊学习、工作、生活相关的话题，我随时在这里！😊 需要我帮忙做什么呢？'), ApiMessage(role='user', content='你好'), ApiMessage(role='user', content='hello')]
+2025-09-22 07:42:17,585 - bzchat.services.deepseek - INFO - chat_completion:68 - [DEBUG] 发送到API的消息数量: 5
+2025-09-22 07:42:17,585 - bzchat.services.deepseek - INFO - _non_stream_response:99 - [DEBUG] 发送请求到DeepSeek API: https://ark.cn-beijing.volces.com/api/v3/chat/completions
+2025-09-22 07:42:28,170 - bzchat.main - INFO - chat_completions:171 - DeepSeek API 非流式响应: 
+你好！👋 看到你中英文切换得很自如呢～ 如果你有任何问题、需要帮忙查资料，或者单纯想聊天，我都在这里！😊 今天有什么想聊的吗？
+2025-09-22 07:42:28,197 - bzchat.services.milvus - INFO - _get_multimodal_embedding:224 - 生成文本向量
+2025-09-22 07:42:28,197 - bzchat.services.milvus - INFO - _get_multimodal_embedding:234 - 消息无图片内容
+2025-09-22 07:42:28,197 - bzchat.services.milvus - INFO - _get_multimodal_embedding:236 - 融合策略: priority
+2025-09-22 07:42:31,256 - bzchat.services.milvus - INFO - store_message:329 - 成功存储多模态消息: 6d9702ec-a0b3-460e-b1c1-fdadd9ecdeea
+2025-09-22 07:42:40,089 - bzchat.services.milvus - INFO - _disconnect:105 - 已断开 Milvus 连接
+2025-09-22 07:44:21,763 - bzchat.services.milvus - INFO - __init__:57 - 成功加载 CLIP 多模态模型: clip-ViT-L-14
+2025-09-22 07:44:21,763 - bzchat.utils.image_handler - INFO - __init__:33 - from image_handler: 图片存储路径: /home/xuyao/data/bzchat_pic
+2025-09-22 07:44:21,763 - bzchat.utils.image_describer - INFO - _load_model:35 - 正在加载图片描述模型: /home/xuyao/data/Qwen2.5-VL-3B-Instruct
+2025-09-22 07:44:25,988 - bzchat.utils.image_describer - INFO - _load_model:48 - 图片描述模型加载成功
+2025-09-22 07:44:26,004 - bzchat.services.milvus - INFO - _connect:96 - 成功连接到 Milvus 服务器 localhost:19530
+2025-09-22 07:44:26,016 - bzchat.services.milvus - INFO - __init__:74 - 集合 chat_messages 已存在，直接使用
+2025-09-22 07:44:26,019 - bzchat.services.milvus - INFO - _create_index:156 - 索引 'embedding_idx' 已存在，跳过创建
+2025-09-22 07:44:26,028 - bzchat.services.milvus - INFO - __init__:83 - 集合 chat_messages 加载完成
+2025-09-22 07:44:51,553 - bzchat.services.milvus - INFO - _get_multimodal_embedding:224 - 生成文本向量
+2025-09-22 07:44:51,553 - bzchat.services.milvus - INFO - _get_multimodal_embedding:234 - 消息无图片内容
+2025-09-22 07:44:51,553 - bzchat.services.milvus - INFO - _get_multimodal_embedding:236 - 融合策略: priority
+2025-09-22 07:44:55,141 - bzchat.services.milvus - INFO - store_message:329 - 成功存储多模态消息: 5fc3c09d-ea63-4f22-aefd-a133a86943fe
+2025-09-22 07:44:55,149 - bzchat.services.milvus - INFO - get_recent_messages:369 - 获取到 6 条最近消息
+2025-09-22 07:44:55,161 - bzchat.services.milvus - INFO - search_similar_messages:421 - 找到 6 条相似消息
+2025-09-22 07:44:55,162 - bzchat.services.milvus - INFO - get_context_messages:485 - 获取到 6 条上下文消息（去重后）
+2025-09-22 07:44:55,162 - bzchat.main - INFO - chat_completions:120 - 送到 DeepSeek API 的消息: [ApiMessage(role='user', content='你是一个有帮助的助手。以下内容包括用户与你聊天的历史消息，以及用户最后一次发送的消息，请参考历史消息和你的知识来回答用户最近一次发送的消息'), ApiMessage(role='user', content='这是一条测试信息'), ApiMessage(role='assistant', content='\n你好！👋 这是一条测试信息的回复～ 如果你有任何问题，或者想聊聊学习、工作、生活相关的话题，我随时在这里！😊 需要我帮忙做什么呢？'), ApiMessage(role='user', content='你好'), ApiMessage(role='user', content='hello'), ApiMessage(role='assistant', content='\n你好！👋 看到你中英文切换得很自如呢～ 如果你有任何问题、需要帮忙查资料，或者单纯想聊天，我都在这里！😊 今天有什么想聊的吗？'), ApiMessage(role='user', content='开始流式响应测试')]
+2025-09-22 07:44:55,162 - bzchat.services.deepseek - INFO - chat_completion:68 - [DEBUG] 发送到API的消息数量: 7
+2025-09-22 07:46:15,769 - bzchat.services.milvus - INFO - _disconnect:105 - 已断开 Milvus 连接
+2025-09-22 07:46:28,307 - bzchat.services.milvus - INFO - __init__:57 - 成功加载 CLIP 多模态模型: clip-ViT-L-14
+2025-09-22 07:46:28,307 - bzchat.utils.image_handler - INFO - __init__:33 - from image_handler: 图片存储路径: /home/xuyao/data/bzchat_pic
+2025-09-22 07:46:28,308 - bzchat.utils.image_describer - INFO - _load_model:35 - 正在加载图片描述模型: /home/xuyao/data/Qwen2.5-VL-3B-Instruct
+2025-09-22 07:46:32,548 - bzchat.utils.image_describer - INFO - _load_model:48 - 图片描述模型加载成功
+2025-09-22 07:46:32,562 - bzchat.services.milvus - INFO - _connect:96 - 成功连接到 Milvus 服务器 localhost:19530
+2025-09-22 07:46:32,569 - bzchat.services.milvus - INFO - __init__:74 - 集合 chat_messages 已存在，直接使用
+2025-09-22 07:46:32,571 - bzchat.services.milvus - INFO - _create_index:156 - 索引 'embedding_idx' 已存在，跳过创建
+2025-09-22 07:46:32,578 - bzchat.services.milvus - INFO - __init__:83 - 集合 chat_messages 加载完成
+2025-09-22 07:46:45,309 - bzchat.services.milvus - INFO - _get_multimodal_embedding:224 - 生成文本向量
+2025-09-22 07:46:45,309 - bzchat.services.milvus - INFO - _get_multimodal_embedding:234 - 消息无图片内容
+2025-09-22 07:46:45,309 - bzchat.services.milvus - INFO - _get_multimodal_embedding:236 - 融合策略: priority
+2025-09-22 07:46:48,366 - bzchat.services.milvus - INFO - store_message:329 - 成功存储多模态消息: 210f89dc-96ac-48f7-bd97-bed2c510f329
+2025-09-22 07:46:48,376 - bzchat.services.milvus - INFO - get_recent_messages:369 - 获取到 7 条最近消息
+2025-09-22 07:46:48,386 - bzchat.services.milvus - INFO - search_similar_messages:421 - 找到 7 条相似消息
+2025-09-22 07:46:48,386 - bzchat.services.milvus - INFO - get_context_messages:485 - 获取到 7 条上下文消息（去重后）
+2025-09-22 07:46:48,386 - bzchat.main - INFO - chat_completions:120 - 送到 DeepSeek API 的消息: [ApiMessage(role='user', content='你是一个有帮助的助手。以下内容包括用户与你聊天的历史消息，以及用户最后一次发送的消息，请参考历史消息和你的知识来回答用户最近一次发送的消息'), ApiMessage(role='user', content='这是一条测试信息'), ApiMessage(role='assistant', content='\n你好！👋 这是一条测试信息的回复～ 如果你有任何问题，或者想聊聊学习、工作、生活相关的话题，我随时在这里！😊 需要我帮忙做什么呢？'), ApiMessage(role='user', content='你好'), ApiMessage(role='user', content='hello'), ApiMessage(role='assistant', content='\n你好！👋 看到你中英文切换得很自如呢～ 如果你有任何问题、需要帮忙查资料，或者单纯想聊天，我都在这里！😊 今天有什么想聊的吗？'), ApiMessage(role='user', content='开始流式响应测试'), ApiMessage(role='user', content='第二次测试')]
+2025-09-22 07:46:48,387 - bzchat.services.deepseek - INFO - chat_completion:68 - [DEBUG] 发送到API的消息数量: 8
+2025-09-22 07:46:48,395 - bzchat.services.deepseek - INFO - _stream_response:138 - [DEBUG] 发送流式请求到DeepSeek API
+2025-09-22 07:47:02,545 - bzchat.services.milvus - INFO - _get_multimodal_embedding:224 - 生成文本向量
+2025-09-22 07:47:02,546 - bzchat.services.milvus - INFO - _get_multimodal_embedding:234 - 消息无图片内容
+2025-09-22 07:47:02,546 - bzchat.services.milvus - INFO - _get_multimodal_embedding:236 - 融合策略: priority
+2025-09-22 07:47:02,558 - bzchat.services.milvus - ERROR - store_message:333 - 存储消息失败: <MilvusException: (code=1100, message=length of varchar field text_content exceeds max length, row number: 0, length: 76314, max length: 10000: invalid parameter)>
+2025-09-22 07:47:02,558 - bzchat.main - INFO - save_after_stream:152 - DeepSeek API 流式响应：data: {"id": "chatcmpl-3d6a4fab70414cb197dbec8369255", "object": "chat.completion.chunk", "created": 1758527208, "model": "deepseek-r1-250528", "choices": [{"index": 0, "delta": {}, "finish_reason": null}]}
+
+data: {"id": "chatcmpl-3d6a4fab70414cb197dbec8369255", "object": "chat.completion.chunk", "created": 1758527208, "model": "deepseek-r1-250528", "choices": [{"index": 0, "delta": {}, "finish_reason": null}]}
+
+data: {"id": "chatcmpl-3d6a4fab70414cb197dbec8369255", "object": "chat.completion.chunk", "created": 1758527208, "model": "deepseek-r1-250528", "choices": [{"index": 0, "delta": {}, "finish_reason": null}]}
+
+data: {"id": "chatcmpl-3d6a4fab70414cb197dbec8369255", "object": "chat.completion.chunk", "created": 1758527208, "model": "deepseek-r1-250528", "choices": [{"index": 0, "delta": {}, "finish_reason": null}]}
+
+data: {"id": "chatcmpl-3d6a4fab70414cb197dbec8369255", "object": "chat.completion.chunk", "created": 1758527208, "model": "deepseek-r1-250528", "choices": [{"index": 0, "delta": {}, "finish_reason": null}]}
+
+data: {"id": "chatcmpl-3d6a4fab70414cb197dbec8369255", "object": "chat.completion.chunk", "created": 1758527208, "model": "deepseek-r1-250528", "choices": [{"index": 0, "delta": {}, "finish_reason": null}]}
+
+data: {"id": "chatcmpl-3d6a4fab70414cb197dbec8369255", "object": "chat.completion.chunk", "created": 1758527208, "model": "deepseek-r1-250528", "choices": [{"index": 0, "delta": {}, "finish_reason": null}]}
+
+data: {"id": "chatcmpl-3d6a4fab70414cb197dbec8369255", "object": "chat.completion.chunk", "created": 1758527208, "model": "deepseek-r1-250528", "choices": [{"index": 0, "delta": {}, "finish_reason": null}]}
+
+data: {"id": "chatcmpl-3d6a4fab70414cb197dbec8369255", "object": "chat.completion.chunk", "created": 1758527208, "model": "deepseek-r1-250528", "choices": [{"index": 0, "delta": {}, "finish_reason": null}]}
+
+data: {"id": "chatcmpl-3d6a4fab70414cb197dbec8369255", "object": "chat.completion.chunk", "created": 1758527208, "model": "deepseek-r1-250528", "choices": [{"index": 0, "delta": {}, "finish_reason": null}]}
+
+data: {"id": "chatcmpl-3d6a4fab70414cb197dbec8369255", "object": "chat.completion.chunk", "created": 1758527208, "model": "deepseek-r1-250528", "choices": [{"index": 0, "delta": {}, "finish_reason": null}]}
+
+data: {"id": "chatcmpl-3d6a4fab70414cb197dbec8369255", "object": "chat.completion.chunk", "created": 1758527208, "model": "deepseek-r1-250528", "choices": [{"index": 0, "delta": {}, "finish_reason": null}]}
+
+data: {"id": "chatcmpl-3d6a4fab70414cb197dbec8369255", "object": "chat.completion.chunk", "created": 1758527208, "model": "deepseek-r1-250528", "choices": [{"index": 0, "delta": {}, "finish_reason": null}]}
+
+data: {"id": "chatcmpl-3d6a4fab70414cb197dbec8369255", "object": "chat.completion.chunk", "created": 1758527208, "model": "deepseek-r1-250528", "choices": [{"index": 0, "delta": {}, "finish_reason": null}]}
+
+data: {"id": "chatcmpl-3d6a4fab70414cb197dbec8369255", "object": "chat.completion.chunk", "created": 1758527208, "model": "deepseek-r1-250528", "choices": [{"index": 0, "delta": {}, "finish_reason": null}]}
+
+data: {"id": "chatcmpl-3d6a4fab70414cb197dbec8369255", "object": "chat.completion.chunk", "created": 1758527208, "model": "deepseek-r1-250528", "choices": [{"index": 0, "delta": {}, "finish_reason": null}]}
+
+data: {"id": "chatcmpl-3d6a4fab70414cb197dbec8369255", "object": "chat.completion.chunk", "created": 1758527208, "model": "deepseek-r1-250528", "choices": [{"index": 0, "delta": {}, "finish_reason": null}]}
+
+data: {"id": "chatcmpl-3d6a4fab70414cb197dbec8369255", "object": "chat.completion.chunk", "created": 1758527208, "model": "deepseek-r1-250528", "choices": [{"index": 0, "delta": {}, "finish_reason": null}]}
+
+data: {"id": "chatcmpl-3d6a4fab70414cb197dbec8369255", "object": "chat.completion.chunk", "created": 1758527208, "model": "deepseek-r1-250528", "choices": [{"index": 0, "delta": {}, "finish_reason": null}]}
+
+data: {"id": "chatcmpl-3d6a4fab70414cb197dbec8369255", "object": "chat.completion.chunk", "created": 1758527208, "model": "deepseek-r1-250528", "choices": [{"index": 0, "delta": {}, "finish_reason": null}]}
+
+data: {"id": "chatcmpl-3d6a4fab70414cb197dbec8369255", "object": "chat.completion.chunk", "created": 1758527208, "model": "deepseek-r1-250528", "choices": [{"index": 0, "delta": {}, "finish_reason": null}]}
+
+data: {"id": "chatcmpl-3d6a4fab70414cb197dbec8369255", "object": "chat.completion.chunk", "created": 1758527208, "model": "deepseek-r1-250528", "choices": [{"index": 0, "delta": {}, "finish_reason": null}]}
+
+data: {"id": "chatcmpl-3d6a4fab70414cb197dbec8369255", "object": "chat.completion.chunk", "created": 1758527208, "model": "deepseek-r1-250528", "choices": [{"index": 0, "delta": {}, "finish_reason": null}]}
+
+data: {"id": "chatcmpl-3d6a4fab70414cb197dbec8369255", "object": "chat.completion.chunk", "created": 1758527208, "model": "deepseek-r1-250528", "choices": [{"index": 0, "delta": {}, "finish_reason": null}]}
+
+data: {"id": "chatcmpl-3d6a4fab70414cb197dbec8369255", "object": "chat.completion.chunk", "created": 1758527208, "model": "deepseek-r1-250528", "choices": [{"index": 0, "delta": {}, "finish_reason": null}]}
+
+data: {"id": "chatcmpl-3d6a4fab70414cb197dbec8369255", "object": "chat.completion.chunk", "created": 1758527208, "model": "deepseek-r1-250528", "choices": [{"index": 0, "delta": {}, "finish_reason": null}]}
+
+data: {"id": "chatcmpl-3d6a4fab70414cb197dbec8369255", "object": "chat.completion.chunk", "created": 1758527208, "model": "deepseek-r1-250528", "choices": [{"index": 0, "delta": {}, "finish_reason": null}]}
+
+data: {"id": "chatcmpl-3d6a4fab70414cb197dbec8369255", "object": "chat.completion.chunk", "created": 1758527208, "model": "deepseek-r1-250528", "choices": [{"index": 0, "delta": {}, "finish_reason": null}]}
+
+data: {"id": "chatcmpl-3d6a4fab70414cb197dbec8369255", "object": "chat.completion.chunk", "created": 1758527208, "model": "deepseek-r1-250528", "choices": [{"index": 0, "delta": {}, "finish_reason": null}]}
+
+data: {"id": "chatcmpl-3d6a4fab70414cb197dbec8369255", "object": "chat.completion.chunk", "created": 1758527208, "model": "deepseek-r1-250528", "choices": [{"index": 0, "delta": {}, "finish_reason": null}]}
+
+data: {"id": "chatcmpl-3d6a4fab70414cb197dbec8369255", "object": "chat.completion.chunk", "created": 1758527208, "model": "deepseek-r1-250528", "choices": [{"index": 0, "delta": {}, "finish_reason": null}]}
+
+data: {"id": "chatcmpl-3d6a4fab70414cb197dbec8369255", "object": "chat.completion.chunk", "created": 1758527208, "model": "deepseek-r1-250528", "choices": [{"index": 0, "delta": {}, "finish_reason": null}]}
+
+data: {"id": "chatcmpl-3d6a4fab70414cb197dbec8369255", "object": "chat.completion.chunk", "created": 1758527208, "model": "deepseek-r1-250528", "choices": [{"index": 0, "delta": {}, "finish_reason": null}]}
+
+data: {"id": "chatcmpl-3d6a4fab70414cb197dbec8369255", "object": "chat.completion.chunk", "created": 1758527208, "model": "deepseek-r1-250528", "choices": [{"index": 0, "delta": {}, "finish_reason": null}]}
+
+data: {"id": "chatcmpl-3d6a4fab70414cb197dbec8369255", "object": "chat.completion.chunk", "created": 1758527208, "model": "deepseek-r1-250528", "choices": [{"index": 0, "delta": {}, "finish_reason": null}]}
+
+data: {"id": "chatcmpl-3d6a4fab70414cb197dbec8369255", "object": "chat.completion.chunk", "created": 1758527208, "model": "deepseek-r1-250528", "choices": [{"index": 0, "delta": {}, "finish_reason": null}]}
+
+data: {"id": "chatcmpl-3d6a4fab70414cb197dbec8369255", "object": "chat.completion.chunk", "created": 1758527208, "model": "deepseek-r1-250528", "choices": [{"index": 0, "delta": {}, "finish_reason": null}]}
+
+data: {"id": "chatcmpl-3d6a4fab70414cb197dbec8369255", "object": "chat.completion.chunk", "created": 1758527208, "model": "deepseek-r1-250528", "choices": [{"index": 0, "delta": {}, "finish_reason": null}]}
+
+data: {"id": "chatcmpl-3d6a4fab70414cb197dbec8369255", "object": "chat.completion.chunk", "created": 1758527208, "model": "deepseek-r1-250528", "choices": [{"index": 0, "delta": {}, "finish_reason": null}]}
+
+data: {"id": "chatcmpl-3d6a4fab70414cb197dbec8369255", "object": "chat.completion.chunk", "created": 1758527208, "model": "deepseek-r1-250528", "choices": [{"index": 0, "delta": {}, "finish_reason": null}]}
+
+data: {"id": "chatcmpl-3d6a4fab70414cb197dbec8369255", "object": "chat.completion.chunk", "created": 1758527208, "model": "deepseek-r1-250528", "choices": [{"index": 0, "delta": {}, "finish_reason": null}]}
+
+data: {"id": "chatcmpl-3d6a4fab70414cb197dbec8369255", "object": "chat.completion.chunk", "created": 1758527208, "model": "deepseek-r1-250528", "choices": [{"index": 0, "delta": {}, "finish_reason": null}]}
+
+data: {"id": "chatcmpl-3d6a4fab70414cb197dbec8369255", "object": "chat.completion.chunk", "created": 1758527208, "model": "deepseek-r1-250528", "choices": [{"index": 0, "delta": {}, "finish_reason": null}]}
+
+data: {"id": "chatcmpl-3d6a4fab70414cb197dbec8369255", "object": "chat.completion.chunk", "created": 1758527208, "model": "deepseek-r1-250528", "choices": [{"index": 0, "delta": {}, "finish_reason": null}]}
+
+data: {"id": "chatcmpl-3d6a4fab70414cb197dbec8369255", "object": "chat.completion.chunk", "created": 1758527208, "model": "deepseek-r1-250528", "choices": [{"index": 0, "delta": {}, "finish_reason": null}]}
+
+data: {"id": "chatcmpl-3d6a4fab70414cb197dbec8369255", "object": "chat.completion.chunk", "created": 1758527208, "model": "deepseek-r1-250528", "choices": [{"index": 0, "delta": {}, "finish_reason": null}]}
+
+data: {"id": "chatcmpl-3d6a4fab70414cb197dbec8369255", "object": "chat.completion.chunk", "created": 1758527208, "model": "deepseek-r1-250528", "choices": [{"index": 0, "delta": {}, "finish_reason": null}]}
+
+data: {"id": "chatcmpl-3d6a4fab70414cb197dbec8369255", "object": "chat.completion.chunk", "created": 1758527208, "model": "deepseek-r1-250528", "choices": [{"index": 0, "delta": {}, "finish_reason": null}]}
+
+data: {"id": "chatcmpl-3d6a4fab70414cb197dbec8369255", "object": "chat.completion.chunk", "created": 1758527208, "model": "deepseek-r1-250528", "choices": [{"index": 0, "delta": {}, "finish_reason": null}]}
+
+data: {"id": "chatcmpl-3d6a4fab70414cb197dbec8369255", "object": "chat.completion.chunk", "created": 1758527208, "model": "deepseek-r1-250528", "choices": [{"index": 0, "delta": {}, "finish_reason": null}]}
+
+data: {"id": "chatcmpl-3d6a4fab70414cb197dbec8369255", "object": "chat.completion.chunk", "created": 1758527208, "model": "deepseek-r1-250528", "choices": [{"index": 0, "delta": {}, "finish_reason": null}]}
+
+data: {"id": "chatcmpl-3d6a4fab70414cb197dbec8369255", "object": "chat.completion.chunk", "created": 1758527208, "model": "deepseek-r1-250528", "choices": [{"index": 0, "delta": {}, "finish_reason": null}]}
+
+data: {"id": "chatcmpl-3d6a4fab70414cb197dbec8369255", "object": "chat.completion.chunk", "created": 1758527208, "model": "deepseek-r1-250528", "choices": [{"index": 0, "delta": {}, "finish_reason": null}]}
+
+data: {"id": "chatcmpl-3d6a4fab70414cb197dbec8369255", "object": "chat.completion.chunk", "created": 1758527208, "model": "deepseek-r1-250528", "choices": [{"index": 0, "delta": {}, "finish_reason": null}]}
+
+data: {"id": "chatcmpl-3d6a4fab70414cb197dbec8369255", "object": "chat.completion.chunk", "created": 1758527208, "model": "deepseek-r1-250528", "choices": [{"index": 0, "delta": {}, "finish_reason": null}]}
+
+data: {"id": "chatcmpl-3d6a4fab70414cb197dbec8369255", "object": "chat.completion.chunk", "created": 1758527208, "model": "deepseek-r1-250528", "choices": [{"index": 0, "delta": {}, "finish_reason": null}]}
+
+data: {"id": "chatcmpl-3d6a4fab70414cb197dbec8369255", "object": "chat.completion.chunk", "created": 1758527208, "model": "deepseek-r1-250528", "choices": [{"index": 0, "delta": {}, "finish_reason": null}]}
+
+data: {"id": "chatcmpl-3d6a4fab70414cb197dbec8369255", "object": "chat.completion.chunk", "created": 1758527208, "model": "deepseek-r1-250528", "choices": [{"index": 0, "delta": {}, "finish_reason": null}]}
+
+data: {"id": "chatcmpl-3d6a4fab70414cb197dbec8369255", "object": "chat.completion.chunk", "created": 1758527208, "model": "deepseek-r1-250528", "choices": [{"index": 0, "delta": {}, "finish_reason": null}]}
+
+data: {"id": "chatcmpl-3d6a4fab70414cb197dbec8369255", "object": "chat.completion.chunk", "created": 1758527208, "model": "deepseek-r1-250528", "choices": [{"index": 0, "delta": {}, "finish_reason": null}]}
+
+data: {"id": "chatcmpl-3d6a4fab70414cb197dbec8369255", "object": "chat.completion.chunk", "created": 1758527208, "model": "deepseek-r1-250528", "choices": [{"index": 0, "delta": {}, "finish_reason": null}]}
+
+data: {"id": "chatcmpl-3d6a4fab70414cb197dbec8369255", "object": "chat.completion.chunk", "created": 1758527208, "model": "deepseek-r1-250528", "choices": [{"index": 0, "delta": {}, "finish_reason": null}]}
+
+data: {"id": "chatcmpl-3d6a4fab70414cb197dbec8369255", "object": "chat.completion.chunk", "created": 1758527208, "model": "deepseek-r1-250528", "choices": [{"index": 0, "delta": {}, "finish_reason": null}]}
+
+data: {"id": "chatcmpl-3d6a4fab70414cb197dbec8369255", "object": "chat.completion.chunk", "created": 1758527208, "model": "deepseek-r1-250528", "choices": [{"index": 0, "delta": {}, "finish_reason": null}]}
+
+data: {"id": "chatcmpl-3d6a4fab70414cb197dbec8369255", "object": "chat.completion.chunk", "created": 1758527208, "model": "deepseek-r1-250528", "choices": [{"index": 0, "delta": {}, "finish_reason": null}]}
+
+data: {"id": "chatcmpl-3d6a4fab70414cb197dbec8369255", "object": "chat.completion.chunk", "created": 1758527208, "model": "deepseek-r1-250528", "choices": [{"index": 0, "delta": {}, "finish_reason": null}]}
+
+data: {"id": "chatcmpl-3d6a4fab70414cb197dbec8369255", "object": "chat.completion.chunk", "created": 1758527208, "model": "deepseek-r1-250528", "choices": [{"index": 0, "delta": {}, "finish_reason": null}]}
+
+data: {"id": "chatcmpl-3d6a4fab70414cb197dbec8369255", "object": "chat.completion.chunk", "created": 1758527208, "model": "deepseek-r1-250528", "choices": [{"index": 0, "delta": {}, "finish_reason": null}]}
+
+data: {"id": "chatcmpl-3d6a4fab70414cb197dbec8369255", "object": "chat.completion.chunk", "created": 1758527208, "model": "deepseek-r1-250528", "choices": [{"index": 0, "delta": {}, "finish_reason": null}]}
+
+data: {"id": "chatcmpl-3d6a4fab70414cb197dbec8369255", "object": "chat.completion.chunk", "created": 1758527208, "model": "deepseek-r1-250528", "choices": [{"index": 0, "delta": {}, "finish_reason": null}]}
+
+data: {"id": "chatcmpl-3d6a4fab70414cb197dbec8369255", "object": "chat.completion.chunk", "created": 1758527208, "model": "deepseek-r1-250528", "choices": [{"index": 0, "delta": {}, "finish_reason": null}]}
+
+data: {"id": "chatcmpl-3d6a4fab70414cb197dbec8369255", "object": "chat.completion.chunk", "created": 1758527208, "model": "deepseek-r1-250528", "choices": [{"index": 0, "delta": {}, "finish_reason": null}]}
+
+data: {"id": "chatcmpl-3d6a4fab70414cb197dbec8369255", "object": "chat.completion.chunk", "created": 1758527208, "model": "deepseek-r1-250528", "choices": [{"index": 0, "delta": {}, "finish_reason": null}]}
+
+data: {"id": "chatcmpl-3d6a4fab70414cb197dbec8369255", "object": "chat.completion.chunk", "created": 1758527208, "model": "deepseek-r1-250528", "choices": [{"index": 0, "delta": {}, "finish_reason": null}]}
+
+data: {"id": "chatcmpl-3d6a4fab70414cb197dbec8369255", "object": "chat.completion.chunk", "created": 1758527208, "model": "deepseek-r1-250528", "choices": [{"index": 0, "delta": {}, "finish_reason": null}]}
+
+data: {"id": "chatcmpl-3d6a4fab70414cb197dbec8369255", "object": "chat.completion.chunk", "created": 1758527208, "model": "deepseek-r1-250528", "choices": [{"index": 0, "delta": {}, "finish_reason": null}]}
+
+data: {"id": "chatcmpl-3d6a4fab70414cb197dbec8369255", "object": "chat.completion.chunk", "created": 1758527208, "model": "deepseek-r1-250528", "choices": [{"index": 0, "delta": {}, "finish_reason": null}]}
+
+data: {"id": "chatcmpl-3d6a4fab70414cb197dbec8369255", "object": "chat.completion.chunk", "created": 1758527208, "model": "deepseek-r1-250528", "choices": [{"index": 0, "delta": {}, "finish_reason": null}]}
+
+data: {"id": "chatcmpl-3d6a4fab70414cb197dbec8369255", "object": "chat.completion.chunk", "created": 1758527208, "model": "deepseek-r1-250528", "choices": [{"index": 0, "delta": {}, "finish_reason": null}]}
+
+data: {"id": "chatcmpl-3d6a4fab70414cb197dbec8369255", "object": "chat.completion.chunk", "created": 1758527208, "model": "deepseek-r1-250528", "choices": [{"index": 0, "delta": {}, "finish_reason": null}]}
+
+data: {"id": "chatcmpl-3d6a4fab70414cb197dbec8369255", "object": "chat.completion.chunk", "created": 1758527208, "model": "deepseek-r1-250528", "choices": [{"index": 0, "delta": {}, "finish_reason": null}]}
+
+data: {"id": "chatcmpl-3d6a4fab70414cb197dbec8369255", "object": "chat.completion.chunk", "created": 1758527208, "model": "deepseek-r1-250528", "choices": [{"index": 0, "delta": {}, "finish_reason": null}]}
+
+data: {"id": "chatcmpl-3d6a4fab70414cb197dbec8369255", "object": "chat.completion.chunk", "created": 1758527208, "model": "deepseek-r1-250528", "choices": [{"index": 0, "delta": {}, "finish_reason": null}]}
+
+data: {"id": "chatcmpl-3d6a4fab70414cb197dbec8369255", "object": "chat.completion.chunk", "created": 1758527208, "model": "deepseek-r1-250528", "choices": [{"index": 0, "delta": {}, "finish_reason": null}]}
+
+data: {"id": "chatcmpl-3d6a4fab70414cb197dbec8369255", "object": "chat.completion.chunk", "created": 1758527208, "model": "deepseek-r1-250528", "choices": [{"index": 0, "delta": {}, "finish_reason": null}]}
+
+data: {"id": "chatcmpl-3d6a4fab70414cb197dbec8369255", "object": "chat.completion.chunk", "created": 1758527208, "model": "deepseek-r1-250528", "choices": [{"index": 0, "delta": {}, "finish_reason": null}]}
+
+data: {"id": "chatcmpl-3d6a4fab70414cb197dbec8369255", "object": "chat.completion.chunk", "created": 1758527208, "model": "deepseek-r1-250528", "choices": [{"index": 0, "delta": {}, "finish_reason": null}]}
+
+data: {"id": "chatcmpl-3d6a4fab70414cb197dbec8369255", "object": "chat.completion.chunk", "created": 1758527208, "model": "deepseek-r1-250528", "choices": [{"index": 0, "delta": {}, "finish_reason": null}]}
+
+data: {"id": "chatcmpl-3d6a4fab70414cb197dbec8369255", "object": "chat.completion.chunk", "created": 1758527208, "model": "deepseek-r1-250528", "choices": [{"index": 0, "delta": {}, "finish_reason": null}]}
+
+data: {"id": "chatcmpl-3d6a4fab70414cb197dbec8369255", "object": "chat.completion.chunk", "created": 1758527208, "model": "deepseek-r1-250528", "choices": [{"index": 0, "delta": {}, "finish_reason": null}]}
+
+data: {"id": "chatcmpl-3d6a4fab70414cb197dbec8369255", "object": "chat.completion.chunk", "created": 1758527208, "model": "deepseek-r1-250528", "choices": [{"index": 0, "delta": {}, "finish_reason": null}]}
+
+data: {"id": "chatcmpl-3d6a4fab70414cb197dbec8369255", "object": "chat.completion.chunk", "created": 1758527208, "model": "deepseek-r1-250528", "choices": [{"index": 0, "delta": {}, "finish_reason": null}]}
+
+data: {"id": "chatcmpl-3d6a4fab70414cb197dbec8369255", "object": "chat.completion.chunk", "created": 1758527208, "model": "deepseek-r1-250528", "choices": [{"index": 0, "delta": {}, "finish_reason": null}]}
+
+data: {"id": "chatcmpl-3d6a4fab70414cb197dbec8369255", "object": "chat.completion.chunk", "created": 1758527208, "model": "deepseek-r1-250528", "choices": [{"index": 0, "delta": {}, "finish_reason": null}]}
+
+data: {"id": "chatcmpl-3d6a4fab70414cb197dbec8369255", "object": "chat.completion.chunk", "created": 1758527208, "model": "deepseek-r1-250528", "choices": [{"index": 0, "delta": {}, "finish_reason": null}]}
+
+data: {"id": "chatcmpl-3d6a4fab70414cb197dbec8369255", "object": "chat.completion.chunk", "created": 1758527208, "model": "deepseek-r1-250528", "choices": [{"index": 0, "delta": {}, "finish_reason": null}]}
+
+data: {"id": "chatcmpl-3d6a4fab70414cb197dbec8369255", "object": "chat.completion.chunk", "created": 1758527208, "model": "deepseek-r1-250528", "choices": [{"index": 0, "delta": {}, "finish_reason": null}]}
+
+data: {"id": "chatcmpl-3d6a4fab70414cb197dbec8369255", "object": "chat.completion.chunk", "created": 1758527208, "model": "deepseek-r1-250528", "choices": [{"index": 0, "delta": {}, "finish_reason": null}]}
+
+data: {"id": "chatcmpl-3d6a4fab70414cb197dbec8369255", "object": "chat.completion.chunk", "created": 1758527208, "model": "deepseek-r1-250528", "choices": [{"index": 0, "delta": {}, "finish_reason": null}]}
+
+data: {"id": "chatcmpl-3d6a4fab70414cb197dbec8369255", "object": "chat.completion.chunk", "created": 1758527208, "model": "deepseek-r1-250528", "choices": [{"index": 0, "delta": {}, "finish_reason": null}]}
+
+data: {"id": "chatcmpl-3d6a4fab70414cb197dbec8369255", "object": "chat.completion.chunk", "created": 1758527208, "model": "deepseek-r1-250528", "choices": [{"index": 0, "delta": {}, "finish_reason": null}]}
+
+data: {"id": "chatcmpl-3d6a4fab70414cb197dbec8369255", "object": "chat.completion.chunk", "created": 1758527208, "model": "deepseek-r1-250528", "choices": [{"index": 0, "delta": {}, "finish_reason": null}]}
+
+data: {"id": "chatcmpl-3d6a4fab70414cb197dbec8369255", "object": "chat.completion.chunk", "created": 1758527208, "model": "deepseek-r1-250528", "choices": [{"index": 0, "delta": {}, "finish_reason": null}]}
+
+data: {"id": "chatcmpl-3d6a4fab70414cb197dbec8369255", "object": "chat.completion.chunk", "created": 1758527208, "model": "deepseek-r1-250528", "choices": [{"index": 0, "delta": {}, "finish_reason": null}]}
+
+data: {"id": "chatcmpl-3d6a4fab70414cb197dbec8369255", "object": "chat.completion.chunk", "created": 1758527208, "model": "deepseek-r1-250528", "choices": [{"index": 0, "delta": {}, "finish_reason": null}]}
+
+data: {"id": "chatcmpl-3d6a4fab70414cb197dbec8369255", "object": "chat.completion.chunk", "created": 1758527208, "model": "deepseek-r1-250528", "choices": [{"index": 0, "delta": {}, "finish_reason": null}]}
+
+data: {"id": "chatcmpl-3d6a4fab70414cb197dbec8369255", "object": "chat.completion.chunk", "created": 1758527208, "model": "deepseek-r1-250528", "choices": [{"index": 0, "delta": {}, "finish_reason": null}]}
+
+data: {"id": "chatcmpl-3d6a4fab70414cb197dbec8369255", "object": "chat.completion.chunk", "created": 1758527208, "model": "deepseek-r1-250528", "choices": [{"index": 0, "delta": {}, "finish_reason": null}]}
+
+data: {"id": "chatcmpl-3d6a4fab70414cb197dbec8369255", "object": "chat.completion.chunk", "created": 1758527208, "model": "deepseek-r1-250528", "choices": [{"index": 0, "delta": {}, "finish_reason": null}]}
+
+data: {"id": "chatcmpl-3d6a4fab70414cb197dbec8369255", "object": "chat.completion.chunk", "created": 1758527208, "model": "deepseek-r1-250528", "choices": [{"index": 0, "delta": {}, "finish_reason": null}]}
+
+data: {"id": "chatcmpl-3d6a4fab70414cb197dbec8369255", "object": "chat.completion.chunk", "created": 1758527208, "model": "deepseek-r1-250528", "choices": [{"index": 0, "delta": {}, "finish_reason": null}]}
+
+data: {"id": "chatcmpl-3d6a4fab70414cb197dbec8369255", "object": "chat.completion.chunk", "created": 1758527208, "model": "deepseek-r1-250528", "choices": [{"index": 0, "delta": {}, "finish_reason": null}]}
+
+data: {"id": "chatcmpl-3d6a4fab70414cb197dbec8369255", "object": "chat.completion.chunk", "created": 1758527208, "model": "deepseek-r1-250528", "choices": [{"index": 0, "delta": {}, "finish_reason": null}]}
+
+data: {"id": "chatcmpl-3d6a4fab70414cb197dbec8369255", "object": "chat.completion.chunk", "created": 1758527208, "model": "deepseek-r1-250528", "choices": [{"index": 0, "delta": {}, "finish_reason": null}]}
+
+data: {"id": "chatcmpl-3d6a4fab70414cb197dbec8369255", "object": "chat.completion.chunk", "created": 1758527208, "model": "deepseek-r1-250528", "choices": [{"index": 0, "delta": {}, "finish_reason": null}]}
+
+data: {"id": "chatcmpl-3d6a4fab70414cb197dbec8369255", "object": "chat.completion.chunk", "created": 1758527208, "model": "deepseek-r1-250528", "choices": [{"index": 0, "delta": {}, "finish_reason": null}]}
+
+data: {"id": "chatcmpl-3d6a4fab70414cb197dbec8369255", "object": "chat.completion.chunk", "created": 1758527208, "model": "deepseek-r1-250528", "choices": [{"index": 0, "delta": {}, "finish_reason": null}]}
+
+data: {"id": "chatcmpl-3d6a4fab70414cb197dbec8369255", "object": "chat.completion.chunk", "created": 1758527208, "model": "deepseek-r1-250528", "choices": [{"index": 0, "delta": {}, "finish_reason": null}]}
+
+data: {"id": "chatcmpl-3d6a4fab70414cb197dbec8369255", "object": "chat.completion.chunk", "created": 1758527208, "model": "deepseek-r1-250528", "choices": [{"index": 0, "delta": {}, "finish_reason": null}]}
+
+data: {"id": "chatcmpl-3d6a4fab70414cb197dbec8369255", "object": "chat.completion.chunk", "created": 1758527208, "model": "deepseek-r1-250528", "choices": [{"index": 0, "delta": {}, "finish_reason": null}]}
+
+data: {"id": "chatcmpl-3d6a4fab70414cb197dbec8369255", "object": "chat.completion.chunk", "created": 1758527208, "model": "deepseek-r1-250528", "choices": [{"index": 0, "delta": {}, "finish_reason": null}]}
+
+data: {"id": "chatcmpl-3d6a4fab70414cb197dbec8369255", "object": "chat.completion.chunk", "created": 1758527208, "model": "deepseek-r1-250528", "choices": [{"index": 0, "delta": {}, "finish_reason": null}]}
+
+data: {"id": "chatcmpl-3d6a4fab70414cb197dbec8369255", "object": "chat.completion.chunk", "created": 1758527208, "model": "deepseek-r1-250528", "choices": [{"index": 0, "delta": {}, "finish_reason": null}]}
+
+data: {"id": "chatcmpl-3d6a4fab70414cb197dbec8369255", "object": "chat.completion.chunk", "created": 1758527208, "model": "deepseek-r1-250528", "choices": [{"index": 0, "delta": {}, "finish_reason": null}]}
+
+data: {"id": "chatcmpl-3d6a4fab70414cb197dbec8369255", "object": "chat.completion.chunk", "created": 1758527208, "model": "deepseek-r1-250528", "choices": [{"index": 0, "delta": {}, "finish_reason": null}]}
+
+data: {"id": "chatcmpl-3d6a4fab70414cb197dbec8369255", "object": "chat.completion.chunk", "created": 1758527208, "model": "deepseek-r1-250528", "choices": [{"index": 0, "delta": {}, "finish_reason": null}]}
+
+data: {"id": "chatcmpl-3d6a4fab70414cb197dbec8369255", "object": "chat.completion.chunk", "created": 1758527208, "model": "deepseek-r1-250528", "choices": [{"index": 0, "delta": {}, "finish_reason": null}]}
+
+data: {"id": "chatcmpl-3d6a4fab70414cb197dbec8369255", "object": "chat.completion.chunk", "created": 1758527208, "model": "deepseek-r1-250528", "choices": [{"index": 0, "delta": {}, "finish_reason": null}]}
+
+data: {"id": "chatcmpl-3d6a4fab70414cb197dbec8369255", "object": "chat.completion.chunk", "created": 1758527208, "model": "deepseek-r1-250528", "choices": [{"index": 0, "delta": {}, "finish_reason": null}]}
+
+data: {"id": "chatcmpl-3d6a4fab70414cb197dbec8369255", "object": "chat.completion.chunk", "created": 1758527208, "model": "deepseek-r1-250528", "choices": [{"index": 0, "delta": {}, "finish_reason": null}]}
+
+data: {"id": "chatcmpl-3d6a4fab70414cb197dbec8369255", "object": "chat.completion.chunk", "created": 1758527208, "model": "deepseek-r1-250528", "choices": [{"index": 0, "delta": {}, "finish_reason": null}]}
+
+data: {"id": "chatcmpl-3d6a4fab70414cb197dbec8369255", "object": "chat.completion.chunk", "created": 1758527208, "model": "deepseek-r1-250528", "choices": [{"index": 0, "delta": {}, "finish_reason": null}]}
+
+data: {"id": "chatcmpl-3d6a4fab70414cb197dbec8369255", "object": "chat.completion.chunk", "created": 1758527208, "model": "deepseek-r1-250528", "choices": [{"index": 0, "delta": {}, "finish_reason": null}]}
+
+data: {"id": "chatcmpl-3d6a4fab70414cb197dbec8369255", "object": "chat.completion.chunk", "created": 1758527208, "model": "deepseek-r1-250528", "choices": [{"index": 0, "delta": {}, "finish_reason": null}]}
+
+data: {"id": "chatcmpl-3d6a4fab70414cb197dbec8369255", "object": "chat.completion.chunk", "created": 1758527208, "model": "deepseek-r1-250528", "choices": [{"index": 0, "delta": {}, "finish_reason": null}]}
+
+data: {"id": "chatcmpl-3d6a4fab70414cb197dbec8369255", "object": "chat.completion.chunk", "created": 1758527208, "model": "deepseek-r1-250528", "choices": [{"index": 0, "delta": {}, "finish_reason": null}]}
+
+data: {"id": "chatcmpl-3d6a4fab70414cb197dbec8369255", "object": "chat.completion.chunk", "created": 1758527208, "model": "deepseek-r1-250528", "choices": [{"index": 0, "delta": {}, "finish_reason": null}]}
+
+data: {"id": "chatcmpl-3d6a4fab70414cb197dbec8369255", "object": "chat.completion.chunk", "created": 1758527208, "model": "deepseek-r1-250528", "choices": [{"index": 0, "delta": {}, "finish_reason": null}]}
+
+data: {"id": "chatcmpl-3d6a4fab70414cb197dbec8369255", "object": "chat.completion.chunk", "created": 1758527208, "model": "deepseek-r1-250528", "choices": [{"index": 0, "delta": {}, "finish_reason": null}]}
+
+data: {"id": "chatcmpl-3d6a4fab70414cb197dbec8369255", "object": "chat.completion.chunk", "created": 1758527208, "model": "deepseek-r1-250528", "choices": [{"index": 0, "delta": {}, "finish_reason": null}]}
+
+data: {"id": "chatcmpl-3d6a4fab70414cb197dbec8369255", "object": "chat.completion.chunk", "created": 1758527208, "model": "deepseek-r1-250528", "choices": [{"index": 0, "delta": {}, "finish_reason": null}]}
+
+data: {"id": "chatcmpl-3d6a4fab70414cb197dbec8369255", "object": "chat.completion.chunk", "created": 1758527208, "model": "deepseek-r1-250528", "choices": [{"index": 0, "delta": {}, "finish_reason": null}]}
+
+data: {"id": "chatcmpl-3d6a4fab70414cb197dbec8369255", "object": "chat.completion.chunk", "created": 1758527208, "model": "deepseek-r1-250528", "choices": [{"index": 0, "delta": {}, "finish_reason": null}]}
+
+data: {"id": "chatcmpl-3d6a4fab70414cb197dbec8369255", "object": "chat.completion.chunk", "created": 1758527208, "model": "deepseek-r1-250528", "choices": [{"index": 0, "delta": {}, "finish_reason": null}]}
+
+data: {"id": "chatcmpl-3d6a4fab70414cb197dbec8369255", "object": "chat.completion.chunk", "created": 1758527208, "model": "deepseek-r1-250528", "choices": [{"index": 0, "delta": {}, "finish_reason": null}]}
+
+data: {"id": "chatcmpl-3d6a4fab70414cb197dbec8369255", "object": "chat.completion.chunk", "created": 1758527208, "model": "deepseek-r1-250528", "choices": [{"index": 0, "delta": {}, "finish_reason": null}]}
+
+data: {"id": "chatcmpl-3d6a4fab70414cb197dbec8369255", "object": "chat.completion.chunk", "created": 1758527208, "model": "deepseek-r1-250528", "choices": [{"index": 0, "delta": {}, "finish_reason": null}]}
+
+data: {"id": "chatcmpl-3d6a4fab70414cb197dbec8369255", "object": "chat.completion.chunk", "created": 1758527208, "model": "deepseek-r1-250528", "choices": [{"index": 0, "delta": {}, "finish_reason": null}]}
+
+data: {"id": "chatcmpl-3d6a4fab70414cb197dbec8369255", "object": "chat.completion.chunk", "created": 1758527208, "model": "deepseek-r1-250528", "choices": [{"index": 0, "delta": {}, "finish_reason": null}]}
+
+data: {"id": "chatcmpl-3d6a4fab70414cb197dbec8369255", "object": "chat.completion.chunk", "created": 1758527208, "model": "deepseek-r1-250528", "choices": [{"index": 0, "delta": {}, "finish_reason": null}]}
+
+data: {"id": "chatcmpl-3d6a4fab70414cb197dbec8369255", "object": "chat.completion.chunk", "created": 1758527208, "model": "deepseek-r1-250528", "choices": [{"index": 0, "delta": {}, "finish_reason": null}]}
+
+data: {"id": "chatcmpl-3d6a4fab70414cb197dbec8369255", "object": "chat.completion.chunk", "created": 1758527208, "model": "deepseek-r1-250528", "choices": [{"index": 0, "delta": {}, "finish_reason": null}]}
+
+data: {"id": "chatcmpl-3d6a4fab70414cb197dbec8369255", "object": "chat.completion.chunk", "created": 1758527208, "model": "deepseek-r1-250528", "choices": [{"index": 0, "delta": {}, "finish_reason": null}]}
+
+data: {"id": "chatcmpl-3d6a4fab70414cb197dbec8369255", "object": "chat.completion.chunk", "created": 1758527208, "model": "deepseek-r1-250528", "choices": [{"index": 0, "delta": {}, "finish_reason": null}]}
+
+data: {"id": "chatcmpl-3d6a4fab70414cb197dbec8369255", "object": "chat.completion.chunk", "created": 1758527208, "model": "deepseek-r1-250528", "choices": [{"index": 0, "delta": {}, "finish_reason": null}]}
+
+data: {"id": "chatcmpl-3d6a4fab70414cb197dbec8369255", "object": "chat.completion.chunk", "created": 1758527208, "model": "deepseek-r1-250528", "choices": [{"index": 0, "delta": {}, "finish_reason": null}]}
+
+data: {"id": "chatcmpl-3d6a4fab70414cb197dbec8369255", "object": "chat.completion.chunk", "created": 1758527208, "model": "deepseek-r1-250528", "choices": [{"index": 0, "delta": {}, "finish_reason": null}]}
+
+data: {"id": "chatcmpl-3d6a4fab70414cb197dbec8369255", "object": "chat.completion.chunk", "created": 1758527208, "model": "deepseek-r1-250528", "choices": [{"index": 0, "delta": {}, "finish_reason": null}]}
+
+data: {"id": "chatcmpl-3d6a4fab70414cb197dbec8369255", "object": "chat.completion.chunk", "created": 1758527208, "model": "deepseek-r1-250528", "choices": [{"index": 0, "delta": {}, "finish_reason": null}]}
+
+data: {"id": "chatcmpl-3d6a4fab70414cb197dbec8369255", "object": "chat.completion.chunk", "created": 1758527208, "model": "deepseek-r1-250528", "choices": [{"index": 0, "delta": {}, "finish_reason": null}]}
+
+data: {"id": "chatcmpl-3d6a4fab70414cb197dbec8369255", "object": "chat.completion.chunk", "created": 1758527208, "model": "deepseek-r1-250528", "choices": [{"index": 0, "delta": {}, "finish_reason": null}]}
+
+data: {"id": "chatcmpl-3d6a4fab70414cb197dbec8369255", "object": "chat.completion.chunk", "created": 1758527208, "model": "deepseek-r1-250528", "choices": [{"index": 0, "delta": {}, "finish_reason": null}]}
+
+data: {"id": "chatcmpl-3d6a4fab70414cb197dbec8369255", "object": "chat.completion.chunk", "created": 1758527208, "model": "deepseek-r1-250528", "choices": [{"index": 0, "delta": {}, "finish_reason": null}]}
+
+data: {"id": "chatcmpl-3d6a4fab70414cb197dbec8369255", "object": "chat.completion.chunk", "created": 1758527208, "model": "deepseek-r1-250528", "choices": [{"index": 0, "delta": {}, "finish_reason": null}]}
+
+data: {"id": "chatcmpl-3d6a4fab70414cb197dbec8369255", "object": "chat.completion.chunk", "created": 1758527208, "model": "deepseek-r1-250528", "choices": [{"index": 0, "delta": {}, "finish_reason": null}]}
+
+data: {"id": "chatcmpl-3d6a4fab70414cb197dbec8369255", "object": "chat.completion.chunk", "created": 1758527208, "model": "deepseek-r1-250528", "choices": [{"index": 0, "delta": {}, "finish_reason": null}]}
+
+data: {"id": "chatcmpl-3d6a4fab70414cb197dbec8369255", "object": "chat.completion.chunk", "created": 1758527208, "model": "deepseek-r1-250528", "choices": [{"index": 0, "delta": {}, "finish_reason": null}]}
+
+data: {"id": "chatcmpl-3d6a4fab70414cb197dbec8369255", "object": "chat.completion.chunk", "created": 1758527208, "model": "deepseek-r1-250528", "choices": [{"index": 0, "delta": {}, "finish_reason": null}]}
+
+data: {"id": "chatcmpl-3d6a4fab70414cb197dbec8369255", "object": "chat.completion.chunk", "created": 1758527208, "model": "deepseek-r1-250528", "choices": [{"index": 0, "delta": {}, "finish_reason": null}]}
+
+data: {"id": "chatcmpl-3d6a4fab70414cb197dbec8369255", "object": "chat.completion.chunk", "created": 1758527208, "model": "deepseek-r1-250528", "choices": [{"index": 0, "delta": {}, "finish_reason": null}]}
+
+data: {"id": "chatcmpl-3d6a4fab70414cb197dbec8369255", "object": "chat.completion.chunk", "created": 1758527208, "model": "deepseek-r1-250528", "choices": [{"index": 0, "delta": {}, "finish_reason": null}]}
+
+data: {"id": "chatcmpl-3d6a4fab70414cb197dbec8369255", "object": "chat.completion.chunk", "created": 1758527208, "model": "deepseek-r1-250528", "choices": [{"index": 0, "delta": {}, "finish_reason": null}]}
+
+data: {"id": "chatcmpl-3d6a4fab70414cb197dbec8369255", "object": "chat.completion.chunk", "created": 1758527208, "model": "deepseek-r1-250528", "choices": [{"index": 0, "delta": {}, "finish_reason": null}]}
+
+data: {"id": "chatcmpl-3d6a4fab70414cb197dbec8369255", "object": "chat.completion.chunk", "created": 1758527208, "model": "deepseek-r1-250528", "choices": [{"index": 0, "delta": {}, "finish_reason": null}]}
+
+data: {"id": "chatcmpl-3d6a4fab70414cb197dbec8369255", "object": "chat.completion.chunk", "created": 1758527208, "model": "deepseek-r1-250528", "choices": [{"index": 0, "delta": {}, "finish_reason": null}]}
+
+data: {"id": "chatcmpl-3d6a4fab70414cb197dbec8369255", "object": "chat.completion.chunk", "created": 1758527208, "model": "deepseek-r1-250528", "choices": [{"index": 0, "delta": {}, "finish_reason": null}]}
+
+data: {"id": "chatcmpl-3d6a4fab70414cb197dbec8369255", "object": "chat.completion.chunk", "created": 1758527208, "model": "deepseek-r1-250528", "choices": [{"index": 0, "delta": {}, "finish_reason": null}]}
+
+data: {"id": "chatcmpl-3d6a4fab70414cb197dbec8369255", "object": "chat.completion.chunk", "created": 1758527208, "model": "deepseek-r1-250528", "choices": [{"index": 0, "delta": {}, "finish_reason": null}]}
+
+data: {"id": "chatcmpl-3d6a4fab70414cb197dbec8369255", "object": "chat.completion.chunk", "created": 1758527208, "model": "deepseek-r1-250528", "choices": [{"index": 0, "delta": {}, "finish_reason": null}]}
+
+data: {"id": "chatcmpl-3d6a4fab70414cb197dbec8369255", "object": "chat.completion.chunk", "created": 1758527208, "model": "deepseek-r1-250528", "choices": [{"index": 0, "delta": {}, "finish_reason": null}]}
+
+data: {"id": "chatcmpl-3d6a4fab70414cb197dbec8369255", "object": "chat.completion.chunk", "created": 1758527208, "model": "deepseek-r1-250528", "choices": [{"index": 0, "delta": {}, "finish_reason": null}]}
+
+data: {"id": "chatcmpl-3d6a4fab70414cb197dbec8369255", "object": "chat.completion.chunk", "created": 1758527208, "model": "deepseek-r1-250528", "choices": [{"index": 0, "delta": {}, "finish_reason": null}]}
+
+data: {"id": "chatcmpl-3d6a4fab70414cb197dbec8369255", "object": "chat.completion.chunk", "created": 1758527208, "model": "deepseek-r1-250528", "choices": [{"index": 0, "delta": {}, "finish_reason": null}]}
+
+data: {"id": "chatcmpl-3d6a4fab70414cb197dbec8369255", "object": "chat.completion.chunk", "created": 1758527208, "model": "deepseek-r1-250528", "choices": [{"index": 0, "delta": {}, "finish_reason": null}]}
+
+data: {"id": "chatcmpl-3d6a4fab70414cb197dbec8369255", "object": "chat.completion.chunk", "created": 1758527208, "model": "deepseek-r1-250528", "choices": [{"index": 0, "delta": {}, "finish_reason": null}]}
+
+data: {"id": "chatcmpl-3d6a4fab70414cb197dbec8369255", "object": "chat.completion.chunk", "created": 1758527208, "model": "deepseek-r1-250528", "choices": [{"index": 0, "delta": {}, "finish_reason": null}]}
+
+data: {"id": "chatcmpl-3d6a4fab70414cb197dbec8369255", "object": "chat.completion.chunk", "created": 1758527208, "model": "deepseek-r1-250528", "choices": [{"index": 0, "delta": {}, "finish_reason": null}]}
+
+data: {"id": "chatcmpl-3d6a4fab70414cb197dbec8369255", "object": "chat.completion.chunk", "created": 1758527208, "model": "deepseek-r1-250528", "choices": [{"index": 0, "delta": {}, "finish_reason": null}]}
+
+data: {"id": "chatcmpl-3d6a4fab70414cb197dbec8369255", "object": "chat.completion.chunk", "created": 1758527208, "model": "deepseek-r1-250528", "choices": [{"index": 0, "delta": {}, "finish_reason": null}]}
+
+data: {"id": "chatcmpl-3d6a4fab70414cb197dbec8369255", "object": "chat.completion.chunk", "created": 1758527208, "model": "deepseek-r1-250528", "choices": [{"index": 0, "delta": {}, "finish_reason": null}]}
+
+data: {"id": "chatcmpl-3d6a4fab70414cb197dbec8369255", "object": "chat.completion.chunk", "created": 1758527208, "model": "deepseek-r1-250528", "choices": [{"index": 0, "delta": {}, "finish_reason": null}]}
+
+data: {"id": "chatcmpl-3d6a4fab70414cb197dbec8369255", "object": "chat.completion.chunk", "created": 1758527208, "model": "deepseek-r1-250528", "choices": [{"index": 0, "delta": {}, "finish_reason": null}]}
+
+data: {"id": "chatcmpl-3d6a4fab70414cb197dbec8369255", "object": "chat.completion.chunk", "created": 1758527208, "model": "deepseek-r1-250528", "choices": [{"index": 0, "delta": {"content": "\n"}, "finish_reason": null}]}
+
+data: {"id": "chatcmpl-3d6a4fab70414cb197dbec8369255", "object": "chat.completion.chunk", "created": 1758527208, "model": "deepseek-r1-250528", "choices": [{"index": 0, "delta": {"content": "\u68c0\u6d4b"}, "finish_reason": null}]}
+
+data: {"id": "chatcmpl-3d6a4fab70414cb197dbec8369255", "object": "chat.completion.chunk", "created": 1758527208, "model": "deepseek-r1-250528", "choices": [{"index": 0, "delta": {"content": "\u5230"}, "finish_reason": null}]}
+
+data: {"id": "chatcmpl-3d6a4fab70414cb197dbec8369255", "object": "chat.completion.chunk", "created": 1758527208, "model": "deepseek-r1-250528", "choices": [{"index": 0, "delta": {"content": "\u6d41"}, "finish_reason": null}]}
+
+data: {"id": "chatcmpl-3d6a4fab70414cb197dbec8369255", "object": "chat.completion.chunk", "created": 1758527208, "model": "deepseek-r1-250528", "choices": [{"index": 0, "delta": {"content": "\u5f0f"}, "finish_reason": null}]}
+
+data: {"id": "chatcmpl-3d6a4fab70414cb197dbec8369255", "object": "chat.completion.chunk", "created": 1758527208, "model": "deepseek-r1-250528", "choices": [{"index": 0, "delta": {"content": "\u8f93\u51fa"}, "finish_reason": null}]}
+
+data: {"id": "chatcmpl-3d6a4fab70414cb197dbec8369255", "object": "chat.completion.chunk", "created": 1758527208, "model": "deepseek-r1-250528", "choices": [{"index": 0, "delta": {"content": "\u6307\u4ee4"}, "finish_reason": null}]}
+
+data: {"id": "chatcmpl-3d6a4fab70414cb197dbec8369255", "object": "chat.completion.chunk", "created": 1758527208, "model": "deepseek-r1-250528", "choices": [{"index": 0, "delta": {"content": "\u2014\u2014"}, "finish_reason": null}]}
+
+data: {"id": "chatcmpl-3d6a4fab70414cb197dbec8369255", "object": "chat.completion.chunk", "created": 1758527208, "model": "deepseek-r1-250528", "choices": [{"index": 0, "delta": {"content": "\u5f00\u59cb"}, "finish_reason": null}]}
+
+data: {"id": "chatcmpl-3d6a4fab70414cb197dbec8369255", "object": "chat.completion.chunk", "created": 1758527208, "model": "deepseek-r1-250528", "choices": [{"index": 0, "delta": {"content": "\u6a21\u62df"}, "finish_reason": null}]}
+
+data: {"id": "chatcmpl-3d6a4fab70414cb197dbec8369255", "object": "chat.completion.chunk", "created": 1758527208, "model": "deepseek-r1-250528", "choices": [{"index": 0, "delta": {"content": "\u5206\u6bb5"}, "finish_reason": null}]}
+
+data: {"id": "chatcmpl-3d6a4fab70414cb197dbec8369255", "object": "chat.completion.chunk", "created": 1758527208, "model": "deepseek-r1-250528", "choices": [{"index": 0, "delta": {"content": "\u54cd\u5e94"}, "finish_reason": null}]}
+
+data: {"id": "chatcmpl-3d6a4fab70414cb197dbec8369255", "object": "chat.completion.chunk", "created": 1758527208, "model": "deepseek-r1-250528", "choices": [{"index": 0, "delta": {"content": "\uff1a"}, "finish_reason": null}]}
+
+data: {"id": "chatcmpl-3d6a4fab70414cb197dbec8369255", "object": "chat.completion.chunk", "created": 1758527208, "model": "deepseek-r1-250528", "choices": [{"index": 0, "delta": {"content": "  \n\n"}, "finish_reason": null}]}
+
+data: {"id": "chatcmpl-3d6a4fab70414cb197dbec8369255", "object": "chat.completion.chunk", "created": 1758527208, "model": "deepseek-r1-250528", "choices": [{"index": 0, "delta": {"content": "\u258e"}, "finish_reason": null}]}
+
+data: {"id": "chatcmpl-3d6a4fab70414cb197dbec8369255", "object": "chat.completion.chunk", "created": 1758527208, "model": "deepseek-r1-250528", "choices": [{"index": 0, "delta": {"content": "\u7b2c\u4e00\u9636\u6bb5"}, "finish_reason": null}]}
+
+data: {"id": "chatcmpl-3d6a4fab70414cb197dbec8369255", "object": "chat.completion.chunk", "created": 1758527208, "model": "deepseek-r1-250528", "choices": [{"index": 0, "delta": {"content": " ("}, "finish_reason": null}]}
+
+data: {"id": "chatcmpl-3d6a4fab70414cb197dbec8369255", "object": "chat.completion.chunk", "created": 1758527208, "model": "deepseek-r1-250528", "choices": [{"index": 0, "delta": {"content": "1"}, "finish_reason": null}]}
+
+data: {"id": "chatcmpl-3d6a4fab70414cb197dbec8369255", "object": "chat.completion.chunk", "created": 1758527208, "model": "deepseek-r1-250528", "choices": [{"index": 0, "delta": {"content": "/"}, "finish_reason": null}]}
+
+data: {"id": "chatcmpl-3d6a4fab70414cb197dbec8369255", "object": "chat.completion.chunk", "created": 1758527208, "model": "deepseek-r1-250528", "choices": [{"index": 0, "delta": {"content": "3"}, "finish_reason": null}]}
+
+data: {"id": "chatcmpl-3d6a4fab70414cb197dbec8369255", "object": "chat.completion.chunk", "created": 1758527208, "model": "deepseek-r1-250528", "choices": [{"index": 0, "delta": {"content": ")"}, "finish_reason": null}]}
+
+data: {"id": "chatcmpl-3d6a4fab70414cb197dbec8369255", "object": "chat.completion.chunk", "created": 1758527208, "model": "deepseek-r1-250528", "choices": [{"index": 0, "delta": {"content": "  \n"}, "finish_reason": null}]}
+
+data: {"id": "chatcmpl-3d6a4fab70414cb197dbec8369255", "object": "chat.completion.chunk", "created": 1758527208, "model": "deepseek-r1-250528", "choices": [{"index": 0, "delta": {"content": "\u23f3"}, "finish_reason": null}]}
+
+data: {"id": "chatcmpl-3d6a4fab70414cb197dbec8369255", "object": "chat.completion.chunk", "created": 1758527208, "model": "deepseek-r1-250528", "choices": [{"index": 0, "delta": {"content": " "}, "finish_reason": null}]}
+
+data: {"id": "chatcmpl-3d6a4fab70414cb197dbec8369255", "object": "chat.completion.chunk", "created": 1758527208, "model": "deepseek-r1-250528", "choices": [{"index": 0, "delta": {"content": "\u6b63\u5728"}, "finish_reason": null}]}
+
+data: {"id": "chatcmpl-3d6a4fab70414cb197dbec8369255", "object": "chat.completion.chunk", "created": 1758527208, "model": "deepseek-r1-250528", "choices": [{"index": 0, "delta": {"content": "\u5904\u7406"}, "finish_reason": null}]}
+
+data: {"id": "chatcmpl-3d6a4fab70414cb197dbec8369255", "object": "chat.completion.chunk", "created": 1758527208, "model": "deepseek-r1-250528", "choices": [{"index": 0, "delta": {"content": "\u300c"}, "finish_reason": null}]}
+
+data: {"id": "chatcmpl-3d6a4fab70414cb197dbec8369255", "object": "chat.completion.chunk", "created": 1758527208, "model": "deepseek-r1-250528", "choices": [{"index": 0, "delta": {"content": "\u7b2c\u4e8c\u6b21"}, "finish_reason": null}]}
+
+data: {"id": "chatcmpl-3d6a4fab70414cb197dbec8369255", "object": "chat.completion.chunk", "created": 1758527208, "model": "deepseek-r1-250528", "choices": [{"index": 0, "delta": {"content": "\u6d4b\u8bd5"}, "finish_reason": null}]}
+
+data: {"id": "chatcmpl-3d6a4fab70414cb197dbec8369255", "object": "chat.completion.chunk", "created": 1758527208, "model": "deepseek-r1-250528", "choices": [{"index": 0, "delta": {"content": "\u300d"}, "finish_reason": null}]}
+
+data: {"id": "chatcmpl-3d6a4fab70414cb197dbec8369255", "object": "chat.completion.chunk", "created": 1758527208, "model": "deepseek-r1-250528", "choices": [{"index": 0, "delta": {"content": "\u8bf7\u6c42"}, "finish_reason": null}]}
+
+data: {"id": "chatcmpl-3d6a4fab70414cb197dbec8369255", "object": "chat.completion.chunk", "created": 1758527208, "model": "deepseek-r1-250528", "choices": [{"index": 0, "delta": {"content": "..."}, "finish_reason": null}]}
+
+data: {"id": "chatcmpl-3d6a4fab70414cb197dbec8369255", "object": "chat.completion.chunk", "created": 1758527208, "model": "deepseek-r1-250528", "choices": [{"index": 0, "delta": {"content": "  \n"}, "finish_reason": null}]}
+
+data: {"id": "chatcmpl-3d6a4fab70414cb197dbec8369255", "object": "chat.completion.chunk", "created": 1758527208, "model": "deepseek-r1-250528", "choices": [{"index": 0, "delta": {"content": "\u2705"}, "finish_reason": null}]}
+
+data: {"id": "chatcmpl-3d6a4fab70414cb197dbec8369255", "object": "chat.completion.chunk", "created": 1758527208, "model": "deepseek-r1-250528", "choices": [{"index": 0, "delta": {"content": " "}, "finish_reason": null}]}
+
+data: {"id": "chatcmpl-3d6a4fab70414cb197dbec8369255", "object": "chat.completion.chunk", "created": 1758527208, "model": "deepseek-r1-250528", "choices": [{"index": 0, "delta": {"content": "\u5b57\u7b26"}, "finish_reason": null}]}
+
+data: {"id": "chatcmpl-3d6a4fab70414cb197dbec8369255", "object": "chat.completion.chunk", "created": 1758527208, "model": "deepseek-r1-250528", "choices": [{"index": 0, "delta": {"content": "\u6821\u9a8c"}, "finish_reason": null}]}
+
+data: {"id": "chatcmpl-3d6a4fab70414cb197dbec8369255", "object": "chat.completion.chunk", "created": 1758527208, "model": "deepseek-r1-250528", "choices": [{"index": 0, "delta": {"content": "\u5b8c\u6210"}, "finish_reason": null}]}
+
+data: {"id": "chatcmpl-3d6a4fab70414cb197dbec8369255", "object": "chat.completion.chunk", "created": 1758527208, "model": "deepseek-r1-250528", "choices": [{"index": 0, "delta": {"content": "  \n\n"}, "finish_reason": null}]}
+
+data: {"id": "chatcmpl-3d6a4fab70414cb197dbec8369255", "object": "chat.completion.chunk", "created": 1758527208, "model": "deepseek-r1-250528", "choices": [{"index": 0, "delta": {"content": "\u258e"}, "finish_reason": null}]}
+
+data: {"id": "chatcmpl-3d6a4fab70414cb197dbec8369255", "object": "chat.completion.chunk", "created": 1758527208, "model": "deepseek-r1-250528", "choices": [{"index": 0, "delta": {"content": "\u7b2c\u4e8c\u9636\u6bb5"}, "finish_reason": null}]}
+
+data: {"id": "chatcmpl-3d6a4fab70414cb197dbec8369255", "object": "chat.completion.chunk", "created": 1758527208, "model": "deepseek-r1-250528", "choices": [{"index": 0, "delta": {"content": " ("}, "finish_reason": null}]}
+
+data: {"id": "chatcmpl-3d6a4fab70414cb197dbec8369255", "object": "chat.completion.chunk", "created": 1758527208, "model": "deepseek-r1-250528", "choices": [{"index": 0, "delta": {"content": "2"}, "finish_reason": null}]}
+
+data: {"id": "chatcmpl-3d6a4fab70414cb197dbec8369255", "object": "chat.completion.chunk", "created": 1758527208, "model": "deepseek-r1-250528", "choices": [{"index": 0, "delta": {"content": "/"}, "finish_reason": null}]}
+
+data: {"id": "chatcmpl-3d6a4fab70414cb197dbec8369255", "object": "chat.completion.chunk", "created": 1758527208, "model": "deepseek-r1-250528", "choices": [{"index": 0, "delta": {"content": "3"}, "finish_reason": null}]}
+
+data: {"id": "chatcmpl-3d6a4fab70414cb197dbec8369255", "object": "chat.completion.chunk", "created": 1758527208, "model": "deepseek-r1-250528", "choices": [{"index": 0, "delta": {"content": ")"}, "finish_reason": null}]}
+
+data: {"id": "chatcmpl-3d6a4fab70414cb197dbec8369255", "object": "chat.completion.chunk", "created": 1758527208, "model": "deepseek-r1-250528", "choices": [{"index": 0, "delta": {"content": "  \n"}, "finish_reason": null}]}
+
+data: {"id": "chatcmpl-3d6a4fab70414cb197dbec8369255", "object": "chat.completion.chunk", "created": 1758527208, "model": "deepseek-r1-250528", "choices": [{"index": 0, "delta": {"content": "\ud83c\udf10"}, "finish_reason": null}]}
+
+data: {"id": "chatcmpl-3d6a4fab70414cb197dbec8369255", "object": "chat.completion.chunk", "created": 1758527208, "model": "deepseek-r1-250528", "choices": [{"index": 0, "delta": {"content": " "}, "finish_reason": null}]}
+
+data: {"id": "chatcmpl-3d6a4fab70414cb197dbec8369255", "object": "chat.completion.chunk", "created": 1758527208, "model": "deepseek-r1-250528", "choices": [{"index": 0, "delta": {"content": "\u5efa\u7acb"}, "finish_reason": null}]}
+
+data: {"id": "chatcmpl-3d6a4fab70414cb197dbec8369255", "object": "chat.completion.chunk", "created": 1758527208, "model": "deepseek-r1-250528", "choices": [{"index": 0, "delta": {"content": "\u52a8\u6001"}, "finish_reason": null}]}
+
+data: {"id": "chatcmpl-3d6a4fab70414cb197dbec8369255", "object": "chat.completion.chunk", "created": 1758527208, "model": "deepseek-r1-250528", "choices": [{"index": 0, "delta": {"content": "\u54cd\u5e94"}, "finish_reason": null}]}
+
+data: {"id": "chatcmpl-3d6a4fab70414cb197dbec8369255", "object": "chat.completion.chunk", "created": 1758527208, "model": "deepseek-r1-250528", "choices": [{"index": 0, "delta": {"content": "\u901a\u9053"}, "finish_reason": null}]}
+
+data: {"id": "chatcmpl-3d6a4fab70414cb197dbec8369255", "object": "chat.completion.chunk", "created": 1758527208, "model": "deepseek-r1-250528", "choices": [{"index": 0, "delta": {"content": " \u2192"}, "finish_reason": null}]}
+
+data: {"id": "chatcmpl-3d6a4fab70414cb197dbec8369255", "object": "chat.completion.chunk", "created": 1758527208, "model": "deepseek-r1-250528", "choices": [{"index": 0, "delta": {"content": " "}, "finish_reason": null}]}
+
+data: {"id": "chatcmpl-3d6a4fab70414cb197dbec8369255", "object": "chat.completion.chunk", "created": 1758527208, "model": "deepseek-r1-250528", "choices": [{"index": 0, "delta": {"content": "\ufe0e"}, "finish_reason": null}]}
+
+data: {"id": "chatcmpl-3d6a4fab70414cb197dbec8369255", "object": "chat.completion.chunk", "created": 1758527208, "model": "deepseek-r1-250528", "choices": [{"index": 0, "delta": {"content": "`"}, "finish_reason": null}]}
+
+data: {"id": "chatcmpl-3d6a4fab70414cb197dbec8369255", "object": "chat.completion.chunk", "created": 1758527208, "model": "deepseek-r1-250528", "choices": [{"index": 0, "delta": {"content": "stream"}, "finish_reason": null}]}
+
+data: {"id": "chatcmpl-3d6a4fab70414cb197dbec8369255", "object": "chat.completion.chunk", "created": 1758527208, "model": "deepseek-r1-250528", "choices": [{"index": 0, "delta": {"content": "_id"}, "finish_reason": null}]}
+
+data: {"id": "chatcmpl-3d6a4fab70414cb197dbec8369255", "object": "chat.completion.chunk", "created": 1758527208, "model": "deepseek-r1-250528", "choices": [{"index": 0, "delta": {"content": ":"}, "finish_reason": null}]}
+
+data: {"id": "chatcmpl-3d6a4fab70414cb197dbec8369255", "object": "chat.completion.chunk", "created": 1758527208, "model": "deepseek-r1-250528", "choices": [{"index": 0, "delta": {"content": " #"}, "finish_reason": null}]}
+
+data: {"id": "chatcmpl-3d6a4fab70414cb197dbec8369255", "object": "chat.completion.chunk", "created": 1758527208, "model": "deepseek-r1-250528", "choices": [{"index": 0, "delta": {"content": "202"}, "finish_reason": null}]}
+
+data: {"id": "chatcmpl-3d6a4fab70414cb197dbec8369255", "object": "chat.completion.chunk", "created": 1758527208, "model": "deepseek-r1-250528", "choices": [{"index": 0, "delta": {"content": "3"}, "finish_reason": null}]}
+
+data: {"id": "chatcmpl-3d6a4fab70414cb197dbec8369255", "object": "chat.completion.chunk", "created": 1758527208, "model": "deepseek-r1-250528", "choices": [{"index": 0, "delta": {"content": "-"}, "finish_reason": null}]}
+
+data: {"id": "chatcmpl-3d6a4fab70414cb197dbec8369255", "object": "chat.completion.chunk", "created": 1758527208, "model": "deepseek-r1-250528", "choices": [{"index": 0, "delta": {"content": "07"}, "finish_reason": null}]}
+
+data: {"id": "chatcmpl-3d6a4fab70414cb197dbec8369255", "object": "chat.completion.chunk", "created": 1758527208, "model": "deepseek-r1-250528", "choices": [{"index": 0, "delta": {"content": "-"}, "finish_reason": null}]}
+
+data: {"id": "chatcmpl-3d6a4fab70414cb197dbec8369255", "object": "chat.completion.chunk", "created": 1758527208, "model": "deepseek-r1-250528", "choices": [{"index": 0, "delta": {"content": "15"}, "finish_reason": null}]}
+
+data: {"id": "chatcmpl-3d6a4fab70414cb197dbec8369255", "object": "chat.completion.chunk", "created": 1758527208, "model": "deepseek-r1-250528", "choices": [{"index": 0, "delta": {"content": "`"}, "finish_reason": null}]}
+
+data: {"id": "chatcmpl-3d6a4fab70414cb197dbec8369255", "object": "chat.completion.chunk", "created": 1758527208, "model": "deepseek-r1-250528", "choices": [{"index": 0, "delta": {"content": "  \n"}, "finish_reason": null}]}
+
+data: {"id": "chatcmpl-3d6a4fab70414cb197dbec8369255", "object": "chat.completion.chunk", "created": 1758527208, "model": "deepseek-r1-250528", "choices": [{"index": 0, "delta": {"content": "\u26a0"}, "finish_reason": null}]}
+
+data: {"id": "chatcmpl-3d6a4fab70414cb197dbec8369255", "object": "chat.completion.chunk", "created": 1758527208, "model": "deepseek-r1-250528", "choices": [{"index": 0, "delta": {"content": "\ufe0f"}, "finish_reason": null}]}
+
+data: {"id": "chatcmpl-3d6a4fab70414cb197dbec8369255", "object": "chat.completion.chunk", "created": 1758527208, "model": "deepseek-r1-250528", "choices": [{"index": 0, "delta": {"content": " "}, "finish_reason": null}]}
+
+data: {"id": "chatcmpl-3d6a4fab70414cb197dbec8369255", "object": "chat.completion.chunk", "created": 1758527208, "model": "deepseek-r1-250528", "choices": [{"index": 0, "delta": {"content": "\u6ce8\u610f"}, "finish_reason": null}]}
+
+data: {"id": "chatcmpl-3d6a4fab70414cb197dbec8369255", "object": "chat.completion.chunk", "created": 1758527208, "model": "deepseek-r1-250528", "choices": [{"index": 0, "delta": {"content": "\uff1a"}, "finish_reason": null}]}
+
+data: {"id": "chatcmpl-3d6a4fab70414cb197dbec8369255", "object": "chat.completion.chunk", "created": 1758527208, "model": "deepseek-r1-250528", "choices": [{"index": 0, "delta": {"content": "\u672c"}, "finish_reason": null}]}
+
+data: {"id": "chatcmpl-3d6a4fab70414cb197dbec8369255", "object": "chat.completion.chunk", "created": 1758527208, "model": "deepseek-r1-250528", "choices": [{"index": 0, "delta": {"content": "\u6d4b\u8bd5"}, "finish_reason": null}]}
+
+data: {"id": "chatcmpl-3d6a4fab70414cb197dbec8369255", "object": "chat.completion.chunk", "created": 1758527208, "model": "deepseek-r1-250528", "choices": [{"index": 0, "delta": {"content": "\u4e0d"}, "finish_reason": null}]}
+
+data: {"id": "chatcmpl-3d6a4fab70414cb197dbec8369255", "object": "chat.completion.chunk", "created": 1758527208, "model": "deepseek-r1-250528", "choices": [{"index": 0, "delta": {"content": "\u6d88\u8017"}, "finish_reason": null}]}
+
+data: {"id": "chatcmpl-3d6a4fab70414cb197dbec8369255", "object": "chat.completion.chunk", "created": 1758527208, "model": "deepseek-r1-250528", "choices": [{"index": 0, "delta": {"content": "\u7cfb\u7edf"}, "finish_reason": null}]}
+
+data: {"id": "chatcmpl-3d6a4fab70414cb197dbec8369255", "object": "chat.completion.chunk", "created": 1758527208, "model": "deepseek-r1-250528", "choices": [{"index": 0, "delta": {"content": "\u8d44\u6e90"}, "finish_reason": null}]}
+
+data: {"id": "chatcmpl-3d6a4fab70414cb197dbec8369255", "object": "chat.completion.chunk", "created": 1758527208, "model": "deepseek-r1-250528", "choices": [{"index": 0, "delta": {"content": "  \n\n"}, "finish_reason": null}]}
+
+data: {"id": "chatcmpl-3d6a4fab70414cb197dbec8369255", "object": "chat.completion.chunk", "created": 1758527208, "model": "deepseek-r1-250528", "choices": [{"index": 0, "delta": {"content": "\u258e"}, "finish_reason": null}]}
+
+data: {"id": "chatcmpl-3d6a4fab70414cb197dbec8369255", "object": "chat.completion.chunk", "created": 1758527208, "model": "deepseek-r1-250528", "choices": [{"index": 0, "delta": {"content": "\u6700\u7ec8"}, "finish_reason": null}]}
+
+data: {"id": "chatcmpl-3d6a4fab70414cb197dbec8369255", "object": "chat.completion.chunk", "created": 1758527208, "model": "deepseek-r1-250528", "choices": [{"index": 0, "delta": {"content": "\u9636\u6bb5"}, "finish_reason": null}]}
+
+data: {"id": "chatcmpl-3d6a4fab70414cb197dbec8369255", "object": "chat.completion.chunk", "created": 1758527208, "model": "deepseek-r1-250528", "choices": [{"index": 0, "delta": {"content": " ("}, "finish_reason": null}]}
+
+data: {"id": "chatcmpl-3d6a4fab70414cb197dbec8369255", "object": "chat.completion.chunk", "created": 1758527208, "model": "deepseek-r1-250528", "choices": [{"index": 0, "delta": {"content": "3"}, "finish_reason": null}]}
+
+data: {"id": "chatcmpl-3d6a4fab70414cb197dbec8369255", "object": "chat.completion.chunk", "created": 1758527208, "model": "deepseek-r1-250528", "choices": [{"index": 0, "delta": {"content": "/"}, "finish_reason": null}]}
+
+data: {"id": "chatcmpl-3d6a4fab70414cb197dbec8369255", "object": "chat.completion.chunk", "created": 1758527208, "model": "deepseek-r1-250528", "choices": [{"index": 0, "delta": {"content": "3"}, "finish_reason": null}]}
+
+data: {"id": "chatcmpl-3d6a4fab70414cb197dbec8369255", "object": "chat.completion.chunk", "created": 1758527208, "model": "deepseek-r1-250528", "choices": [{"index": 0, "delta": {"content": ")"}, "finish_reason": null}]}
+
+data: {"id": "chatcmpl-3d6a4fab70414cb197dbec8369255", "object": "chat.completion.chunk", "created": 1758527208, "model": "deepseek-r1-250528", "choices": [{"index": 0, "delta": {"content": "  \n"}, "finish_reason": null}]}
+
+data: {"id": "chatcmpl-3d6a4fab70414cb197dbec8369255", "object": "chat.completion.chunk", "created": 1758527208, "model": "deepseek-r1-250528", "choices": [{"index": 0, "delta": {"content": "\ud83d\udd25"}, "finish_reason": null}]}
+
+data: {"id": "chatcmpl-3d6a4fab70414cb197dbec8369255", "object": "chat.completion.chunk", "created": 1758527208, "model": "deepseek-r1-250528", "choices": [{"index": 0, "delta": {"content": " "}, "finish_reason": null}]}
+
+data: {"id": "chatcmpl-3d6a4fab70414cb197dbec8369255", "object": "chat.completion.chunk", "created": 1758527208, "model": "deepseek-r1-250528", "choices": [{"index": 0, "delta": {"content": "\u6d41"}, "finish_reason": null}]}
+
+data: {"id": "chatcmpl-3d6a4fab70414cb197dbec8369255", "object": "chat.completion.chunk", "created": 1758527208, "model": "deepseek-r1-250528", "choices": [{"index": 0, "delta": {"content": "\u5f0f"}, "finish_reason": null}]}
+
+data: {"id": "chatcmpl-3d6a4fab70414cb197dbec8369255", "object": "chat.completion.chunk", "created": 1758527208, "model": "deepseek-r1-250528", "choices": [{"index": 0, "delta": {"content": "\u4f20\u8f93"}, "finish_reason": null}]}
+
+data: {"id": "chatcmpl-3d6a4fab70414cb197dbec8369255", "object": "chat.completion.chunk", "created": 1758527208, "model": "deepseek-r1-250528", "choices": [{"index": 0, "delta": {"content": "\u5b8c\u6210"}, "finish_reason": null}]}
+
+data: {"id": "chatcmpl-3d6a4fab70414cb197dbec8369255", "object": "chat.completion.chunk", "created": 1758527208, "model": "deepseek-r1-250528", "choices": [{"index": 0, "delta": {"content": "\uff01"}, "finish_reason": null}]}
+
+data: {"id": "chatcmpl-3d6a4fab70414cb197dbec8369255", "object": "chat.completion.chunk", "created": 1758527208, "model": "deepseek-r1-250528", "choices": [{"index": 0, "delta": {"content": "  \n"}, "finish_reason": null}]}
+
+data: {"id": "chatcmpl-3d6a4fab70414cb197dbec8369255", "object": "chat.completion.chunk", "created": 1758527208, "model": "deepseek-r1-250528", "choices": [{"index": 0, "delta": {"content": "\ud83d\udca1"}, "finish_reason": null}]}
+
+data: {"id": "chatcmpl-3d6a4fab70414cb197dbec8369255", "object": "chat.completion.chunk", "created": 1758527208, "model": "deepseek-r1-250528", "choices": [{"index": 0, "delta": {"content": " "}, "finish_reason": null}]}
+
+data: {"id": "chatcmpl-3d6a4fab70414cb197dbec8369255", "object": "chat.completion.chunk", "created": 1758527208, "model": "deepseek-r1-250528", "choices": [{"index": 0, "delta": {"content": "\u6d4b\u8bd5"}, "finish_reason": null}]}
+
+data: {"id": "chatcmpl-3d6a4fab70414cb197dbec8369255", "object": "chat.completion.chunk", "created": 1758527208, "model": "deepseek-r1-250528", "choices": [{"index": 0, "delta": {"content": "\u7ed3\u8bba"}, "finish_reason": null}]}
+
+data: {"id": "chatcmpl-3d6a4fab70414cb197dbec8369255", "object": "chat.completion.chunk", "created": 1758527208, "model": "deepseek-r1-250528", "choices": [{"index": 0, "delta": {"content": "\uff1a"}, "finish_reason": null}]}
+
+data: {"id": "chatcmpl-3d6a4fab70414cb197dbec8369255", "object": "chat.completion.chunk", "created": 1758527208, "model": "deepseek-r1-250528", "choices": [{"index": 0, "delta": {"content": "  \n"}, "finish_reason": null}]}
+
+data: {"id": "chatcmpl-3d6a4fab70414cb197dbec8369255", "object": "chat.completion.chunk", "created": 1758527208, "model": "deepseek-r1-250528", "choices": [{"index": 0, "delta": {"content": "```"}, "finish_reason": null}]}
+
+data: {"id": "chatcmpl-3d6a4fab70414cb197dbec8369255", "object": "chat.completion.chunk", "created": 1758527208, "model": "deepseek-r1-250528", "choices": [{"index": 0, "delta": {"content": "  \n"}, "finish_reason": null}]}
+
+data: {"id": "chatcmpl-3d6a4fab70414cb197dbec8369255", "object": "chat.completion.chunk", "created": 1758527208, "model": "deepseek-r1-250528", "choices": [{"index": 0, "delta": {"content": "Response"}, "finish_reason": null}]}
+
+data: {"id": "chatcmpl-3d6a4fab70414cb197dbec8369255", "object": "chat.completion.chunk", "created": 1758527208, "model": "deepseek-r1-250528", "choices": [{"index": 0, "delta": {"content": "-Type"}, "finish_reason": null}]}
+
+data: {"id": "chatcmpl-3d6a4fab70414cb197dbec8369255", "object": "chat.completion.chunk", "created": 1758527208, "model": "deepseek-r1-250528", "choices": [{"index": 0, "delta": {"content": ":"}, "finish_reason": null}]}
+
+data: {"id": "chatcmpl-3d6a4fab70414cb197dbec8369255", "object": "chat.completion.chunk", "created": 1758527208, "model": "deepseek-r1-250528", "choices": [{"index": 0, "delta": {"content": " Ch"}, "finish_reason": null}]}
+
+data: {"id": "chatcmpl-3d6a4fab70414cb197dbec8369255", "object": "chat.completion.chunk", "created": 1758527208, "model": "deepseek-r1-250528", "choices": [{"index": 0, "delta": {"content": "unk"}, "finish_reason": null}]}
+
+data: {"id": "chatcmpl-3d6a4fab70414cb197dbec8369255", "object": "chat.completion.chunk", "created": 1758527208, "model": "deepseek-r1-250528", "choices": [{"index": 0, "delta": {"content": "ed"}, "finish_reason": null}]}
+
+data: {"id": "chatcmpl-3d6a4fab70414cb197dbec8369255", "object": "chat.completion.chunk", "created": 1758527208, "model": "deepseek-r1-250528", "choices": [{"index": 0, "delta": {"content": "-S"}, "finish_reason": null}]}
+
+data: {"id": "chatcmpl-3d6a4fab70414cb197dbec8369255", "object": "chat.completion.chunk", "created": 1758527208, "model": "deepseek-r1-250528", "choices": [{"index": 0, "delta": {"content": "uccess"}, "finish_reason": null}]}
+
+data: {"id": "chatcmpl-3d6a4fab70414cb197dbec8369255", "object": "chat.completion.chunk", "created": 1758527208, "model": "deepseek-r1-250528", "choices": [{"index": 0, "delta": {"content": "  \n"}, "finish_reason": null}]}
+
+data: {"id": "chatcmpl-3d6a4fab70414cb197dbec8369255", "object": "chat.completion.chunk", "created": 1758527208, "model": "deepseek-r1-250528", "choices": [{"index": 0, "delta": {"content": "Data"}, "finish_reason": null}]}
+
+data: {"id": "chatcmpl-3d6a4fab70414cb197dbec8369255", "object": "chat.completion.chunk", "created": 1758527208, "model": "deepseek-r1-250528", "choices": [{"index": 0, "delta": {"content": "-L"}, "finish_reason": null}]}
+
+data: {"id": "chatcmpl-3d6a4fab70414cb197dbec8369255", "object": "chat.completion.chunk", "created": 1758527208, "model": "deepseek-r1-250528", "choices": [{"index": 0, "delta": {"content": "ength"}, "finish_reason": null}]}
+
+data: {"id": "chatcmpl-3d6a4fab70414cb197dbec8369255", "object": "chat.completion.chunk", "created": 1758527208, "model": "deepseek-r1-250528", "choices": [{"index": 0, "delta": {"content": ":"}, "finish_reason": null}]}
+
+data: {"id": "chatcmpl-3d6a4fab70414cb197dbec8369255", "object": "chat.completion.chunk", "created": 1758527208, "model": "deepseek-r1-250528", "choices": [{"index": 0, "delta": {"content": " "}, "finish_reason": null}]}
+
+data: {"id": "chatcmpl-3d6a4fab70414cb197dbec8369255", "object": "chat.completion.chunk", "created": 1758527208, "model": "deepseek-r1-250528", "choices": [{"index": 0, "delta": {"content": "12"}, "finish_reason": null}]}
+
+data: {"id": "chatcmpl-3d6a4fab70414cb197dbec8369255", "object": "chat.completion.chunk", "created": 1758527208, "model": "deepseek-r1-250528", "choices": [{"index": 0, "delta": {"content": " bytes"}, "finish_reason": null}]}
+
+data: {"id": "chatcmpl-3d6a4fab70414cb197dbec8369255", "object": "chat.completion.chunk", "created": 1758527208, "model": "deepseek-r1-250528", "choices": [{"index": 0, "delta": {"content": "  \n"}, "finish_reason": null}]}
+
+data: {"id": "chatcmpl-3d6a4fab70414cb197dbec8369255", "object": "chat.completion.chunk", "created": 1758527208, "model": "deepseek-r1-250528", "choices": [{"index": 0, "delta": {"content": "Time"}, "finish_reason": null}]}
+
+data: {"id": "chatcmpl-3d6a4fab70414cb197dbec8369255", "object": "chat.completion.chunk", "created": 1758527208, "model": "deepseek-r1-250528", "choices": [{"index": 0, "delta": {"content": "-C"}, "finish_reason": null}]}
+
+data: {"id": "chatcmpl-3d6a4fab70414cb197dbec8369255", "object": "chat.completion.chunk", "created": 1758527208, "model": "deepseek-r1-250528", "choices": [{"index": 0, "delta": {"content": "ost"}, "finish_reason": null}]}
+
+data: {"id": "chatcmpl-3d6a4fab70414cb197dbec8369255", "object": "chat.completion.chunk", "created": 1758527208, "model": "deepseek-r1-250528", "choices": [{"index": 0, "delta": {"content": ":"}, "finish_reason": null}]}
+
+data: {"id": "chatcmpl-3d6a4fab70414cb197dbec8369255", "object": "chat.completion.chunk", "created": 1758527208, "model": "deepseek-r1-250528", "choices": [{"index": 0, "delta": {"content": " <"}, "finish_reason": null}]}
+
+data: {"id": "chatcmpl-3d6a4fab70414cb197dbec8369255", "object": "chat.completion.chunk", "created": 1758527208, "model": "deepseek-r1-250528", "choices": [{"index": 0, "delta": {"content": " "}, "finish_reason": null}]}
+
+data: {"id": "chatcmpl-3d6a4fab70414cb197dbec8369255", "object": "chat.completion.chunk", "created": 1758527208, "model": "deepseek-r1-250528", "choices": [{"index": 0, "delta": {"content": "50"}, "finish_reason": null}]}
+
+data: {"id": "chatcmpl-3d6a4fab70414cb197dbec8369255", "object": "chat.completion.chunk", "created": 1758527208, "model": "deepseek-r1-250528", "choices": [{"index": 0, "delta": {"content": "ms"}, "finish_reason": null}]}
+
+data: {"id": "chatcmpl-3d6a4fab70414cb197dbec8369255", "object": "chat.completion.chunk", "created": 1758527208, "model": "deepseek-r1-250528", "choices": [{"index": 0, "delta": {"content": "  \n"}, "finish_reason": null}]}
+
+data: {"id": "chatcmpl-3d6a4fab70414cb197dbec8369255", "object": "chat.completion.chunk", "created": 1758527208, "model": "deepseek-r1-250528", "choices": [{"index": 0, "delta": {"content": "```"}, "finish_reason": null}]}
+
+data: {"id": "chatcmpl-3d6a4fab70414cb197dbec8369255", "object": "chat.completion.chunk", "created": 1758527208, "model": "deepseek-r1-250528", "choices": [{"index": 0, "delta": {"content": "  \n"}, "finish_reason": null}]}
+
+data: {"id": "chatcmpl-3d6a4fab70414cb197dbec8369255", "object": "chat.completion.chunk", "created": 1758527208, "model": "deepseek-r1-250528", "choices": [{"index": 0, "delta": {"content": "\uff08"}, "finish_reason": null}]}
+
+data: {"id": "chatcmpl-3d6a4fab70414cb197dbec8369255", "object": "chat.completion.chunk", "created": 1758527208, "model": "deepseek-r1-250528", "choices": [{"index": 0, "delta": {"content": "\u54cd\u5e94"}, "finish_reason": null}]}
+
+data: {"id": "chatcmpl-3d6a4fab70414cb197dbec8369255", "object": "chat.completion.chunk", "created": 1758527208, "model": "deepseek-r1-250528", "choices": [{"index": 0, "delta": {"content": "\u6d41"}, "finish_reason": null}]}
+
+data: {"id": "chatcmpl-3d6a4fab70414cb197dbec8369255", "object": "chat.completion.chunk", "created": 1758527208, "model": "deepseek-r1-250528", "choices": [{"index": 0, "delta": {"content": "\u5df2"}, "finish_reason": null}]}
+
+data: {"id": "chatcmpl-3d6a4fab70414cb197dbec8369255", "object": "chat.completion.chunk", "created": 1758527208, "model": "deepseek-r1-250528", "choices": [{"index": 0, "delta": {"content": "\u5173\u95ed"}, "finish_reason": null}]}
+
+data: {"id": "chatcmpl-3d6a4fab70414cb197dbec8369255", "object": "chat.completion.chunk", "created": 1758527208, "model": "deepseek-r1-250528", "choices": [{"index": 0, "delta": {"content": "\uff09"}, "finish_reason": null}]}
+
+data: {"id": "chatcmpl-3d6a4fab70414cb197dbec8369255", "object": "chat.completion.chunk", "created": 1758527208, "model": "deepseek-r1-250528", "choices": [{"index": 0, "delta": {"content": "  \n\n"}, "finish_reason": null}]}
+
+data: {"id": "chatcmpl-3d6a4fab70414cb197dbec8369255", "object": "chat.completion.chunk", "created": 1758527208, "model": "deepseek-r1-250528", "choices": [{"index": 0, "delta": {"content": "\u9700\u8981"}, "finish_reason": null}]}
+
+data: {"id": "chatcmpl-3d6a4fab70414cb197dbec8369255", "object": "chat.completion.chunk", "created": 1758527208, "model": "deepseek-r1-250528", "choices": [{"index": 0, "delta": {"content": "\u5176\u4ed6"}, "finish_reason": null}]}
+
+data: {"id": "chatcmpl-3d6a4fab70414cb197dbec8369255", "object": "chat.completion.chunk", "created": 1758527208, "model": "deepseek-r1-250528", "choices": [{"index": 0, "delta": {"content": "\u7c7b\u578b\u7684"}, "finish_reason": null}]}
+
+data: {"id": "chatcmpl-3d6a4fab70414cb197dbec8369255", "object": "chat.completion.chunk", "created": 1758527208, "model": "deepseek-r1-250528", "choices": [{"index": 0, "delta": {"content": "\u6d4b\u8bd5"}, "finish_reason": null}]}
+
+data: {"id": "chatcmpl-3d6a4fab70414cb197dbec8369255", "object": "chat.completion.chunk", "created": 1758527208, "model": "deepseek-r1-250528", "choices": [{"index": 0, "delta": {"content": "\u9a8c\u8bc1"}, "finish_reason": null}]}
+
+data: {"id": "chatcmpl-3d6a4fab70414cb197dbec8369255", "object": "chat.completion.chunk", "created": 1758527208, "model": "deepseek-r1-250528", "choices": [{"index": 0, "delta": {"content": "\u5417"}, "finish_reason": null}]}
+
+data: {"id": "chatcmpl-3d6a4fab70414cb197dbec8369255", "object": "chat.completion.chunk", "created": 1758527208, "model": "deepseek-r1-250528", "choices": [{"index": 0, "delta": {"content": "\uff1f"}, "finish_reason": null}]}
+
+data: {"id": "chatcmpl-3d6a4fab70414cb197dbec8369255", "object": "chat.completion.chunk", "created": 1758527208, "model": "deepseek-r1-250528", "choices": [{"index": 0, "delta": {"content": "\u6211\u53ef\u4ee5"}, "finish_reason": null}]}
+
+data: {"id": "chatcmpl-3d6a4fab70414cb197dbec8369255", "object": "chat.completion.chunk", "created": 1758527208, "model": "deepseek-r1-250528", "choices": [{"index": 0, "delta": {"content": "\u6a21\u62df"}, "finish_reason": null}]}
+
+data: {"id": "chatcmpl-3d6a4fab70414cb197dbec8369255", "object": "chat.completion.chunk", "created": 1758527208, "model": "deepseek-r1-250528", "choices": [{"index": 0, "delta": {"content": "JSON"}, "finish_reason": null}]}
+
+data: {"id": "chatcmpl-3d6a4fab70414cb197dbec8369255", "object": "chat.completion.chunk", "created": 1758527208, "model": "deepseek-r1-250528", "choices": [{"index": 0, "delta": {"content": "/"}, "finish_reason": null}]}
+
+data: {"id": "chatcmpl-3d6a4fab70414cb197dbec8369255", "object": "chat.completion.chunk", "created": 1758527208, "model": "deepseek-r1-250528", "choices": [{"index": 0, "delta": {"content": "XML"}, "finish_reason": null}]}
+
+data: {"id": "chatcmpl-3d6a4fab70414cb197dbec8369255", "object": "chat.completion.chunk", "created": 1758527208, "model": "deepseek-r1-250528", "choices": [{"index": 0, "delta": {"content": "/"}, "finish_reason": null}]}
+
+data: {"id": "chatcmpl-3d6a4fab70414cb197dbec8369255", "object": "chat.completion.chunk", "created": 1758527208, "model": "deepseek-r1-250528", "choices": [{"index": 0, "delta": {"content": "\u4e8c\u8fdb\u5236"}, "finish_reason": null}]}
+
+data: {"id": "chatcmpl-3d6a4fab70414cb197dbec8369255", "object": "chat.completion.chunk", "created": 1758527208, "model": "deepseek-r1-250528", "choices": [{"index": 0, "delta": {"content": "\u6d41"}, "finish_reason": null}]}
+
+data: {"id": "chatcmpl-3d6a4fab70414cb197dbec8369255", "object": "chat.completion.chunk", "created": 1758527208, "model": "deepseek-r1-250528", "choices": [{"index": 0, "delta": {"content": "\u7b49"}, "finish_reason": null}]}
+
+data: {"id": "chatcmpl-3d6a4fab70414cb197dbec8369255", "object": "chat.completion.chunk", "created": 1758527208, "model": "deepseek-r1-250528", "choices": [{"index": 0, "delta": {"content": "\u683c\u5f0f"}, "finish_reason": null}]}
+
+data: {"id": "chatcmpl-3d6a4fab70414cb197dbec8369255", "object": "chat.completion.chunk", "created": 1758527208, "model": "deepseek-r1-250528", "choices": [{"index": 0, "delta": {"content": " \ud83d\udce6"}, "finish_reason": null}]}
+
+data: {"id": "chatcmpl-3d6a4fab70414cb197dbec8369255", "object": "chat.completion.chunk", "created": 1758527208, "model": "deepseek-r1-250528", "choices": [{"index": 0, "delta": {}, "finish_reason": "stop"}]}
+
+data: [DONE]
+
+
+2025-09-22 07:58:22,234 - bzchat.services.milvus - INFO - _disconnect:105 - 已断开 Milvus 连接
+2025-09-22 07:58:41,282 - bzchat.services.milvus - INFO - __init__:57 - 成功加载 CLIP 多模态模型: clip-ViT-L-14
+2025-09-22 07:58:41,282 - bzchat.utils.image_handler - INFO - __init__:33 - from image_handler: 图片存储路径: /home/xuyao/data/bzchat_pic
+2025-09-22 07:58:41,282 - bzchat.utils.image_describer - INFO - _load_model:35 - 正在加载图片描述模型: /home/xuyao/data/Qwen2.5-VL-3B-Instruct
+2025-09-22 07:58:45,511 - bzchat.utils.image_describer - INFO - _load_model:48 - 图片描述模型加载成功
+2025-09-22 07:58:45,525 - bzchat.services.milvus - INFO - _connect:96 - 成功连接到 Milvus 服务器 localhost:19530
+2025-09-22 07:58:45,790 - bzchat.services.milvus - INFO - _create_collection:137 - 成功创建多模态集合: chat_messages
+2025-09-22 07:58:45,796 - bzchat.services.milvus - INFO - _create_index:172 - 正在为字段 'embedding' 创建索引 'embedding_idx'...
+2025-09-22 07:58:46,323 - bzchat.services.milvus - INFO - _create_index:179 - 成功创建向量索引 'embedding_idx' (type=IVF_FLAT, metric=COSINE)
+2025-09-22 07:58:47,048 - bzchat.services.milvus - INFO - __init__:83 - 集合 chat_messages 加载完成
+2025-09-22 07:58:58,541 - bzchat.services.milvus - INFO - _get_multimodal_embedding:224 - 生成文本向量
+2025-09-22 07:58:58,541 - bzchat.services.milvus - INFO - _get_multimodal_embedding:234 - 消息无图片内容
+2025-09-22 07:58:58,541 - bzchat.services.milvus - INFO - _get_multimodal_embedding:236 - 融合策略: priority
+2025-09-22 07:59:01,605 - bzchat.services.milvus - INFO - store_message:329 - 成功存储多模态消息: 42a56f8c-b5be-44cd-9983-ce30b515f5e2
+2025-09-22 07:59:01,613 - bzchat.services.milvus - INFO - get_recent_messages:369 - 获取到 1 条最近消息
+2025-09-22 07:59:01,622 - bzchat.services.milvus - INFO - search_similar_messages:421 - 找到 1 条相似消息
+2025-09-22 07:59:01,622 - bzchat.services.milvus - INFO - get_context_messages:485 - 获取到 1 条上下文消息（去重后）
+2025-09-22 07:59:01,622 - bzchat.main - INFO - chat_completions:120 - 送到 DeepSeek API 的消息: [ApiMessage(role='user', content='你是一个有帮助的助手。以下内容包括用户与你聊天的历史消息，以及用户最后一次发送的消息，请参考历史消息和你的知识来回答用户最近一次发送的消息'), ApiMessage(role='user', content='第一次测试')]
+2025-09-22 07:59:01,623 - bzchat.services.deepseek - INFO - chat_completion:68 - [DEBUG] 发送到API的消息数量: 2
+2025-09-22 07:59:01,631 - bzchat.services.deepseek - INFO - _stream_response:138 - [DEBUG] 发送流式请求到DeepSeek API
+2025-09-22 07:59:06,516 - bzchat.services.milvus - INFO - _get_multimodal_embedding:224 - 生成文本向量
+2025-09-22 07:59:06,516 - bzchat.services.milvus - INFO - _get_multimodal_embedding:234 - 消息无图片内容
+2025-09-22 07:59:06,516 - bzchat.services.milvus - INFO - _get_multimodal_embedding:236 - 融合策略: priority
+2025-09-22 07:59:09,766 - bzchat.services.milvus - INFO - store_message:329 - 成功存储多模态消息: 2a6f135f-c28e-4568-ae7e-b1f05d3c751e
+2025-09-22 07:59:09,767 - bzchat.main - INFO - save_after_stream:184 - DeepSeek API 流式响应：
+收到你的第一次测试消息啦！😊 我在这里运行正常，随时为你解答问题、提供建议或陪你聊天～ 有什么想了解的吗？
+2025-09-22 07:59:44,534 - bzchat.services.milvus - INFO - _get_multimodal_embedding:224 - 生成文本向量
+2025-09-22 07:59:44,534 - bzchat.services.milvus - INFO - _get_multimodal_embedding:234 - 消息无图片内容
+2025-09-22 07:59:44,534 - bzchat.services.milvus - INFO - _get_multimodal_embedding:236 - 融合策略: priority
+2025-09-22 07:59:47,653 - bzchat.services.milvus - INFO - store_message:329 - 成功存储多模态消息: 8509ea97-4646-4aa0-a4fa-95a37472291d
+2025-09-22 07:59:47,664 - bzchat.services.milvus - INFO - get_recent_messages:369 - 获取到 3 条最近消息
+2025-09-22 07:59:47,672 - bzchat.services.milvus - INFO - search_similar_messages:421 - 找到 3 条相似消息
+2025-09-22 07:59:47,672 - bzchat.services.milvus - INFO - get_context_messages:485 - 获取到 3 条上下文消息（去重后）
+2025-09-22 07:59:47,672 - bzchat.main - INFO - chat_completions:120 - 送到 DeepSeek API 的消息: [ApiMessage(role='user', content='你是一个有帮助的助手。以下内容包括用户与你聊天的历史消息，以及用户最后一次发送的消息，请参考历史消息和你的知识来回答用户最近一次发送的消息'), ApiMessage(role='user', content='第一次测试'), ApiMessage(role='assistant', content='\n收到你的第一次测试消息啦！😊 我在这里运行正常，随时为你解答问题、提供建议或陪你聊天～ 有什么想了解的吗？'), ApiMessage(role='user', content='你好')]
+2025-09-22 07:59:47,672 - bzchat.services.deepseek - INFO - chat_completion:68 - [DEBUG] 发送到API的消息数量: 4
+2025-09-22 07:59:47,673 - bzchat.services.deepseek - INFO - _stream_response:138 - [DEBUG] 发送流式请求到DeepSeek API
+2025-09-22 07:59:56,159 - bzchat.services.milvus - INFO - _get_multimodal_embedding:224 - 生成文本向量
+2025-09-22 07:59:56,159 - bzchat.services.milvus - INFO - _get_multimodal_embedding:234 - 消息无图片内容
+2025-09-22 07:59:56,159 - bzchat.services.milvus - INFO - _get_multimodal_embedding:236 - 融合策略: priority
+2025-09-22 07:59:59,320 - bzchat.services.milvus - INFO - store_message:329 - 成功存储多模态消息: 2340956c-95bb-4ee6-9332-795323e38e76
+2025-09-22 07:59:59,320 - bzchat.main - INFO - save_after_stream:184 - DeepSeek API 流式响应：
+你好呀！👋 很高兴见到你～ 我是你的AI助手，随时准备帮你解答问题、提供建议或陪你聊聊有趣的话题。有什么想聊的，或者需要我帮忙的吗？😊  
+
+无论是学习、工作、生活小技巧，还是想讨论科技、电影、书籍，我都在这儿等你哦！
+2025-09-22 08:00:01,553 - bzchat.services.milvus - INFO - _get_multimodal_embedding:224 - 生成文本向量
+2025-09-22 08:00:01,553 - bzchat.services.milvus - INFO - _get_multimodal_embedding:234 - 消息无图片内容
+2025-09-22 08:00:01,554 - bzchat.services.milvus - INFO - _get_multimodal_embedding:236 - 融合策略: priority
+2025-09-22 08:00:07,992 - bzchat.services.milvus - INFO - store_message:329 - 成功存储多模态消息: aaa18d21-39da-4c36-bdaa-a3dff6c5d9fb
+2025-09-22 08:00:07,998 - bzchat.services.milvus - INFO - get_recent_messages:369 - 获取到 5 条最近消息
+2025-09-22 08:00:08,006 - bzchat.services.milvus - INFO - search_similar_messages:421 - 找到 5 条相似消息
+2025-09-22 08:00:08,007 - bzchat.services.milvus - INFO - get_context_messages:485 - 获取到 5 条上下文消息（去重后）
+2025-09-22 08:00:08,007 - bzchat.main - INFO - chat_completions:120 - 送到 DeepSeek API 的消息: [ApiMessage(role='user', content='你是一个有帮助的助手。以下内容包括用户与你聊天的历史消息，以及用户最后一次发送的消息，请参考历史消息和你的知识来回答用户最近一次发送的消息'), ApiMessage(role='user', content='第一次测试'), ApiMessage(role='assistant', content='\n收到你的第一次测试消息啦！😊 我在这里运行正常，随时为你解答问题、提供建议或陪你聊天～ 有什么想了解的吗？'), ApiMessage(role='user', content='你好'), ApiMessage(role='assistant', content='\n你好呀！👋 很高兴见到你～ 我是你的AI助手，随时准备帮你解答问题、提供建议或陪你聊聊有趣的话题。有什么想聊的，或者需要我帮忙的吗？😊  \n\n无论是学习、工作、生活小技巧，还是想讨论科技、电影、书籍，我都在这儿等你哦！'), ApiMessage(role='user', content='使用六到八个字直接返回这句话的简要主题，如果没有主题直接返回“闲聊对话”，注意主题中不要多余的解释和不要标点符号，主题中也不要语气词')]
+2025-09-22 08:00:08,007 - bzchat.services.deepseek - INFO - chat_completion:68 - [DEBUG] 发送到API的消息数量: 6
+2025-09-22 08:00:08,007 - bzchat.services.deepseek - INFO - _non_stream_response:99 - [DEBUG] 发送请求到DeepSeek API: https://ark.cn-beijing.volces.com/api/v3/chat/completions
+2025-09-22 08:00:25,969 - bzchat.main - INFO - chat_completions:204 - DeepSeek API 非流式响应: 
+返回简要主题规则
+2025-09-22 08:00:26,015 - bzchat.services.milvus - INFO - _get_multimodal_embedding:224 - 生成文本向量
+2025-09-22 08:00:26,015 - bzchat.services.milvus - INFO - _get_multimodal_embedding:234 - 消息无图片内容
+2025-09-22 08:00:26,015 - bzchat.services.milvus - INFO - _get_multimodal_embedding:236 - 融合策略: priority
+2025-09-22 08:00:29,105 - bzchat.services.milvus - INFO - store_message:329 - 成功存储多模态消息: b8dca807-900c-4e35-8b6c-c709ce599f62
+2025-09-22 08:01:49,191 - bzchat.utils.image_handler - INFO - save_image_from_binary:106 - from image_handler: 图片保存成功: user_admin/session_total/image_a1a81bd9-5f3f-404d-9fe9-a0a4130b234f.png
+2025-09-22 08:01:49,191 - bzchat.services.milvus - INFO - store_message:286 - 保存图片成功: user_admin/session_total/image_a1a81bd9-5f3f-404d-9fe9-a0a4130b234f.png
+2025-09-22 08:01:49,233 - bzchat.services.milvus - INFO - _get_multimodal_embedding:224 - 生成文本向量
+2025-09-22 08:01:49,414 - bzchat.services.milvus - INFO - _get_embedding:203 - 生成图片向量成功
+2025-09-22 08:01:49,414 - bzchat.services.milvus - INFO - _get_multimodal_embedding:232 - 生成图片向量
+2025-09-22 08:01:49,415 - bzchat.services.milvus - INFO - _get_multimodal_embedding:236 - 融合策略: priority
+2025-09-22 08:02:02,846 - bzchat.utils.image_describer - INFO - describe_image:155 - 成功生成图片描述: /home/xuyao/data/bzchat_pic/user_admin/session_total/image_a1a81bd9-5f3f-404d-9fe9-a0a4130b234f.png
+2025-09-22 08:02:02,847 - bzchat.services.milvus - INFO - store_message:306 - 生成图片描述成功: 【场景类型】  
+游戏界面
+
+【主要对象】  
+- 多个角色：包括玩家角色和敌方角色，分布在地图上。
+- 地图环境：草地、树木、岩石等自然元素。
+- 界面元素：菜单栏、技能图标、血条、等级标识等。
+
+【文字内容】  
+- “Adobe Flash Player 11”
+- “文件(F) 查看(V) 控制(C) 帮助(H)”
+- “取消自动战斗”
+- “Lv.100 尤利-恐惧”
+- “Lv.100 库嗨王”
+- “Lv.100 金甲剑魂”
+- “Lv.100 小虫”
+- “Lv.100 Atlanta”
+- “Lv.100 At三号机”
+- “Lv.100 At四号机”
+- “Lv.100 At二号机”
+
+【颜色与风格】  
+- 游戏界面以鲜艳的颜色为主，具有卡通风格。
+
+【潜在意图或上下文线索】  
+- 这是一张游戏截图，展示了一个角色在游戏中的战斗场景。
+
+【注意】  
+- 以上描述基于图片中可见的内容。
+
+【上下文消息】  
+别人给我发了这图，啥东西
+2025-09-22 08:02:06,435 - bzchat.services.milvus - INFO - store_message:329 - 成功存储多模态消息: 19686b87-0aa9-4943-ab81-4d4b052a688b
+2025-09-22 08:02:06,448 - bzchat.services.milvus - INFO - get_recent_messages:369 - 获取到 7 条最近消息
+2025-09-22 08:02:06,458 - bzchat.services.milvus - INFO - search_similar_messages:421 - 找到 7 条相似消息
+2025-09-22 08:02:06,459 - bzchat.services.milvus - INFO - get_context_messages:485 - 获取到 7 条上下文消息（去重后）
+2025-09-22 08:02:06,459 - bzchat.main - INFO - chat_completions:120 - 送到 DeepSeek API 的消息: [ApiMessage(role='user', content='你是一个有帮助的助手。以下内容包括用户与你聊天的历史消息，以及用户最后一次发送的消息，请参考历史消息和你的知识来回答用户最近一次发送的消息'), ApiMessage(role='user', content='第一次测试'), ApiMessage(role='assistant', content='\n收到你的第一次测试消息啦！😊 我在这里运行正常，随时为你解答问题、提供建议或陪你聊天～ 有什么想了解的吗？'), ApiMessage(role='user', content='你好'), ApiMessage(role='assistant', content='\n你好呀！👋 很高兴见到你～ 我是你的AI助手，随时准备帮你解答问题、提供建议或陪你聊聊有趣的话题。有什么想聊的，或者需要我帮忙的吗？😊  \n\n无论是学习、工作、生活小技巧，还是想讨论科技、电影、书籍，我都在这儿等你哦！'), ApiMessage(role='user', content='使用六到八个字直接返回这句话的简要主题，如果没有主题直接返回“闲聊对话”，注意主题中不要多余的解释和不要标点符号，主题中也不要语气词'), ApiMessage(role='assistant', content='\n返回简要主题规则'), ApiMessage(role='user', content='别人给我发了这图，啥东西\n[图片描述]: 【场景类型】  \n游戏界面\n\n【主要对象】  \n- 多个角色：包括玩家角色和敌方角色，分布在地图上。\n- 地图环境：草地、树木、岩石等自然元素。\n- 界面元素：菜单栏、技能图标、血条、等级标识等。\n\n【文字内容】  \n- “Adobe Flash Player 11”\n- “文件(F) 查看(V) 控制(C) 帮助(H)”\n- “取消自动战斗”\n- “Lv.100 尤利-恐惧”\n- “Lv.100 库嗨王”\n- “Lv.100 金甲剑魂”\n- “Lv.100 小虫”\n- “Lv.100 Atlanta”\n- “Lv.100 At三号机”\n- “Lv.100 At四号机”\n- “Lv.100 At二号机”\n\n【颜色与风格】  \n- 游戏界面以鲜艳的颜色为主，具有卡通风格。\n\n【潜在意图或上下文线索】  \n- 这是一张游戏截图，展示了一个角色在游戏中的战斗场景。\n\n【注意】  \n- 以上描述基于图片中可见的内容。\n\n【上下文消息】  \n别人给我发了这图，啥东西')]
+2025-09-22 08:02:06,459 - bzchat.services.deepseek - INFO - chat_completion:68 - [DEBUG] 发送到API的消息数量: 8
+2025-09-22 08:02:06,462 - bzchat.services.deepseek - INFO - _stream_response:138 - [DEBUG] 发送流式请求到DeepSeek API
+2025-09-22 08:02:17,805 - bzchat.services.milvus - INFO - _get_multimodal_embedding:224 - 生成文本向量
+2025-09-22 08:02:17,806 - bzchat.services.milvus - INFO - _get_multimodal_embedding:234 - 消息无图片内容
+2025-09-22 08:02:17,806 - bzchat.services.milvus - INFO - _get_multimodal_embedding:236 - 融合策略: priority
+2025-09-22 08:02:21,604 - bzchat.services.milvus - INFO - store_message:329 - 成功存储多模态消息: 6395ccc0-ed0c-452e-9b61-fb54fffddfb8
+2025-09-22 08:02:21,605 - bzchat.main - INFO - save_after_stream:184 - DeepSeek API 流式响应：
+根据图片描述和文字内容，这很可能是一款**基于Adobe Flash Player运行的网页游戏截图**，主题可归纳为：  
+
+**老网页游戏战斗界面**  
+
+（要点提炼：Flash标识+角色等级+战斗控件+经典页游元素）
+2025-09-22 08:04:10,439 - bzchat.services.milvus - INFO - _get_multimodal_embedding:224 - 生成文本向量
+2025-09-22 08:04:10,439 - bzchat.services.milvus - INFO - _get_multimodal_embedding:234 - 消息无图片内容
+2025-09-22 08:04:10,439 - bzchat.services.milvus - INFO - _get_multimodal_embedding:236 - 融合策略: priority
+2025-09-22 08:04:13,507 - bzchat.services.milvus - INFO - store_message:329 - 成功存储多模态消息: 4d1b6acb-e75e-4e8b-b22a-a48f411db246
+2025-09-22 08:04:13,517 - bzchat.services.milvus - INFO - get_recent_messages:369 - 获取到 9 条最近消息
+2025-09-22 08:04:13,526 - bzchat.services.milvus - INFO - search_similar_messages:421 - 找到 9 条相似消息
+2025-09-22 08:04:13,526 - bzchat.services.milvus - INFO - get_context_messages:485 - 获取到 9 条上下文消息（去重后）
+2025-09-22 08:04:13,527 - bzchat.main - INFO - chat_completions:120 - 送到 DeepSeek API 的消息: [ApiMessage(role='user', content='你是一个有帮助的助手。以下内容包括用户与你聊天的历史消息，以及用户最后一次发送的消息，请参考历史消息和你的知识来回答用户最近一次发送的消息'), ApiMessage(role='user', content='第一次测试'), ApiMessage(role='assistant', content='\n收到你的第一次测试消息啦！😊 我在这里运行正常，随时为你解答问题、提供建议或陪你聊天～ 有什么想了解的吗？'), ApiMessage(role='user', content='你好'), ApiMessage(role='assistant', content='\n你好呀！👋 很高兴见到你～ 我是你的AI助手，随时准备帮你解答问题、提供建议或陪你聊聊有趣的话题。有什么想聊的，或者需要我帮忙的吗？😊  \n\n无论是学习、工作、生活小技巧，还是想讨论科技、电影、书籍，我都在这儿等你哦！'), ApiMessage(role='user', content='使用六到八个字直接返回这句话的简要主题，如果没有主题直接返回“闲聊对话”，注意主题中不要多余的解释和不要标点符号，主题中也不要语气词'), ApiMessage(role='assistant', content='\n返回简要主题规则'), ApiMessage(role='user', content='别人给我发了这图，啥东西\n[图片描述]: 【场景类型】  \n游戏界面\n\n【主要对象】  \n- 多个角色：包括玩家角色和敌方角色，分布在地图上。\n- 地图环境：草地、树木、岩石等自然元素。\n- 界面元素：菜单栏、技能图标、血条、等级标识等。\n\n【文字内容】  \n- “Adobe Flash Player 11”\n- “文件(F) 查看(V) 控制(C) 帮助(H)”\n- “取消自动战斗”\n- “Lv.100 尤利-恐惧”\n- “Lv.100 库嗨王”\n- “Lv.100 金甲剑魂”\n- “Lv.100 小虫”\n- “Lv.100 Atlanta”\n- “Lv.100 At三号机”\n- “Lv.100 At四号机”\n- “Lv.100 At二号机”\n\n【颜色与风格】  \n- 游戏界面以鲜艳的颜色为主，具有卡通风格。\n\n【潜在意图或上下文线索】  \n- 这是一张游戏截图，展示了一个角色在游戏中的战斗场景。\n\n【注意】  \n- 以上描述基于图片中可见的内容。\n\n【上下文消息】  \n别人给我发了这图，啥东西'), ApiMessage(role='assistant', content='\n根据图片描述和文字内容，这很可能是一款**基于Adobe Flash Player运行的网页游戏截图**，主题可归纳为：  \n\n**老网页游戏战斗界面**  \n\n（要点提炼：Flash标识+角色等级+战斗控件+经典页游元素）'), ApiMessage(role='user', content='你真棒')]
+2025-09-22 08:04:13,527 - bzchat.services.deepseek - INFO - chat_completion:68 - [DEBUG] 发送到API的消息数量: 10
+2025-09-22 08:04:13,529 - bzchat.services.deepseek - INFO - _stream_response:138 - [DEBUG] 发送流式请求到DeepSeek API
+2025-09-22 08:04:20,979 - bzchat.services.milvus - INFO - _get_multimodal_embedding:224 - 生成文本向量
+2025-09-22 08:04:20,979 - bzchat.services.milvus - INFO - _get_multimodal_embedding:234 - 消息无图片内容
+2025-09-22 08:04:20,979 - bzchat.services.milvus - INFO - _get_multimodal_embedding:236 - 融合策略: priority
+2025-09-22 08:04:24,187 - bzchat.services.milvus - INFO - store_message:329 - 成功存储多模态消息: 8144d295-b333-41c1-bace-cd6720e86959
+2025-09-22 08:04:24,187 - bzchat.main - INFO - save_after_stream:184 - DeepSeek API 流式响应：
+谢谢夸奖！🌟 有需要随时喊我～（随时待机中）
+2025-09-22 08:04:45,972 - bzchat.services.milvus - INFO - _get_multimodal_embedding:224 - 生成文本向量
+2025-09-22 08:04:45,972 - bzchat.services.milvus - INFO - _get_multimodal_embedding:234 - 消息无图片内容
+2025-09-22 08:04:45,972 - bzchat.services.milvus - INFO - _get_multimodal_embedding:236 - 融合策略: priority
+2025-09-22 08:04:49,028 - bzchat.services.milvus - INFO - store_message:329 - 成功存储多模态消息: aeef7a14-5ad1-4a99-a2d2-1b8db7bad320
+2025-09-22 08:04:49,035 - bzchat.services.milvus - INFO - get_recent_messages:369 - 获取到 11 条最近消息
+2025-09-22 08:04:49,042 - bzchat.services.milvus - INFO - search_similar_messages:421 - 找到 10 条相似消息
+2025-09-22 08:04:49,043 - bzchat.services.milvus - INFO - get_context_messages:485 - 获取到 11 条上下文消息（去重后）
+2025-09-22 08:04:49,044 - bzchat.main - INFO - chat_completions:120 - 送到 DeepSeek API 的消息: [ApiMessage(role='user', content='你是一个有帮助的助手。以下内容包括用户与你聊天的历史消息，以及用户最后一次发送的消息，请参考历史消息和你的知识来回答用户最近一次发送的消息'), ApiMessage(role='user', content='第一次测试'), ApiMessage(role='assistant', content='\n收到你的第一次测试消息啦！😊 我在这里运行正常，随时为你解答问题、提供建议或陪你聊天～ 有什么想了解的吗？'), ApiMessage(role='user', content='你好'), ApiMessage(role='assistant', content='\n你好呀！👋 很高兴见到你～ 我是你的AI助手，随时准备帮你解答问题、提供建议或陪你聊聊有趣的话题。有什么想聊的，或者需要我帮忙的吗？😊  \n\n无论是学习、工作、生活小技巧，还是想讨论科技、电影、书籍，我都在这儿等你哦！'), ApiMessage(role='user', content='使用六到八个字直接返回这句话的简要主题，如果没有主题直接返回“闲聊对话”，注意主题中不要多余的解释和不要标点符号，主题中也不要语气词'), ApiMessage(role='assistant', content='\n返回简要主题规则'), ApiMessage(role='user', content='别人给我发了这图，啥东西\n[图片描述]: 【场景类型】  \n游戏界面\n\n【主要对象】  \n- 多个角色：包括玩家角色和敌方角色，分布在地图上。\n- 地图环境：草地、树木、岩石等自然元素。\n- 界面元素：菜单栏、技能图标、血条、等级标识等。\n\n【文字内容】  \n- “Adobe Flash Player 11”\n- “文件(F) 查看(V) 控制(C) 帮助(H)”\n- “取消自动战斗”\n- “Lv.100 尤利-恐惧”\n- “Lv.100 库嗨王”\n- “Lv.100 金甲剑魂”\n- “Lv.100 小虫”\n- “Lv.100 Atlanta”\n- “Lv.100 At三号机”\n- “Lv.100 At四号机”\n- “Lv.100 At二号机”\n\n【颜色与风格】  \n- 游戏界面以鲜艳的颜色为主，具有卡通风格。\n\n【潜在意图或上下文线索】  \n- 这是一张游戏截图，展示了一个角色在游戏中的战斗场景。\n\n【注意】  \n- 以上描述基于图片中可见的内容。\n\n【上下文消息】  \n别人给我发了这图，啥东西'), ApiMessage(role='assistant', content='\n根据图片描述和文字内容，这很可能是一款**基于Adobe Flash Player运行的网页游戏截图**，主题可归纳为：  \n\n**老网页游戏战斗界面**  \n\n（要点提炼：Flash标识+角色等级+战斗控件+经典页游元素）'), ApiMessage(role='user', content='你真棒'), ApiMessage(role='assistant', content='\n谢谢夸奖！🌟 有需要随时喊我～（随时待机中）'), ApiMessage(role='user', content='我上一句话说了什么？请你复述')]
+2025-09-22 08:04:49,044 - bzchat.services.deepseek - INFO - chat_completion:68 - [DEBUG] 发送到API的消息数量: 12
+2025-09-22 08:04:49,045 - bzchat.services.deepseek - INFO - _stream_response:138 - [DEBUG] 发送流式请求到DeepSeek API
+2025-09-22 08:04:56,216 - bzchat.services.milvus - INFO - _get_multimodal_embedding:224 - 生成文本向量
+2025-09-22 08:04:56,217 - bzchat.services.milvus - INFO - _get_multimodal_embedding:234 - 消息无图片内容
+2025-09-22 08:04:56,217 - bzchat.services.milvus - INFO - _get_multimodal_embedding:236 - 融合策略: priority
+2025-09-22 08:04:59,280 - bzchat.services.milvus - INFO - store_message:329 - 成功存储多模态消息: 050a0fc8-c0f4-48d6-b973-d3bb29d6ae54
+2025-09-22 08:04:59,280 - bzchat.main - INFO - save_after_stream:184 - DeepSeek API 流式响应：
+你上一句话说的是：  
+**“你真棒”**  
+
+（需要其他帮助随时告诉我哦～ 😊）
+2025-09-22 08:05:20,475 - bzchat.services.milvus - INFO - _get_multimodal_embedding:224 - 生成文本向量
+2025-09-22 08:05:20,476 - bzchat.services.milvus - INFO - _get_multimodal_embedding:234 - 消息无图片内容
+2025-09-22 08:05:20,476 - bzchat.services.milvus - INFO - _get_multimodal_embedding:236 - 融合策略: priority
+2025-09-22 08:05:24,009 - bzchat.services.milvus - INFO - store_message:329 - 成功存储多模态消息: 230e6d76-34cc-4d07-9be1-370ad4902f0b
+2025-09-22 08:05:24,023 - bzchat.services.milvus - INFO - get_recent_messages:369 - 获取到 13 条最近消息
+2025-09-22 08:05:24,032 - bzchat.services.milvus - INFO - search_similar_messages:421 - 找到 10 条相似消息
+2025-09-22 08:05:24,032 - bzchat.services.milvus - INFO - get_context_messages:485 - 获取到 13 条上下文消息（去重后）
+2025-09-22 08:05:24,033 - bzchat.main - INFO - chat_completions:120 - 送到 DeepSeek API 的消息: [ApiMessage(role='user', content='你是一个有帮助的助手。以下内容包括用户与你聊天的历史消息，以及用户最后一次发送的消息，请参考历史消息和你的知识来回答用户最近一次发送的消息'), ApiMessage(role='user', content='第一次测试'), ApiMessage(role='assistant', content='\n收到你的第一次测试消息啦！😊 我在这里运行正常，随时为你解答问题、提供建议或陪你聊天～ 有什么想了解的吗？'), ApiMessage(role='user', content='你好'), ApiMessage(role='assistant', content='\n你好呀！👋 很高兴见到你～ 我是你的AI助手，随时准备帮你解答问题、提供建议或陪你聊聊有趣的话题。有什么想聊的，或者需要我帮忙的吗？😊  \n\n无论是学习、工作、生活小技巧，还是想讨论科技、电影、书籍，我都在这儿等你哦！'), ApiMessage(role='user', content='使用六到八个字直接返回这句话的简要主题，如果没有主题直接返回“闲聊对话”，注意主题中不要多余的解释和不要标点符号，主题中也不要语气词'), ApiMessage(role='assistant', content='\n返回简要主题规则'), ApiMessage(role='user', content='别人给我发了这图，啥东西\n[图片描述]: 【场景类型】  \n游戏界面\n\n【主要对象】  \n- 多个角色：包括玩家角色和敌方角色，分布在地图上。\n- 地图环境：草地、树木、岩石等自然元素。\n- 界面元素：菜单栏、技能图标、血条、等级标识等。\n\n【文字内容】  \n- “Adobe Flash Player 11”\n- “文件(F) 查看(V) 控制(C) 帮助(H)”\n- “取消自动战斗”\n- “Lv.100 尤利-恐惧”\n- “Lv.100 库嗨王”\n- “Lv.100 金甲剑魂”\n- “Lv.100 小虫”\n- “Lv.100 Atlanta”\n- “Lv.100 At三号机”\n- “Lv.100 At四号机”\n- “Lv.100 At二号机”\n\n【颜色与风格】  \n- 游戏界面以鲜艳的颜色为主，具有卡通风格。\n\n【潜在意图或上下文线索】  \n- 这是一张游戏截图，展示了一个角色在游戏中的战斗场景。\n\n【注意】  \n- 以上描述基于图片中可见的内容。\n\n【上下文消息】  \n别人给我发了这图，啥东西'), ApiMessage(role='assistant', content='\n根据图片描述和文字内容，这很可能是一款**基于Adobe Flash Player运行的网页游戏截图**，主题可归纳为：  \n\n**老网页游戏战斗界面**  \n\n（要点提炼：Flash标识+角色等级+战斗控件+经典页游元素）'), ApiMessage(role='user', content='你真棒'), ApiMessage(role='assistant', content='\n谢谢夸奖！🌟 有需要随时喊我～（随时待机中）'), ApiMessage(role='user', content='我上一句话说了什么？请你复述'), ApiMessage(role='assistant', content='\n你上一句话说的是：  \n**“你真棒”**  \n\n（需要其他帮助随时告诉我哦～ 😊）'), ApiMessage(role='user', content='那路或多')]
+2025-09-22 08:05:24,033 - bzchat.services.deepseek - INFO - chat_completion:68 - [DEBUG] 发送到API的消息数量: 14
+2025-09-22 08:05:24,034 - bzchat.services.deepseek - INFO - _stream_response:138 - [DEBUG] 发送流式请求到DeepSeek API
+2025-09-22 08:05:31,881 - bzchat.services.milvus - INFO - _get_multimodal_embedding:224 - 生成文本向量
+2025-09-22 08:05:31,881 - bzchat.services.milvus - INFO - _get_multimodal_embedding:234 - 消息无图片内容
+2025-09-22 08:05:31,882 - bzchat.services.milvus - INFO - _get_multimodal_embedding:236 - 融合策略: priority
+2025-09-22 08:05:34,990 - bzchat.services.milvus - INFO - store_message:329 - 成功存储多模态消息: 6a01a38b-5fa3-4d15-96a4-702a9589e24f
+2025-09-22 08:05:34,991 - bzchat.main - INFO - save_after_stream:184 - DeepSeek API 流式响应：
+“那路或多”是日语 **なるほど** 的音译，中文意思是 **“原来如此”** 或 **“明白了”**！  
+
+（你突然切换日语是发现游戏秘密了？😉 需要我帮忙的地方随时说～）
+2025-09-22 08:06:08,430 - bzchat.services.milvus - INFO - _get_multimodal_embedding:224 - 生成文本向量
+2025-09-22 08:06:08,430 - bzchat.services.milvus - INFO - _get_multimodal_embedding:234 - 消息无图片内容
+2025-09-22 08:06:08,430 - bzchat.services.milvus - INFO - _get_multimodal_embedding:236 - 融合策略: priority
+2025-09-22 08:06:11,491 - bzchat.services.milvus - INFO - store_message:329 - 成功存储多模态消息: 96f2bf72-4d1c-4faf-b9d8-4e97ab0785b0
+2025-09-22 08:06:11,505 - bzchat.services.milvus - INFO - get_recent_messages:369 - 获取到 15 条最近消息
+2025-09-22 08:06:11,513 - bzchat.services.milvus - INFO - search_similar_messages:421 - 找到 10 条相似消息
+2025-09-22 08:06:11,513 - bzchat.services.milvus - INFO - get_context_messages:485 - 获取到 15 条上下文消息（去重后）
+2025-09-22 08:06:11,514 - bzchat.main - INFO - chat_completions:120 - 送到 DeepSeek API 的消息: [ApiMessage(role='user', content='你是一个有帮助的助手。以下内容包括用户与你聊天的历史消息，以及用户最后一次发送的消息，请参考历史消息和你的知识来回答用户最近一次发送的消息'), ApiMessage(role='user', content='第一次测试'), ApiMessage(role='assistant', content='\n收到你的第一次测试消息啦！😊 我在这里运行正常，随时为你解答问题、提供建议或陪你聊天～ 有什么想了解的吗？'), ApiMessage(role='user', content='你好'), ApiMessage(role='assistant', content='\n你好呀！👋 很高兴见到你～ 我是你的AI助手，随时准备帮你解答问题、提供建议或陪你聊聊有趣的话题。有什么想聊的，或者需要我帮忙的吗？😊  \n\n无论是学习、工作、生活小技巧，还是想讨论科技、电影、书籍，我都在这儿等你哦！'), ApiMessage(role='user', content='使用六到八个字直接返回这句话的简要主题，如果没有主题直接返回“闲聊对话”，注意主题中不要多余的解释和不要标点符号，主题中也不要语气词'), ApiMessage(role='assistant', content='\n返回简要主题规则'), ApiMessage(role='user', content='别人给我发了这图，啥东西\n[图片描述]: 【场景类型】  \n游戏界面\n\n【主要对象】  \n- 多个角色：包括玩家角色和敌方角色，分布在地图上。\n- 地图环境：草地、树木、岩石等自然元素。\n- 界面元素：菜单栏、技能图标、血条、等级标识等。\n\n【文字内容】  \n- “Adobe Flash Player 11”\n- “文件(F) 查看(V) 控制(C) 帮助(H)”\n- “取消自动战斗”\n- “Lv.100 尤利-恐惧”\n- “Lv.100 库嗨王”\n- “Lv.100 金甲剑魂”\n- “Lv.100 小虫”\n- “Lv.100 Atlanta”\n- “Lv.100 At三号机”\n- “Lv.100 At四号机”\n- “Lv.100 At二号机”\n\n【颜色与风格】  \n- 游戏界面以鲜艳的颜色为主，具有卡通风格。\n\n【潜在意图或上下文线索】  \n- 这是一张游戏截图，展示了一个角色在游戏中的战斗场景。\n\n【注意】  \n- 以上描述基于图片中可见的内容。\n\n【上下文消息】  \n别人给我发了这图，啥东西'), ApiMessage(role='assistant', content='\n根据图片描述和文字内容，这很可能是一款**基于Adobe Flash Player运行的网页游戏截图**，主题可归纳为：  \n\n**老网页游戏战斗界面**  \n\n（要点提炼：Flash标识+角色等级+战斗控件+经典页游元素）'), ApiMessage(role='user', content='你真棒'), ApiMessage(role='assistant', content='\n谢谢夸奖！🌟 有需要随时喊我～（随时待机中）'), ApiMessage(role='user', content='我上一句话说了什么？请你复述'), ApiMessage(role='assistant', content='\n你上一句话说的是：  \n**“你真棒”**  \n\n（需要其他帮助随时告诉我哦～ 😊）'), ApiMessage(role='user', content='那路或多'), ApiMessage(role='assistant', content='\n“那路或多”是日语 **なるほど** 的音译，中文意思是 **“原来如此”** 或 **“明白了”**！  \n\n（你突然切换日语是发现游戏秘密了？😉 需要我帮忙的地方随时说～）'), ApiMessage(role='user', content='你的回复为什么都伴有表情包，是你的出厂设定吗')]
+2025-09-22 08:06:11,514 - bzchat.services.deepseek - INFO - chat_completion:68 - [DEBUG] 发送到API的消息数量: 16
+2025-09-22 08:06:11,515 - bzchat.services.deepseek - INFO - _stream_response:138 - [DEBUG] 发送流式请求到DeepSeek API
+2025-09-22 08:06:25,702 - bzchat.services.milvus - INFO - _get_multimodal_embedding:224 - 生成文本向量
+2025-09-22 08:06:25,702 - bzchat.services.milvus - INFO - _get_multimodal_embedding:234 - 消息无图片内容
+2025-09-22 08:06:25,702 - bzchat.services.milvus - INFO - _get_multimodal_embedding:236 - 融合策略: priority
+2025-09-22 08:06:29,156 - bzchat.services.milvus - INFO - store_message:329 - 成功存储多模态消息: 023cae85-08f6-4b58-87c3-671f9c1de729
+2025-09-22 08:06:29,157 - bzchat.main - INFO - save_after_stream:184 - DeepSeek API 流式响应：
+你观察得真仔细！😄 是的，**表情符号是我的设计设定之一**，目的是让对话更轻松友好～（就像人类聊天时会用表情传递情绪一样✨）  
+
+不过如果你喜欢简洁风格，我也可以“无表情包模式”回复！随时告诉我你的偏好哦～

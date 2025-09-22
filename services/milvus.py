@@ -479,8 +479,8 @@ class MilvusMessageStore:
                     seen_ids.add(message.id)
                     unique_messages.append(message)
             
-            # 按时间戳排序
-            unique_messages.sort(key=lambda x: x.timestamp, reverse=True)
+            # 按时间戳升序排序
+            unique_messages.sort(key=lambda x: x.timestamp, reverse=False)
             
             logger.info(f"获取到 {len(unique_messages)} 条上下文消息（去重后）")
             return unique_messages

@@ -83,7 +83,7 @@ class DeepSeekAPI:
         
         # 移除 None 值
         data = {k: v for k, v in data.items() if v is not None}
-        
+
         if stream:
             return self._stream_response(headers, data, model_name)
         else:
